@@ -1,26 +1,21 @@
 .App {
-  padding: 5vh 0;
+  margin: 5vh auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
+
+  border-radius: 20px;
+  height: 85vh;
+  width: 95vw
 }
-.App > div {
-  border: 1px solid black;
-  width: 70vw;
+.intro {
+  width: 70%;
+  border: 10px solid black;
+  height: 100%;
+  border-radius: 20px;
 }
 
-.header{
-  height: 15vh;
-}
-
-.homepage{
-  height: 50vh;
-}
-
-.login{
-  height: 50vh;
-}
-
-.search {
-  height: 20vh;
+.aside {
+  border: 10px solid green;
+  height: 100%;
+  width: 30%;
 }
