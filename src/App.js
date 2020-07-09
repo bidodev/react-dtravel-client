@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import "./App.css";
 import { Switch, Route } from "react-router-dom";
-
+import Intro from './components/intro.component';
 
 const Aside = () => (<div className="aside">Hello Aside</div>)
 
@@ -9,7 +8,7 @@ const App = () => {
   return (
     <div className="App">
       <Intro />
-      <Aside />
+       <Aside /> 
       {/* <Header />
       <Nav />
       <Search />
