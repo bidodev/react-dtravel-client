@@ -10,7 +10,8 @@
   flex-direction: column;
   justify-content: space-between;
   border-radius: 30px;
-  z-index: -1;
+  z-index: 1;
+  transform: translate(3%);
 
   .logo {
     width: 20vw;
