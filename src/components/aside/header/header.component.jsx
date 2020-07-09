@@ -5,11 +5,11 @@ function Header() {
   return (
     <div className="aside-header">
       <div className="aside-header__menu">Menu</div>
-      <ul>
+      <div className="aside-header__nav">
         <Link to="/discover">Discover</Link>
         <Link to="/about">About</Link>
-        <li>user_img</li>
-      </ul>
+        <img src="/img/sophie.jpg" alt="avatar"></img>
+      </div>
     </div>
   );
 }

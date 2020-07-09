@@ -1,8 +1,8 @@
 .aside {
   width: 35%;
   height: 100%;
-  padding: 0 3%;
-  background-color: #fcfcfc;
+  padding: 0 4%;
+  background-color: #fff;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 
@@ -12,37 +12,46 @@
     display: flex;
     align-items: center;
     width: 100%;
-    z-index: 1;
 
     &__menu {
-      //border: 1px solid red;
+    
     }
 
-    ul {
+    &__nav {
       margin-left: auto;
       display: flex;
+      align-items: center;
       justify-content: space-evenly;
-      width: 65%;
+      width: 50%;
       //border: 1px solid red;
       list-style: none;
+      
+      a{
+        color: #181818;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+
+      img{
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+      }
     }
   }
 
   &-search {
     display: flex;
     align-items: center;
-    border: 1px solid greenyellow;
     height: 10%;
-    justify-content: center;
     input {
       width: 90%;
     }
   }
 
   &-main {
-    border: 1px solid teal;
     height: 50%;
-    padding: 0 10%;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -56,12 +65,11 @@
 
     &__carrousel {
         height: 70%;
-        border: 1px solid black;
+        //border: 1px solid black;
     }
   }
 
   &-adventurous__mood {
-    border: 1px solid teal;
     height: 30%;
   }
 }
