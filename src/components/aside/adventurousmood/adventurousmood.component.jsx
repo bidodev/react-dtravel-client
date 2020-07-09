@@ -5,19 +5,19 @@ function AdventurousMood() {
     <div className="aside-adventurous__mood">
       AdventurousMood Bar
       <span>
-        <i class="fas fa-golf-ball"></i>
+        <ion-icon name="boat"></ion-icon>
       </span>
       <span>
-        <i class="fas fa-plane-departure"></i>
+        <ion-icon name="airplane"></ion-icon>
       </span>
       <span>
-        <i class="fas fa-car-side"></i>
+        <ion-icon name="car"></ion-icon>
       </span>
       <span>
-        <i class="fas fa-ship"></i>
+        <ion-icon name="caret-up"></ion-icon>
       </span>
       <span>
-        <i class="fas fa-mountain"></i>
+        <ion-icon name="bicycle"></ion-icon>
       </span>
     </div>
   );
