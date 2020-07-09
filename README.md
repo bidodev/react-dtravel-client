@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ## Dtravel
 
 # Roadmap
@@ -18,6 +17,3 @@ __Website content mindmap [Design doc/SRS]__ _in process_
 |_ __architecture__ //logic  
 
 __splitting the tasks__  
-=======
-## Dtravel - group project
->>>>>>> origin/simona
