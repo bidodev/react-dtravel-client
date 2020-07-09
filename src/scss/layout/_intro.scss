@@ -1,5 +1,5 @@
 .intro {
-  width: 60%;
+  width: 65%;
   height: 100%;
   color: white;
   background-image: url(../../img/mirror-lake-reflecting-wooden-house-in-middle-of-lake-147411.jpg);
@@ -9,9 +9,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border-bottom-left-radius: 20px;
-  border-top-left-radius: 20px;
-  // font-family: 'Lora', serif;
+  border-radius: 30px;
+  z-index: -1;
 
   .logo {
     width: 20vw;
@@ -26,7 +25,7 @@
   }
   .content {
     width: 55vw;
-    height: 55%;
+    height: 65%;
     display: flex;
     flex-direction: column;
     justify-content: center;
