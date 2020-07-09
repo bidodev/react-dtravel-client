@@ -1,0 +1,87 @@
+[
+    {
+      "id": 0,
+      "productName": "bora bora",
+      "description": "What this small island may lack in size it makes up for in sheer tropical beauty. Here, you'll find picturesque beaches, lush jungles and luxurious resorts. The island's dormant volcano, Mount Otemanu, makes for a great photo-op or challenging hike, and the friendly Bora Bora locals can help you catch a glimpse of the island's best sights during an off-road excursion. To relax, head to Matira Beach for crystal-clear water and soft sand. Although a trip to Bora Bora is very expensive, most travelers say it's worth every penny. ",
+      "photo": "../public/img/bora-bora.jpg",
+      "country": "French Polynesia, France",
+      "geographic-region": "oceania",
+      "type": "tropical"
+    },
+    {
+      "id": 1,
+      "productName": "maui",
+      "description": "Whether you're driving along the Road to Hana, enjoying a bird's-eye view of the lush coastline from a helicopter, snorkeling with sea turtles or simply relaxing on the island's honey- or black-colored beaches, you'll find that Maui is unlike any other tropical destination. Don't miss a chance to visit Haleakala National Park, which is home to the world's largest dormant volcano. You should also attend a luau for a dose of local culture and a taste of Hawaiian specialties like poi, poke and mahimahi.",
+      "photo": "../public/img/maui.jpg",
+      "country": "hawaiian islands, united states",
+      "continent": "north american",
+      "type": "tropical"
+    },
+    {
+      "id": 2,
+      "productName": "rome",
+      "description": "When you visit the Eternal City, prepare to cross a few must-see attractions – including the Colosseum, the Trevi Fountain and the Pantheon – off of your bucket list. Additional treasures, such as St. Peter's Basilica and the Sistine Chapel, can be found in nearby Vatican City. Escape the tourist crowds by taking a twilight stroll along the cobblestone streets of Trastevere, or head to Mercato Centrale Roma to sample local delicacies like gelato and pizza. Before leaving, peruse some of Rome's lesser-known museums, art galleries and boutiques.",
+      "photo": "../public/img/rome.jpg",
+      "country": "italy",
+      "continent": "europe",
+      "type": "city-break"
+    },
+    {
+      "id": 3,
+      "productName": "barcelona",
+      "description": "This Spanish city is a feast for the eyes: Visitors can walk past medieval architecture in the Barri Gòtic, snap photos of the intricate Sagrada Família and marvel at Gaudí's whimsical creations in Park Güell. La Barceloneta Beach and the Parc de la Ciutadella are perfect places to pass the time on a sunny day before checking out the restaurants and bars along Las Ramblas, which buzzes at all hours of the night. For travelers who want to see Barcelona from above, a trek up Tibidabo is a must. ",
+      "photo": "../public/img/barcelona.jpg",
+      "country": "spain",
+      "continent": "europe",
+      "type": "city-break"
+    },
+    {
+      "id": 4,
+      "productName": "grand canyon",
+      "description": "Measuring roughly 277 miles long, 18 miles wide and a mile deep, the Grand Canyon offers plenty of outdoor activities for everyone from day-trippers to adventure junkies. Hike along the national park's popular Rim and Bright Angel trails for unparalleled vistas, cool off with a whitewater rafting excursion down the Colorado River or view the dramatic Arizona landscape from above during a helicopter tour. ",
+      "photo": "../public/img/grand-canyon.jpg",
+      "country": "united states",
+      "continent": "north american",
+      "type": "mountain",
+      "difficulty": "hard"
+    },
+    {
+      "id": 5,
+      "productName": "the basho wayfarer",
+      "description": "Japan boasts numerous ancient trails, connecting temples and cities. This self-guided trip follows a route taken by the poet Matsuo Basho over 300 years ago. The six-day trek starts in Sendai and works its way through the northern Tohoku region, passing through the UNESCO World Heritage Site of Hiraizumi and along the ancient Dewa Kaido path, with its beech and cherry forests, before heading into the mountains of Natagiri-toge and finishing at the temple of Yamadera.",
+      "photo": "../public/img/basho-way.jpg",
+      "country": "japan",
+      "continent": "asian",
+      "type": "mountain",
+      "difficulty": "medium"
+    },
+    {
+      "id": 6,
+      "productName": "lechweg trail",
+      "description": "Starting in the Bavarian town of Fussen, this nine-day route follows the Lechweg river to its source in the Austrian state of Vorarlberg. Passing the royal castles of a King Ludwig II of Bavaria, Germany as well as crystal clear lakes, the trail heads through the Tiroler Lech National Park, a protected area with lush meadows, turquoise water and ibex at every turn.",
+      "photo": "../public/img/lechweg.jpg",
+      "country": "germany, austria",
+      "continent": "europe",
+      "type": "mountain",
+      "difficulty": "hard"
+    },
+    {
+      "id": 7,
+      "productName": "phuket",
+      "description": "Located in southern Thailand, Phuket offers something for everyone, especially budget-minded travelers. Everything from accommodations to spa treatments to boat tours come with a low price tag. For stunning scenery, check out the limestone cliffs of Phang Nga Bay and lounge on Phuket's gorgeous white sand beaches. Other must-sees include Wat Chalong Temple and the Big Buddha. Once the sun sets, take part in the island's lively nightlife scene.",
+      "photo": "../public/img/phuket.jpg",
+      "country": "thailand",
+      "continent": "asian",
+      "type": "tropical"
+    },
+    {
+      "id": 8,
+      "productName": "amsterdam",
+      "description": "Famous museums, tulips, canal-lined streets, 'coffee shops' and high-end boutiques await you in Amsterdam. Here, you can spend your days gazing at Vincent van Gogh paintings, relaxing in Vondelpark and shopping in the Nine Little Streets area. Immerse yourself in Dutch culture by eating raw herring, or satisfy your sweet tooth with stroopwafels. You can also do as the Dutch do and rent a bicycle to tour the city. If you plan on visiting in spring, don't miss the Keukenhof gardens, where you can view millions of colorful flowers. ",
+      "photo": "../public/img/amsterdam.jpg",
+      "country": "netherlands",
+      "continent": "europe",
+      "type": "city-break"
+    }
+
+]
