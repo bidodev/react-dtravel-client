@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { Switch, Route } from "react-router-dom";
-import Intro from './components/intro.component';
 
-const Aside = () => (<div className="aside">Hello Aside</div>)
+import Intro from './components/intro/intro.component';
+import Aside from './components/aside/aside.component';
+
 
 const App = () => {
   return (
     <div className="App">
       <Intro />
-       <Aside /> 
+      <Aside /> 
       {/* <Header />
       <Nav />
       <Search />
