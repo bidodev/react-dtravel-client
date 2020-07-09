@@ -1,23 +1,22 @@
 import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
+import ExperienceItem from './experiences/experience.item.component'
 
-const ExperienceItem = ({ title }) => {
-  return <h1>{title}</h1>;
-};
-const Experiences = () => {
-  const fakeDB = [{ title: "Juca" }, { title: "Jose" }, { title: "Pedro" }];
+
+const Carrousel = ({match}) => {
+    console.log(match)
+
+  const fakeDB = [{ id: 1, title: "Juca" }, {id: 2, title: "Jose" }, {id:3, title: "Pedro" }];
 
   return (
     <div>
-      {fakeDB.map((exp) => (
-        <ExperienceItem {...exp} />
+      {fakeDB.map(({id, ...otherProps}) => (
+          <ExperienceItem key={id}{...otherProps} />
       ))}
       {/* generate the list of experiences */}
     </div>
   );
 };
-const Places = () => <div>Hello Places</div>;
-const Housing = () => <div>Hello Housing</div>;
 
 const Main = () => {
   return (
@@ -31,9 +30,9 @@ const Main = () => {
 
       <div className="aside-main__carrousel">
         <Switch>
-          <Route exact path="/experiences" component={Experiences} />
-          <Route exact path="/places" component={Places} />
-          <Route exact path="/housings" component={Housing} />
+          <Route exact path="/experiences" component={Carrousel} />
+          <Route exact path="/places" component={Carrousel} />
+          <Route exact path="/housings" component={Carrousel} />
         </Switch>
       </div>
     </div>
