@@ -1,5 +1,5 @@
 body{
-  background-color: rgba(20,20,20,0.2);
+  background-color: #000;
 }
 
 .App {
@@ -7,10 +7,10 @@ body{
     display: flex;
     align-items: center;
     border-radius: 20px;
-    height: 85vh;
+    height: 90vh;
     width: 95vw;
-    border: 1px solid red;
-    background-color: rgba(223, 221, 221, 1);
+    border-radius: 50px;
+    border: 10px solid black;
   }
 
   a {
