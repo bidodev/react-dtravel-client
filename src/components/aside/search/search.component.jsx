@@ -3,9 +3,8 @@ import React from 'react'
 function Search() {
     return (
         <div className="aside-search">
-            Search Bar
+            <input type="search" placeholder="Search"/>
         </div>
     )
 }
-
 export default Search
