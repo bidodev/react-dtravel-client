@@ -1,4 +1,5 @@
 import React from "react";
+import OfferEndList from './OfferEndList'
 
 const Intro = () => {
   return (
@@ -24,6 +25,9 @@ const Intro = () => {
         <p>Get inspired</p>
         <ion-icon name="chevron-forward-outline"></ion-icon>
       </div>
+      <div className="offers">
+
+        </div>
     </div>
   );
 };

@@ -7,14 +7,12 @@ const ListItem = (props) => {
 
 export const OfferEndList = (props = offersData) => {
     const offersArr = props.offersArr;
-    const listItems = offersArr.forEach((number) =>
+    const listItems = offersArr.forEach(elem =>
     <ListItem key={elem.toString()} value={elem} />
   );
   return (
-    <div className="offers-list">
-    <ul>
+    <ul className="offers-list">
       {listItems}
     </ul>
-    </div>
   );
 }
