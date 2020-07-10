@@ -3,24 +3,48 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import MainTitle from "./mainTitle/MainTitle.component";
 import Quiz from "./quiz/Quiz.component";
+import Landing from "./landing.component";
+        
+function About() {
+  return (
+      <div className="about">
+        About Component
+      </div>
+  );
+}
 
+function Blog() {
+  return (
+      <div className="blog">
+        Hello Blog
+      </div>
+  );
+}
+
+// About Intro Component
+// Intro is one of the main component along aside.
+// While ASIDE behaves as a navbar INTRO switch componenets inside on demanad.
+
+//The intro CSS Class control the size / border and fallback background of the container only.
+
+//The Main Tittle, About, Blog are dynamic componenets, they will switch inside of the INTRO Component.
 const Intro = () => {
   return (
     <div className="intro">  
       {/* Page change */}
       <div className="pages">
         <Switch>
-          <Route exact path="/">
-            <MainTitle />
-         </Route>
-         <Route exact path="/quiz">
-              <Quiz />
-        </Route>
-      </Switch>
-        </div>
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/quiz" component={Quiz} /> 
+          <Route exact path="/about" component={About} />
+          <Route exact path="/blog" component={Blog} /> 
+       </Switch>
       </div>
+    </div>
   );
 };
 export default Intro;
+
+
+

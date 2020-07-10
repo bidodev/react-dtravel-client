@@ -14,7 +14,10 @@ const Carrousel = ({match}) => {
           <ExperienceItem key={id}{...otherProps} />
       ))}
       {/* generate the list of experiences */}
+      <ion-icon name="chevron-back-outline"></ion-icon>
+      <ion-icon name="chevron-forward-outline"></ion-icon>
     </div>
+
   );
 };
 
