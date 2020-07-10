@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 
-export const MainTitle = () => {
+const MainTitle = () => {
   return (
     <div className="main-title">
         {/* LOGO */}
@@ -16,7 +16,7 @@ export const MainTitle = () => {
           housing in the world
         </h5>
         <Link to="/quiz">
-        <button type="button" class="btn btn-primary btn-lg">
+        <button type="button" className="btn btn-primary btn-lg">
           Start the Quiz
         </button>
         </Link>
@@ -27,5 +27,7 @@ export const MainTitle = () => {
     </div>
   );
 }
+
+export default MainTitle;
 
 

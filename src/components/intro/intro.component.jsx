@@ -1,8 +1,7 @@
 import React from "react";
-import offersData from "../../data.json";
 
-import OfferEndList from './OfferEndList';
-import { MainTitle } from "./MainTitle.component";
+import OfferEndList from './OfferEndList.component';
+import MainTitle from "./MainTitle.component";
 
 const Intro = () => {
   return (
@@ -10,7 +9,7 @@ const Intro = () => {
       {/* Page change */}
       <div className="pages">
         <MainTitle />
-         <OfferEndList offersArr = {offersData}/>
+         <OfferEndList input={null}/>
         </div>
       </div>
   );
