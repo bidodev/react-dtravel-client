@@ -6,7 +6,7 @@ function Header() {
     <div className="aside-header">
       <div className="aside-header__menu">Menu</div>
       <div className="aside-header__nav">
-        <Link to="/discover">Discover</Link>
+        <Link to="/blog">Blog</Link>
         <Link to="/about">About</Link>
         <img src="/img/sophie.jpg" alt="avatar"></img>
       </div>
