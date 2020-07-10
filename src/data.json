@@ -5,10 +5,10 @@
       "description": "What this small island may lack in size it makes up for in sheer tropical beauty. Here, you'll find picturesque beaches, lush jungles and luxurious resorts. The island's dormant volcano, Mount Otemanu, makes for a great photo-op or challenging hike, and the friendly Bora Bora locals can help you catch a glimpse of the island's best sights during an off-road excursion. To relax, head to Matira Beach for crystal-clear water and soft sand. Although a trip to Bora Bora is very expensive, most travelers say it's worth every penny. ",
       "src": "./img/bora-bora.jpg",
       "country": "French Polynesia, France",
-      "continent": "oceania",
+      "continent": "australia and oceania",
       "type": "tropical",
       "difficulty": "easy",
-      "prices": "very high",
+      "prices": "expensive",
       "bestMatch": false
     },
     {
@@ -20,7 +20,7 @@
       "continent": "north america",
       "type": "tropical",
       "difficulty": "easy",
-      "prices": "high",
+      "prices": "expensive",
       "bestMatch": false
     },
     {
@@ -53,7 +53,7 @@
       "description": "Measuring roughly 277 miles long, 18 miles wide and a mile deep, the Grand Canyon offers plenty of outdoor activities for everyone from day-trippers to adventure junkies. Hike along the national park's popular Rim and Bright Angel trails for unparalleled vistas, cool off with a whitewater rafting excursion down the Colorado River or view the dramatic Arizona landscape from above during a helicopter tour. ",
       "src": "./img/grand-canyon.jpg",
       "country": "united states",
-      "continent": "north american",
+      "continent": "north america",
       "type": "mountain",
       "difficulty": "hard",
       "prices": "cheap",
@@ -65,9 +65,10 @@
       "description": "Japan boasts numerous ancient trails, connecting temples and cities. This self-guided trip follows a route taken by the poet Matsuo Basho over 300 years ago. The six-day trek starts in Sendai and works its way through the northern Tohoku region, passing through the UNESCO World Heritage Site of Hiraizumi and along the ancient Dewa Kaido path, with its beech and cherry forests, before heading into the mountains of Natagiri-toge and finishing at the temple of Yamadera.",
       "src": "./img/basho-way.jpg",
       "country": "japan",
-      "continent": "asian",
+      "continent": "asia",
       "type": "mountain",
       "difficulty": "medium",
+      "prices": "expensive",
       "bestMatch": false
     },
     {

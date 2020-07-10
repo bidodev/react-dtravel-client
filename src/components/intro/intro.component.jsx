@@ -1,11 +1,11 @@
 import React from "react";
-
-import OfferEndList from "./OfferEndList.component";
+import {
+  Switch,
+  Route
+} from "react-router-dom";
+import Quiz from "./quiz/Quiz.component";
 import Landing from "./landing.component";
-
-import { Route, Switch } from 'react-router-dom';
-
-
+        
 function About() {
   return (
       <div className="about">
@@ -29,15 +29,18 @@ function Blog() {
 //The intro CSS Class control the size / border and fallback background of the container only.
 
 //The Main Tittle, About, Blog are dynamic componenets, they will switch inside of the INTRO Component.
-
 const Intro = () => {
   return (
-    <div className="intro">
-      <Switch>
-        <Route exact path="/" component={Landing} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/blog" component={Blog} />
-      </Switch>
+    <div className="intro">  
+      {/* Page change */}
+      <div className="pages">
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/quiz" component={Quiz} /> 
+          <Route exact path="/about" component={About} />
+          <Route exact path="/blog" component={Blog} /> 
+       </Switch>
+      </div>
     </div>
   );
 };
@@ -45,8 +48,3 @@ export default Intro;
 
 
 
-//  {/* Page change */}
-//       <div className="pages">
-//         {/* <MainTitle /> */}
-//         {/* <OfferEndList input={null} /> */}
-//       </div>
