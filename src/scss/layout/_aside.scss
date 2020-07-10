@@ -1,14 +1,16 @@
-.aside {
-  width: 35%;
-  height: 100%;
+ .aside {
+   /* grid */
+  /* .aside is fixed for main-about-quiz, but not for Offers */
+  grid-row: 1;
+  grid-column: 2;
+  /*  */
   padding: 0 5px;
-
+  height: 95vh;
   &-header {
     height: 10%;
     display: flex;
     align-items: center;
     width: 100%;
-
     &__menu {
       //border: 1px solid red;
     }

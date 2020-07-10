@@ -1,15 +1,24 @@
 import React from "react";
-
-import OfferEndList from './OfferEndList.component';
-import MainTitle from "./MainTitle.component";
+import {
+  Switch,
+  Route
+} from "react-router-dom";
+import MainTitle from "./mainTitle/MainTitle.component";
+import Quiz from "./quiz/Quiz.component";
 
 const Intro = () => {
   return (
-    <div className="intro">
+    <div className="intro">  
       {/* Page change */}
       <div className="pages">
-        <MainTitle />
-         <OfferEndList input={null}/>
+        <Switch>
+          <Route exact path="/">
+            <MainTitle />
+         </Route>
+         <Route exact path="/quiz">
+              <Quiz />
+        </Route>
+      </Switch>
         </div>
       </div>
   );

@@ -12,7 +12,6 @@ const noOfferMatch = {
 
 const ListItem = (props) => {
   const item = props.value;
-  console.log(item)
     return (
       <div className="offers-item">
         <h3>{item.productName}</h3>
@@ -24,11 +23,11 @@ const ListItem = (props) => {
     );
   }
 
-const OfferEndList = (props) => {
+const OffersEndList = (props) => {
   const input = props.input;
   const offersArr = handleOfferSearch(input, noOfferMatch, offersFullData);
   const listItems = offersArr.map(elem =>
-    <ListItem key={elem.toString()} value={elem} />
+    <ListItem key={elem.id.toString()} value={elem} />
   );
   return (
     <div className="offers">
@@ -39,4 +38,4 @@ const OfferEndList = (props) => {
   );
 }
 
-export default OfferEndList;
+export default OffersEndList;
