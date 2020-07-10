@@ -1,18 +1,19 @@
 import React from 'react';
-import offersData from "../../data.json";
 
 const ListItem = (props) => {
     return <li>{props.value}</li>;
   }
 
-export const OfferEndList = (props = offersData) => {
-    const offersArr = props.offersArr;
+export const OfferEndList = (props = props.offersArr) => {
+    const offersArr = props;
     const listItems = offersArr.forEach(elem =>
     <ListItem key={elem.toString()} value={elem} />
   );
   return (
+    <div className="offers">
     <ul className="offers-list">
       {listItems}
     </ul>
+    </div>
   );
 }

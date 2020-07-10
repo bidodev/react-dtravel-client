@@ -11,7 +11,7 @@ const noOffer = [
 ];
 
 //
-export const handleOfferRequest = input => {
+export const handleOfferSearch = input => {
     //runs when input not an array already as in a quiz case
     const inputArr = input.constructor !== Array ? input.split(' ') : input;
     //prevent empty input treating
