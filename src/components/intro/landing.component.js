@@ -33,7 +33,7 @@ const Landing = () => {
       </div>
 
       {/* onClick make the URL inside imgStyle change, you can pass it with props */}
-      <div className="pages">
+      <div className="pagination">
         <ion-icon name="chevron-back-outline"></ion-icon>
         <p>Get inspired</p>
         <ion-icon name="chevron-forward-outline"></ion-icon>
