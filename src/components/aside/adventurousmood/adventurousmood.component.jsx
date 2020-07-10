@@ -4,7 +4,7 @@ function AdventurousMood() {
   return (
     <div className="aside-adventurous__mood">
       <h3>AdventurousMood</h3>
-      <div>
+      <div className="aside-adventurous__mood-icons">
         <ion-icon name="boat"></ion-icon>
         <ion-icon name="airplane"></ion-icon>
         <ion-icon name="car"></ion-icon>
