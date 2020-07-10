@@ -4,8 +4,16 @@ import { Link } from "react-router-dom";
 import "./landing.title.styles.scss";
 
 const Landing = () => {
+
+  let imgStyle = {
+    backgroundImage: `linear-gradient(
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.5)
+          ), url("./img/landing.jpg")`,
+  };
+
   return (
-    <div className="main-title">
+    <div className="main-title image" style={imgStyle}>
       {/* LOGO */}
       <div className="logo">
         <p> do the travel.</p>
@@ -23,6 +31,8 @@ const Landing = () => {
           </button>
         </Link>
       </div>
+
+      {/* onClick make the URL inside imgStyle change, you can pass it with props */}
       <div className="pages">
         <ion-icon name="chevron-back-outline"></ion-icon>
         <p>Get inspired</p>

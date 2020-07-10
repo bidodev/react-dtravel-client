@@ -50,7 +50,7 @@
   }
 
   &-main {
-    height: 50%;
+    height: 60%;
 
     display: flex;
     flex-direction: column;
@@ -65,15 +65,7 @@
 
     &__carrousel {
         height: 70%;
-        //border: 1px solid black;
-    }
-  }
-
-  &-adventurous__mood {
-    height: 30%;
-
-    &-icons{
-      
+        border: 1px solid black;
     }
   }
 }
