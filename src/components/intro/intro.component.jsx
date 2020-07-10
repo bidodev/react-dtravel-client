@@ -4,7 +4,7 @@ import {
   Route
 } from "react-router-dom";
 import Quiz from "./quiz/Quiz.component";
-import Landing from "./landing.component";
+import Landing from "./landing/landing.component";
         
 function About() {
   return (
@@ -32,15 +32,12 @@ function Blog() {
 const Intro = () => {
   return (
     <div className="intro">  
-      {/* Page change */}
-      <div className="pages">
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route exact path="/quiz" component={Quiz} /> 
           <Route exact path="/about" component={About} />
           <Route exact path="/blog" component={Blog} /> 
        </Switch>
-      </div>
     </div>
   );
 };

@@ -8,6 +8,7 @@ const App = () => (
   <div className="App">
     <Intro />
     <Aside />
+    {/*temporal for tests*/}
     <OffersEndList input={null}/>
   </div>
 );

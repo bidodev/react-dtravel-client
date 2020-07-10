@@ -1,0 +1,17 @@
+.quiz-main {
+    margin-top: 9rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.quiz-list {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    .quiz-item {
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
