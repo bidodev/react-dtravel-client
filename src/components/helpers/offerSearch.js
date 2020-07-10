@@ -1,4 +1,4 @@
-import offerData from "../data.json";
+import offersData from "../../data.json";
 
 //obj to return for no match
 const noOffer = [
@@ -15,7 +15,7 @@ export const handleOfferRequest = input => {
     //runs when input not an array already as in a quiz case
     const inputArr = input.constructor !== Array ? input.split(' ') : input;
     //prevent empty input treating
-    if (!inputArr.length) {return offerData}
+    if (!inputArr.length) {return offersData}
     //tools for data/input request comparing
     resultArr = [];
     //search goes a bit smarter
@@ -24,7 +24,7 @@ export const handleOfferRequest = input => {
     //there is also a simplified version for one item search query (i.e. mood buttons)
     if (inputArr.length === 1) {
         //looping through data at once
-        offerData.forEach(currentOffer => {
+        offersData.forEach(currentOffer => {
             //search assigns every obj a matching rank
             numOfMatches.current = 0;
             inputArr.forEach(searchWord => {
@@ -45,7 +45,7 @@ export const handleOfferRequest = input => {
             max: 5
         }
         //looping through data at once
-        offerData.forEach(currentOffer => {
+        offersData.forEach(currentOffer => {
             //search assigns every obj a matching rank
             numOfMatches.current = 0;
             inputArr.forEach(searchWord => {
@@ -67,7 +67,7 @@ export const handleOfferRequest = input => {
         });
     }
     //if no matches
-    if(resultOfferData.length < 1) {return noOffer}
+    if(resultOffersData.length < 1) {return noOffer}
     //otherwise what we need
     return resultArr;
 }
