@@ -6,6 +6,7 @@ import {
 import Quiz from "./quiz/Quiz.component";
 import Landing from "./landing/landing.component";
         
+// About component, please move to it own file.
 function About() {
   return (
       <div className="about">
@@ -14,6 +15,7 @@ function About() {
   );
 }
 
+//Blog component please move to it own file.
 function Blog() {
   return (
       <div className="blog">

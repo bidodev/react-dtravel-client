@@ -1,14 +1,21 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   return (
     <div className="aside-header">
       <div className="aside-header__menu">Menu</div>
       <div className="aside-header__nav">
-        <Link to="/">Home</Link>
-        <Link to="/blog">Blog</Link>
-        <Link to="/about">About</Link>
+        <NavLink
+          to="/"
+          activeStyle={{
+            fontWeight: "bold",
+          }}
+        >
+          Home
+        </NavLink>
+        <NavLink to="/blog">Blog</NavLink>
+        <NavLink to="/about">About</NavLink>
         <img src="/img/sophie.jpg" alt="avatar"></img>
       </div>
     </div>

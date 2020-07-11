@@ -25,12 +25,19 @@
       width: 50%;
       //border: 1px solid red;
       list-style: none;
-      
+
+
       a{
         color: #181818;
         font-weight: 600;
         font-size: 1rem;
       }
+
+      .active {
+        color: #f75d37;
+        text-decoration: underline;
+  
+        }
 
       img{
         width: 36px;
