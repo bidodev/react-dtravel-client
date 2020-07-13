@@ -1,7 +1,7 @@
 import React from "react";
 
-function ListItem({productName, src, description, continent, prices}) {
 
+function ListItem({productName, src, description, continent, prices}) {
   return (
     <div className="offers-item">
       <h3>{productName}</h3>

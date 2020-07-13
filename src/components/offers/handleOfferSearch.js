@@ -2,6 +2,7 @@
 let numOfCalls = 0;
 const handleOfferSearch = ({input}, defaultItem, fulldata) => {
   numOfCalls++;
+  console.log("numOfCalls " + numOfCalls);
   //prevent empty input treating
   if (input === undefined || input === null) {
     console.log(numOfCalls + ": input is empty");
@@ -17,12 +18,13 @@ const handleOfferSearch = ({input}, defaultItem, fulldata) => {
     max: (max) => max,
     get min() {
       //handles also one word search
-      return inputArr.length === 1 ? 1 : Math.floor((inputArr.length * 2) / 3);
+      return inputArr.length === 1 ? 1 : Math.floor((inputArr.length * 3) / 4);
     },
     current: 0,
   };
   //storage for matches
   const resultObjsArr = [];
+  const controlResultArr = [];
   //treats when the input isn't an array but one item string
   const inputArr = input.constructor !== Array ? input.split(" ") : input;
   //handling string/number case
@@ -48,9 +50,10 @@ const handleOfferSearch = ({input}, defaultItem, fulldata) => {
         const valueToArr = [...value.toString()];
         const spellNumOfMatches = {
           get min() {
-            return valueToArr.length === 1
+            const controlArr = valueToArr.length >= inputElemToArr.length ? valueToArr : inputElemToArr;
+            return controlArr.length === 1
               ? 1
-              : Math.floor((valueToArr.length * 3) / 4);
+              : Math.floor((controlArr.length * 3) / 4);
           },
           current: 0,
         };
@@ -62,14 +65,16 @@ const handleOfferSearch = ({input}, defaultItem, fulldata) => {
         });
       }
         if ((spellNumOfMatches.current >= spellNumOfMatches.min) || (value === inputElem)) {
-          //console.warn(value)
-          //console.warn("PASSED " + inputElem)
+          console.warn(value)
+          console.warn("PASSED " + inputElem)
           numOfMatches.current++;
         }
       }
+      if (controlResultArr.includes(fulldataElem.id)) {return}
       //now checking if current item doesn't fit, fits or fits best
       if (numOfMatches.current === numOfMatches.min) {
         resultObjsArr.push(fulldataElem);
+        controlResultArr.push(fulldataElem.id)
       } else if (
         numOfMatches.current >= numOfMatches.max(5) ||
         numOfMatches.current >= inputArr.length
@@ -78,6 +83,7 @@ const handleOfferSearch = ({input}, defaultItem, fulldata) => {
           fulldataElem["bestMatch"] = true;
         }
         resultObjsArr.push(fulldataElem);
+        controlResultArr.push(fulldataElem.id)
       }
       return;
     });
