@@ -11,7 +11,7 @@ const noOfferMatch = [{
   country: "Neverland",
 }];
 
-const OffersEndList = ({input}) => {
+const OffersEndList = (input) => {
   //grabing the data you need from the state.
   const offersFullData = useSelector(state => state.destinations)
 

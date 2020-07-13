@@ -2,13 +2,13 @@
     {
       "id": 0,
       "productName": "bora bora",
-      "description": "What this small island may lack in size it makes up for in sheer tropical beauty. Here, you'll find picturesque beaches, lush jungles and luxurious resorts. The island's dormant volcano, Mount Otemanu, makes for a great photo-op or challenging hike, and the friendly Bora Bora locals can help you catch a glimpse of the island's best sights during an off-road excursion. To relax, head to Matira Beach for crystal-clear water and soft sand. Although a trip to Bora Bora is very expensive, most travelers say it's worth every penny. ",
+      "description": "What this small island may lack in size it makes up for in sheer tropical beauty. Here, you'll find picturesque beaches, lush jungles and luxurious resorts. The island's dormant volcano, Mount Otemanu, makes for a great photo-op or challenging hike, and the friendly Bora Bora locals can help you catch a glimpse of the island's best sights during an off-road excursion. To relax, head to Matira Beach for crystal-clear water and soft sand. Although a trip to Bora Bora is very high, most travelers say it's worth every penny. ",
       "src": "./img/bora-bora.jpg",
       "country": "French Polynesia, France",
       "continent": "australia and oceania",
       "type": "tropical",
-      "difficulty": "smooth",
-      "prices": "big-budget",
+      "difficulty": "easy",
+      "prices": "high",
       "bestMatch": false
     },
     {
@@ -19,8 +19,8 @@
       "country": "hawaii",
       "continent": "north america",
       "type": "tropical",
-      "difficulty": "smooth",
-      "prices": "big-budget",
+      "difficulty": "easy",
+      "prices": "high",
       "bestMatch": false
     },
     {
@@ -31,8 +31,8 @@
       "country": "italy",
       "continent": "europe",
       "type": "city",
-      "difficulty": "smooth",
-      "prices": "medium",
+      "difficulty": "easy",
+      "prices": "low",
       "bestMatch": false
     },
     {
@@ -43,8 +43,8 @@
       "country": "spain",
       "continent": "europe",
       "type": "city",
-      "difficulty": "smooth",
-      "prices": "medium",
+      "difficulty": "easy",
+      "prices": "low",
       "bestMatch": false
     },
     {
@@ -56,7 +56,7 @@
       "continent": "north america",
       "type": "mountain",
       "difficulty": "hard",
-      "prices": "competitive",
+      "prices": "normal",
       "bestMatch": false
     },
     {
@@ -68,7 +68,7 @@
       "continent": "asia",
       "type": "mountain",
       "difficulty": "medium",
-      "prices": "big-budget",
+      "prices": "high",
       "bestMatch": false
     },
     {
@@ -80,7 +80,7 @@
       "continent": "europe",
       "type": "mountain",
       "difficulty": "hard",
-      "prices": "medium",
+      "prices": "low",
       "bestMatch": false
     },
     {
@@ -92,7 +92,7 @@
       "continent": "asia",
       "type": "tropical",
       "difficulty": "medium",
-      "prices": "competitive",
+      "prices": "normal",
       "bestMatch": false
     },
     {
@@ -103,7 +103,7 @@
       "country": "netherlands",
       "continent": "europe",
       "type": "city",
-      "prices": "medium",
+      "prices": "low",
       "bestMatch": false
     }
 
