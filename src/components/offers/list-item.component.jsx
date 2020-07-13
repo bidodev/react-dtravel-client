@@ -1,7 +1,6 @@
 import React from 'react'
 
 function ListItem(props) {
-  console.log(props)
     const {productName, src, description, continent, prices} = props.value;
 
     return (
