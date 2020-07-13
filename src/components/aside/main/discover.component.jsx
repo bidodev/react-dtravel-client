@@ -32,8 +32,8 @@ const Main = () => {
         {otherArr.map(({...item}) => (<ExperienceItem {...item}/>))}
       </div>
       <div className="pagination">
-        <ion-icon name="chevron-back-outline" onClick={handlePage}></ion-icon>
-        <ion-icon name="chevron-forward-outline" onClick={handlePage}></ion-icon>
+{/*         <ion-icon name="chevron-back-outline" onClick={handlePage}></ion-icon>
+        <ion-icon name="chevron-forward-outline" onClick={handlePage}></ion-icon> */}
       </div>
     </div>
   );

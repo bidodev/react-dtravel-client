@@ -3,43 +3,43 @@
     "id": "continent",
     "question": "Where would you like to go?",
     "variants": [
-      "north america",
-      "south america",
-      "australia and oceania",
-      "africa",
-      "europe",
-      "middle east",
-      "asia",
-      "antarctica"
+      "North America",
+      "South America",
+      "Australia and Oceania",
+      "Africa",
+      "Europe",
+      "Middle East",
+      "Asia",
+      "Antarctica"
   ]
   },
   {
       "id": "prices",
       "question": "And what about the price...:",
       "variants": [
-        "competitive",
-        "moderate",
-        "big-budget"
+        "low",
+        "normal",
+        "high"
     ]
     },
     {
-      "id": "mood",
+      "id": "Mood",
       "question": "What fits your style better:",
       "variants": [
-        "boat",
-        "airplane",
-        "car",
-        "bicycle",
-        "on foot"
+        "Boat",
+        "Airplane",
+        "Car",
+        "Bicycle",
+        "On foot"
     ]
     },
     {
       "id": "difficulty",
       "question": "Cozy or challenging?",
       "variants": [
-        "effortless",
-        "smooth",
-        "average",
+        "easy",
+        "medium",
+        "hard",
         "extreme"
     ]
     },
@@ -50,7 +50,7 @@
         "tropical",
         "city",
         "mountain",
-        "river or lake"
+        "river"
     ]
     }
 ]
