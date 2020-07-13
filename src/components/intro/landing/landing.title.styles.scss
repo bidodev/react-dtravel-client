@@ -20,10 +20,10 @@
 
   .logo {
     width: 20vw;
-    height: 10%;
+    height: 35%;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     font-family: "Nunito", sans-serif;
     p {
       font-size: 1.6vw;
@@ -33,11 +33,12 @@
     }
   }
   .content {
+    //border: 1px solid red;
     width: 55vw;
-    height: 65%;
+    height: 40%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     padding-left: 5vw;
     & :first-child,
     & :nth-child(2) {
@@ -53,6 +54,7 @@
     }
   }
   .pagination {
+    height: 40%;
     width: 25vw;
     padding-left: 5vw;
     display: flex;
@@ -66,6 +68,10 @@
     ion-icon {
       font-size: 2vw;
       --ionicon-stroke-width: 20px;
+      &:hover{
+        cursor: pointer;
+        opacity: 0.5;
+      }
     }
   }
 }
