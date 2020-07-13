@@ -28,15 +28,15 @@ const handleOfferSearch = ({input}, defaultItem, fulldata) => {
   const inputArr = input.constructor !== Array ? input.split(" ") : input;
   //handling string/number case
   fulldata = fulldata.constructor !== Array ? fulldata.split(" ") : fulldata;
-  //checking every item {currentObj} in offers.db how it meets the query input
-
+  //first, handling a loop for an outer cycle, JSON/array of objects
   fulldata.forEach((fulldataElem) => {
+      //checking every item {currentObj} in offers.db how it meets the query input
     inputArr.forEach((inputElem) => {
     inputElem = inputElem.toLowerCase();
     const inputElemToArr = [...inputElem];
     //handleSearch assigns every obj a matching rank
     let fulldataElemToArr = fulldataElem;
-    //first, handling a loop for an outer cycle, JSON/array of objects
+    
     if (fulldataElem.constructor === Object) {
       fulldataElemToArr = Object.entries(fulldataElem);
     }
@@ -57,11 +57,23 @@ const handleOfferSearch = ({input}, defaultItem, fulldata) => {
         current: 0,
       };
       if (inputElemToArr[0] === valueToArr[0]) {
-      inputElemToArr.forEach((inputLetter) => {
-        if (valueToArr.includes(inputLetter)) {
-          spellNumOfMatches.current++;
-        }
+        const valueStringToArr = value.split(" ");
+      if (valueStringToArr.length > 1) {
+        valueStringToArr.forEach(elem => {
+          elem = [...elem.toString()];
+          inputElemToArr.forEach((inputLetter) => {
+            if (elem.includes(inputLetter)) {
+              spellNumOfMatches.current++;
+            }
+        });
       });
+      } else {
+        inputElemToArr.forEach((inputLetter) => {
+          if (valueToArr.includes(inputLetter)) {
+            spellNumOfMatches.current++;
+          }
+        });
+      }
     }
     console.log("input " + inputElem)
     console.log("value " + value)
@@ -89,13 +101,6 @@ const handleOfferSearch = ({input}, defaultItem, fulldata) => {
       }
   numOfMatches.current = 0;
 });
-
-
-
-
-
-
-
 /*   inputArr.forEach((inputElem) => {
     inputElem = inputElem.toLowerCase();
     const inputElemToArr = [...inputElem];
@@ -162,6 +167,9 @@ const handleOfferSearch = ({input}, defaultItem, fulldata) => {
   //if nothing matches
   if (resultObjsArr.length < 1) {
     return defaultItem;
+  }
+  if (resultObjsArr.length === 1) {
+    resultObjsArr[0]["bestMatch"] = true;
   }
   //otherwise what we need
   console.log(resultObjsArr)

@@ -14,7 +14,7 @@ const App = () => {
       <Intro />
       <Aside />
       {/*temporal for tests*/}
-      <OffersEndList input={"bor bora"} />
+      <OffersEndList input={input} />
     </div>
   )
 };
