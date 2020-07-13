@@ -9,6 +9,10 @@
     //border: 1px solid teal;
     display: flex;
     justify-content: space-evenly;
+
+    &:hover{
+      opacity: 0.8;
+    }
   }
 
   ion-icon {
