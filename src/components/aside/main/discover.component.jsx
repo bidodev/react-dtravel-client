@@ -30,6 +30,9 @@ const Main = () => {
       <div className="aside-main__carrousel">
         <Carrousel />
          <Carrousel />
+         <Carrousel />
+         <Carrousel />
+         <Carrousel />
       </div>
     </div>
   );
