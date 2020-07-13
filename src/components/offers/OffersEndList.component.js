@@ -1,41 +1,32 @@
-import React from 'react';
-import offersFullData from "../../data.json";
-import handleOfferSearch from "./handleOfferSearch"
+import React from "react";
+import handleOfferSearch from "./handleOfferSearch";
+import { useSelector } from 'react-redux';
+import ListItem from './list-item.component'
 
 //obj to return for no match
 const noOfferMatch = {
-  "id": 404,
-  "description": "Try one more time",
-  "photo": "../public/img/404.jpg",
-  "country": "Neverland"
-}
-
-const ListItem = (props) => {
-  const item = props.value;
-    return (
-      <div className="offers-item">
-        <h3>{item.productName}</h3>
-        <img src = {item.src} alt = {item.productName}/>
-    <p>{item.description}</p>
-    <p>Continent: {item.continent}</p>
-    <p>Prices: {item.prices}</p>
-    </div>
-    );
-  }
+  id: 404,
+  description: "Try one more time",
+  photo: "../public/img/404.jpg",
+  country: "Neverland",
+};
 
 const OffersEndList = (props) => {
+  
+  //grabing the data you need from the state.
+  const offersFullData = useSelector(state => state.destinations)
+
   const input = props.input;
   const offersArr = handleOfferSearch(input, noOfferMatch, offersFullData);
-  const listItems = offersArr.map(elem =>
+  const listItems = offersArr.map((elem) => (
     <ListItem key={elem.id.toString()} value={elem} />
-  );
+  ));
   return (
     <div className="offers">
-    <ul className="offers-list">
-      {listItems}
-    </ul>
+      <ul className="offers-list">{listItems}</ul>
     </div>
   );
-}
+};
+
 
 export default OffersEndList;
