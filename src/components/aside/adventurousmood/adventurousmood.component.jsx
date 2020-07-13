@@ -1,5 +1,5 @@
 import React from "react";
-import './adventurousmood.component.scss'
+import "./adventurousmood.component.scss";
 
 function AdventurousMood() {
   return (
