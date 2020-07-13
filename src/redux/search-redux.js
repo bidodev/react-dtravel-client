@@ -1,7 +1,14 @@
-const searchReducer = (state = null, action) => {
+const INITIAL_STATE = {
+    input: null
+}
+
+const searchReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case 'UPDATE_INPUT':
-            return state = action.payload;
+            return {
+                ...state,
+                input: action.payload
+            };
         default:
             return state;
     }

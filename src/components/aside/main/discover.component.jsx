@@ -8,7 +8,11 @@ const Carrousel = ({ match }) => {
   const arrayItems = offersFullData.length;
   const randIndex = Math.floor(Math.random() * arrayItems);
 
+  //stupid fix by now..
   const randomOffer = offersFullData[randIndex];
+
+  //get more photos of randomOffer
+
 
   return (
     <div>
@@ -18,11 +22,13 @@ const Carrousel = ({ match }) => {
       <ion-icon name="chevron-back-outline"></ion-icon>
       <ion-icon name="chevron-forward-outline"></ion-icon>
       */}
+      
     </div>
   );
 };
 
 const Main = () => {
+  console.log("reRender Main()")
   return (
     <div className="aside-main">
       <h1>Discover</h1>

@@ -1,6 +1,6 @@
 //
 let numOfCalls = 0;
-const handleOfferSearch = (input, defaultItem, fulldata) => {
+const handleOfferSearch = ({input}, defaultItem, fulldata) => {
   numOfCalls++;
   //prevent empty input treating
   if (input === undefined || input === null) {
