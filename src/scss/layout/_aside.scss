@@ -1,5 +1,5 @@
- .aside {
-   /* grid */
+.aside {
+  /* grid */
   /* .aside is fixed for main-about-quiz, but not for Offers */
   grid-row: 1;
   grid-column: 2;
@@ -8,27 +8,28 @@
   background-color: #fff;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
+  height: 95vh;
 
   &-header {
     height: 10%;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     &__menu {
-    
+      ion-icon {
+        font-size: 1.6rem;
+      }
     }
 
     &__nav {
-      margin-left: auto;
       display: flex;
       align-items: center;
       justify-content: space-evenly;
       width: 50%;
-      //border: 1px solid red;
       list-style: none;
 
-
-      a{
+      a {
         color: #181818;
         font-weight: 600;
         font-size: 1rem;
@@ -37,10 +38,9 @@
       .active {
         color: #f75d37;
         text-decoration: underline;
-  
-        }
+      }
 
-      img{
+      img {
         width: 36px;
         height: 36px;
         border-radius: 50%;
@@ -54,6 +54,19 @@
     height: 10%;
     input {
       width: 90%;
+      border: none;
+      border-bottom: 1px solid gray;
+      font-size: 1vw;
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: grey;
+      }
+      //   &::-webkit-search-cancel-button{
+      //     color:grey;
+      //     background-color: grey;
+      // }
     }
   }
 
@@ -63,26 +76,26 @@
     flex-direction: column;
     justify-content: space-around;
 
-    h1{
+    h1 {
       color: #f75d37;
     }
 
     &__nav {
       width: 55%;
       display: flex;
-      justify-content:space-between;
-      color: #303030
+      justify-content: space-between;
+      color: #303030;
     }
 
     &__carrousel {
-        height: 90%;
+      height: 90%;
     }
   }
-  
+
   .about {
     color: red;
   }
-  
+
   .blog {
     color: red;
   }
