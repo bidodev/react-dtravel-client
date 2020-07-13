@@ -101,69 +101,6 @@ const handleOfferSearch = ({input}, defaultItem, fulldata) => {
       }
   numOfMatches.current = 0;
 });
-/*   inputArr.forEach((inputElem) => {
-    inputElem = inputElem.toLowerCase();
-    const inputElemToArr = [...inputElem];
-    fulldata.forEach((fulldataElem) => {
-      //handleSearch assigns every obj a matching rank
-      let fulldataElemToArr = fulldataElem;
-      //first, handling a loop for an outer cycle, JSON/array of objects
-      if (fulldataElem.constructor === Object) {
-        fulldataElemToArr = Object.entries(fulldataElem);
-      }
-      //now we are inside of an Object
-      for (let [key, value] of fulldataElemToArr) {
-        if (key === "description" || key === "src" || key === "bestMatch") {
-          continue;
-        }
-        //same idea for spellCheck
-        const valueToArr = [...value.toString()];
-        const spellNumOfMatches = {
-          get min() {
-            const controlArr = valueToArr.length >= inputElemToArr.length ? valueToArr : inputElemToArr;
-            return controlArr.length === 1
-              ? 1
-              : Math.floor((controlArr.length * 3) / 4);
-          },
-          current: 0,
-        };
-        if (inputElemToArr[0] === valueToArr[0]) {
-        inputElemToArr.forEach((inputLetter) => {
-          if (valueToArr.includes(inputLetter)) {
-            spellNumOfMatches.current++;
-          }
-        });
-      }
-      console.log("input " + inputElem)
-      console.log("value " + value)
-      console.warn("spellNumOfMatches.c " + spellNumOfMatches.current)
-        if ((spellNumOfMatches.current >= spellNumOfMatches.min) || (value === inputElem)) {
-          console.warn(value)
-          console.warn("PASSED " + inputElem)
-          numOfMatches.current++;
-        }
-      }
-      console.warn("current " + numOfMatches.current)
-      console.log("min " + numOfMatches.min)
-      if (controlResultArr.includes(fulldataElem.id)) {return}
-      //now checking if current item doesn't fit, fits or fits best
-      if (numOfMatches.current === numOfMatches.min) {
-        resultObjsArr.push(fulldataElem);
-        controlResultArr.push(fulldataElem.id)
-      } else if (
-        numOfMatches.current >= numOfMatches.min ||
-        numOfMatches.current >= inputArr.length
-      ) {
-        if (fulldataElem.constructor === Object) {
-          fulldataElem["bestMatch"] = true;
-        }
-        resultObjsArr.push(fulldataElem);
-        controlResultArr.push(fulldataElem.id)
-      }
-      numOfMatches.current = 0;
-      return;
-    });
-  }); */
   //if nothing matches
   if (resultObjsArr.length < 1) {
     return defaultItem;
