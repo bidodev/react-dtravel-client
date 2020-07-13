@@ -4,13 +4,19 @@ import Intro from "./components/intro/intro.component";
 import Aside from "./components/aside/aside.component";
 import OffersEndList from './components/offers/OffersEndList.component';
 
-const App = () => (
-  <div className="App">
-    <Intro />
-    <Aside />
-    {/*temporal for tests*/}
-    <OffersEndList input={null}/>
-  </div>
-);
+import { useSelector } from "react-redux";
+
+const App = () => {
+  const input = useSelector((state) => state.searchInput);
+  return(
+  
+    <div className="App">
+      <Intro />
+      <Aside />
+      {/*temporal for tests*/}
+      <OffersEndList input={input} />
+    </div>
+  )
+};
 
 export default App;

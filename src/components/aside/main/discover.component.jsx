@@ -1,23 +1,24 @@
 import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
-import ExperienceItem from './experiences/experience.item.component'
+import { Switch, Route, NavLink } from "react-router-dom";
+import ExperienceItem from "./experiences/experience.item.component";
+import { useSelector } from "react-redux";
 
+const Carrousel = ({ match }) => {
+  const offersFullData = useSelector((state) => state.destinations);
 
-const Carrousel = ({match}) => {
-    console.log(match)
+  const arrayItems = offersFullData.length;
+  const randIndex = Math.floor(Math.random() * arrayItems);
 
-  const fakeDB = [{ id: 1, title: "Juca" }, {id: 2, title: "Jose" }, {id:3, title: "Pedro" }];
+  const randomOffer = offersFullData[randIndex];
 
   return (
     <div>
-      {fakeDB.map(({id, ...otherProps}) => (
-          <ExperienceItem key={id}{...otherProps} />
-      ))}
+      {<ExperienceItem {...randomOffer} />}
+
       {/* generate the list of experiences */}
       <ion-icon name="chevron-back-outline"></ion-icon>
       <ion-icon name="chevron-forward-outline"></ion-icon>
     </div>
-
   );
 };
 
@@ -26,15 +27,17 @@ const Main = () => {
     <div className="aside-main">
       <h1>Discover</h1>
       <nav className="aside-main__nav">
-        <Link to="/experiences">Experiences</Link>
-        <Link to="/places">Places</Link>
-        <Link to="/housings">Housings</Link>
+        <NavLink to="/experiences">Experiences</NavLink>
+        <NavLink to="/discover/places">Places</NavLink>
+        <NavLink to="/housings">Housings</NavLink>
       </nav>
 
       <div className="aside-main__carrousel">
         <Switch>
-          <Route exact path="/experiences" component={Carrousel} />
-          <Route exact path="/places" component={Carrousel} />
+          <Route exact path="/">
+            <Carrousel />
+          </Route>
+          <Route exact path="/discover/places" component={Carrousel} />
           <Route exact path="/housings" component={Carrousel} />
         </Switch>
       </div>

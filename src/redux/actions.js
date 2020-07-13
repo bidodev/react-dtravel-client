@@ -1,5 +1,6 @@
 const testAction = (status) => ({
   type: "TEST_ACTION",
-  payload: status
+  payload: status,
 });
-export default testAction;
+
+export default {testAction};
