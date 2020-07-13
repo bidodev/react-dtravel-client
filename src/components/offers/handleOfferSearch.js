@@ -55,7 +55,6 @@ const handleOfferSearch = (input, defaultItem, fulldata) => {
           current: 0,
         };
         if (inputElemToArr[0] === valueToArr[0]) {
-          console.warn("FIRST")
         inputElemToArr.forEach((inputLetter) => {
           if (valueToArr.includes(inputLetter)) {
             spellNumOfMatches.current++;
