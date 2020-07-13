@@ -1,62 +1,56 @@
 [
-    {
-      "id": "continent",
-      "question": "Where you like to go?",
+  {
+    "id": "continent",
+    "question": "Where would you like to go?",
+    "variants": [
+      "north america",
+      "south america",
+      "australia and oceania",
+      "africa",
+      "europe",
+      "middle east",
+      "asia",
+      "antarctica"
+  ]
+  },
+  {
+      "id": "prices",
+      "question": "And what about the price...:",
       "variants": [
-        "north america",
-        "latin america",
-        "south america",
-        "australia and oceania",
-        "africa",
-        "west europe",
-        "east europe",
-        "near east",
-        "india",
-        "far east",
-        "arctic"
+        "competitive",
+        "moderate",
+        "big-budget"
     ]
     },
     {
-        "id": "prices",
-        "question": "And what about price...",
-        "variants": [
-          "very cheap",
-          "cheap",
-          "medium",
-          "expensive"
-      ]
-      },
-      {
-        "id": "mood",
-        "question": "Just what fits your style:",
-        "variants": [
-          "boat",
-          "airplane",
-          "car",
-          "bicycle",
-          "on foot"
-      ]
-      },
-      {
-        "id": "difficulty",
-        "question": "Cozy or challenging?",
-        "variants": [
-          "very easy",
-          "easy",
-          "medium",
-          "high"
-      ]
-      },
-      {
-        "id": "type",
-        "question": "River or sea?",
-        "variants": [
-          "tropical",
-          "city",
-          "mountain",
-          "river or lake",
-          "sea or ocean",
-          "wood"
-      ]
-      }
+      "id": "mood",
+      "question": "What fits your style better:",
+      "variants": [
+        "boat",
+        "airplane",
+        "car",
+        "bicycle",
+        "on foot"
+    ]
+    },
+    {
+      "id": "difficulty",
+      "question": "Cozy or challenging?",
+      "variants": [
+        "effortless",
+        "smooth",
+        "average",
+        "extreme"
+    ]
+    },
+    {
+      "id": "type",
+      "question": "City-life or out in the nature?",
+      "variants": [
+        "tropical",
+        "city",
+        "mountain",
+        "river or lake"
+    ]
+    }
 ]
