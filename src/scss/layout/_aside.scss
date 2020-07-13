@@ -53,6 +53,7 @@
     align-items: center;
     height: 10%;
     input {
+      margin-left: 1vw;
       width: 90%;
       border: none;
       border-bottom: 1px solid gray;
@@ -70,25 +71,22 @@
     }
   }
 
-  &-main {
+  .aside-main {
     height: 60%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
     h1 {
+      margin-left: 1vw;
       color: #f75d37;
     }
 
-    &__nav {
-      width: 55%;
-      display: flex;
-      justify-content: space-between;
-      color: #303030;
-    }
-
     &__carrousel {
-      height: 90%;
+      margin-left: 1vw;
+      height: 80%;
+      display: flex;
+      overflow-x: scroll;
     }
   }
 
