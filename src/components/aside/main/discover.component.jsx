@@ -29,6 +29,7 @@ const Main = () => {
 
       <div className="aside-main__carrousel">
         <Carrousel />
+         <Carrousel />
       </div>
     </div>
   );
