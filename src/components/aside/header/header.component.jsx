@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 function Header() {
   return (
     <div className="aside-header">
-      <div className="aside-header__menu">Menu</div>
+      <div className="aside-header__menu"><ion-icon name="grid-outline"></ion-icon></div>
       <div className="aside-header__nav">
         <NavLink
           to="/"

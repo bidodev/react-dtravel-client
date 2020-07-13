@@ -1,18 +1,20 @@
-body{
+body {
   background-color: #000;
-}
- 
-.App {
-    display: grid;
-    grid-template-rows: 100vh 100vh;
-    grid-template-columns: 70vw 30vw;
-  }
-
-  a {
-    text-decoration: none;
-    color: #606060;
-  }
-  
-body{
   overflow-x: hidden;
+}
+
+.App {
+  margin: 2vh 1vw;
+  display: grid;
+  grid-template-rows: 100vh 100vh;
+  grid-template-columns: 70vw 27vw;
+  border-radius: 20px;
+  border: 1px solid black;
+
+  
+}
+
+a {
+  text-decoration: none;
+  color: #606060;
 }
