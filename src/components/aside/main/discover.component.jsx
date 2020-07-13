@@ -12,7 +12,7 @@ const Carrousel = ({ match }) => {
   const randomOffer = offersFullData[randIndex];
 
   //get more photos of randomOffer
-
+  
 
   return (
     <div>
