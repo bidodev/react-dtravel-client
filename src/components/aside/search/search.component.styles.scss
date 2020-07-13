@@ -1,0 +1,39 @@
+.aside-search {
+    display: flex;
+    align-items: center;
+    height: 10%;
+    
+
+    span {
+        transform: translateX(+2rem);
+        z-index: 3;
+      }
+
+    input {
+      margin-left: 1vw;
+      width: 23vw;
+      border: none;
+      border-bottom: 1px solid #303030;
+      font-size: 0.8vw;
+      text-indent: 1rem;
+
+      &:focus {
+        outline: none;
+      }
+      &::placeholder {
+        color: grey;
+      }
+       &::-webkit-search-cancel-button{
+       color:grey;
+        background-color: grey;
+      }
+    }
+}
+ion-icon {
+    position: relative;
+    color: rgb(142, 142, 142);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+
+  }

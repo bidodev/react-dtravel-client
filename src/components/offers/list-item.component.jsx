@@ -1,8 +1,7 @@
 import React from "react";
 
-function ListItem(props) {
-    const {productName, src, description, continent, prices} = props.value;
 
+function ListItem({productName, src, description, continent, prices}) {
   return (
     <div className="offers-item">
       <h3>{productName}</h3>

@@ -5,22 +5,29 @@ import { useSelector } from "react-redux";
 import "./landing.title.styles.scss";
 
 const Landing = () => {
-  const [index, setIndex] = useState(0);
+  const [img, setImg] = useState(0);
 
   const offersFullData = useSelector((state) => state.destinations);
   const Urls = offersFullData.map((item) => item.src);
 
   const handleImg = () => {
-    const arrayItems = offersFullData.length;
-    const randIndex = Math.floor(Math.random() * arrayItems);
-    setIndex(randIndex);
+    const arrayItems = offersFullData.length - 1;
+    let numberImg = 0;
+
+    if (img >= (arrayItems)) {
+      setImg(0);
+    } else {
+      numberImg = img + 1;
+      setImg(numberImg);
+    }
+    
   };
 
   let imgStyle = {
     backgroundImage: `linear-gradient(
-            rgba(0, 0, 0, 0.2),
-            rgba(0, 0, 0, 0.5)
-          ), url("${Urls[index]}")`,
+            rgba(0, 0, 0, 0.4),
+            rgba(0, 0, 0, 0.8)
+          ), url("${Urls[img]}")`,
   };
 
   return (
