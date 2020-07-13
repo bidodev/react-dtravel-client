@@ -4,7 +4,7 @@ import "./adventurousmood.component.scss";
 function AdventurousMood() {
   return (
     <div className="aside-adventurous__mood">
-      <h4>Adventurous Mood</h4>
+      <h3>Adventurous Mood</h3>
       <div className="aside-adventurous__mood-icons">
         <ion-icon name="boat"></ion-icon>
         <ion-icon name="airplane"></ion-icon>
