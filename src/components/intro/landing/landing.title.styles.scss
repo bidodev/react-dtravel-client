@@ -51,7 +51,7 @@
   }
   .pagination {
     width: 25vw;
-    align-self: center;
+    padding-left: 5vw;
     display: flex;
     align-items: center;
 
@@ -61,8 +61,8 @@
       margin: 0 2vw;
     }
     ion-icon {
-      font-size: 3vw;
-      --ionicon-stroke-width: 26px;
+      font-size: 2vw;
+      --ionicon-stroke-width: 20px;
     }
   }
 }
