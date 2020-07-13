@@ -26,20 +26,9 @@ const Main = () => {
   return (
     <div className="aside-main">
       <h1>Discover</h1>
-      <nav className="aside-main__nav">
-        <NavLink to="/experiences">Experiences</NavLink>
-        <NavLink to="/discover/places">Places</NavLink>
-        <NavLink to="/housings">Housings</NavLink>
-      </nav>
 
       <div className="aside-main__carrousel">
-        <Switch>
-          <Route exact path="/">
-            <Carrousel />
-          </Route>
-          <Route exact path="/discover/places" component={Carrousel} />
-          <Route exact path="/housings" component={Carrousel} />
-        </Switch>
+        <Carrousel />
       </div>
     </div>
   );

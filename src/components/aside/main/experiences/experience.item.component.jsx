@@ -38,9 +38,6 @@ class Card extends Component {
               <li>
                 <span>{description}</span>
               </li>
-              <li>
-                <span></span>
-              </li>
             </div>
           )}
         </div>
