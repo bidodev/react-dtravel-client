@@ -1,5 +1,4 @@
 import React from "react";
-import { Switch, Route, NavLink } from "react-router-dom";
 import ExperienceItem from "./experiences/experience.item.component";
 import { useSelector } from "react-redux";
 
@@ -15,9 +14,10 @@ const Carrousel = ({ match }) => {
     <div>
       {<ExperienceItem {...randomOffer} />}
 
-      {/* generate the list of experiences */}
+      {/* generate the list of experiences 
       <ion-icon name="chevron-back-outline"></ion-icon>
       <ion-icon name="chevron-forward-outline"></ion-icon>
+      */}
     </div>
   );
 };
