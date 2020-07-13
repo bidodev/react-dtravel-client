@@ -4,12 +4,12 @@ import { useSelector } from 'react-redux';
 import ListItem from './list-item.component'
 
 //obj to return for no match
-const noOfferMatch = {
+const noOfferMatch = [{
   id: 404,
   description: "Try one more time",
   photo: "../public/img/404.jpg",
   country: "Neverland",
-};
+}];
 
 const OffersEndList = (props) => {
   

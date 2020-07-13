@@ -9,7 +9,7 @@ const App = () => (
     <Intro />
     <Aside />
     {/*temporal for tests*/}
-    <OffersEndList input={null}/>
+    <OffersEndList input={"tropcal eas"}/>
   </div>
 );
 
