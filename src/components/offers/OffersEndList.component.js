@@ -11,12 +11,10 @@ const noOfferMatch = [{
   country: "Neverland",
 }];
 
-const OffersEndList = (props) => {
-  
+const OffersEndList = ({input}) => {
   //grabing the data you need from the state.
   const offersFullData = useSelector(state => state.destinations)
 
-  const input = props.input;
   const offersArr = handleOfferSearch(input, noOfferMatch, offersFullData);
   const listItems = offersArr.map((elem) => (
     <ListItem key={elem.id.toString()} value={elem} />
