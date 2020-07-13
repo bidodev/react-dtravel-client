@@ -27,6 +27,9 @@
     font-family: "Nunito", sans-serif;
     p {
       font-size: 1.6vw;
+      span{
+        color:#f75d37 ;
+      }
     }
   }
   .content {
@@ -44,7 +47,7 @@
     .btn {
       background-color: #f75d37;
       border: none;
-      width: 10vw;
+      width: 20vw;
       margin-top: 2vh;
       text-align: center;
     }

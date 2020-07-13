@@ -27,7 +27,8 @@ const Landing = () => {
     <div className="main-title image" style={imgStyle}>
       {/* LOGO */}
       <div className="logo">
-        <p> do the travel.</p>
+        <p> do the travel
+          <span>.</span></p>
       </div>
       {/* Content part */}
       <div className="content">
