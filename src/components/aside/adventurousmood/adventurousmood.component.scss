@@ -5,23 +5,23 @@
   flex-direction: column;
   justify-content: space-around;
 
+  h3 {
+    margin-left: 1vw;
+    color: #f75d37;
+  }
   &-icons {
     //border: 1px solid teal;
     display: flex;
     justify-content: space-evenly;
-
-    &:hover{
-      opacity: 0.8;
-    }
   }
 
   ion-icon {
     font-size: 3vw;
     color: #303030;
     --ionicon-stroke-width: 26px;
-  }
-
-  h4{
-    color: #f75d37;
+    &:hover {
+      opacity: 0.8;
+      color: #f75d37;
+    }
   }
 }

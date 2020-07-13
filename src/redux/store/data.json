@@ -7,8 +7,8 @@
       "country": "French Polynesia, France",
       "continent": "australia and oceania",
       "type": "tropical",
-      "difficulty": "easy",
-      "prices": "expensive",
+      "difficulty": "smooth",
+      "prices": "big-budget",
       "bestMatch": false
     },
     {
@@ -19,8 +19,8 @@
       "country": "hawaii",
       "continent": "north america",
       "type": "tropical",
-      "difficulty": "easy",
-      "prices": "expensive",
+      "difficulty": "smooth",
+      "prices": "big-budget",
       "bestMatch": false
     },
     {
@@ -31,7 +31,7 @@
       "country": "italy",
       "continent": "europe",
       "type": "city",
-      "difficulty": "easy",
+      "difficulty": "smooth",
       "prices": "medium",
       "bestMatch": false
     },
@@ -43,7 +43,7 @@
       "country": "spain",
       "continent": "europe",
       "type": "city",
-      "difficulty": "easy",
+      "difficulty": "smooth",
       "prices": "medium",
       "bestMatch": false
     },
@@ -56,7 +56,7 @@
       "continent": "north america",
       "type": "mountain",
       "difficulty": "hard",
-      "prices": "cheap",
+      "prices": "competitive",
       "bestMatch": false
     },
     {
@@ -68,7 +68,7 @@
       "continent": "asia",
       "type": "mountain",
       "difficulty": "medium",
-      "prices": "expensive",
+      "prices": "big-budget",
       "bestMatch": false
     },
     {
@@ -92,7 +92,7 @@
       "continent": "asia",
       "type": "tropical",
       "difficulty": "medium",
-      "prices": "cheap",
+      "prices": "competitive",
       "bestMatch": false
     },
     {

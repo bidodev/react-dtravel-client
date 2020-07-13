@@ -1,6 +1,6 @@
 //
 let numOfCalls = 0;
-const handleOfferSearch = (input, defaultItem, fulldata) => {
+const handleOfferSearch = ({input}, defaultItem, fulldata) => {
   numOfCalls++;
   console.log("numOfCalls " + numOfCalls);
   //prevent empty input treating
