@@ -6,11 +6,11 @@ function AdventurousMood() {
     <div className="aside-adventurous__mood">
       <h3>Adventurous Mood</h3>
       <div className="aside-adventurous__mood-icons">
-        <ion-icon name="boat"></ion-icon>
-        <ion-icon name="airplane"></ion-icon>
-        <ion-icon name="car"></ion-icon>
-        <ion-icon name="caret-up"></ion-icon>
+        <ion-icon name="sunny-outline"></ion-icon>
+        <ion-icon name="snow-outline"></ion-icon>
+        <ion-icon name="map-outline"></ion-icon>
         <ion-icon name="bicycle"></ion-icon>
+        <ion-icon name="business-outline"></ion-icon>
       </div>
     </div>
   );
