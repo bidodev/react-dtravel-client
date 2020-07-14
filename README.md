@@ -2,9 +2,9 @@
 
 
 ## Preview:
-
+<!-- 
 ![Imgur](https://i.imgur.com/9b9LoTl.jpg)
-![Imgur](https://i.imgur.com/vvNDogo.jpg)
+![Imgur](https://i.imgur.com/vvNDogo.jpg) -->
 
 # Roadmap
 ### Stage 0  
