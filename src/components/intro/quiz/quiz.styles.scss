@@ -64,3 +64,18 @@ ul {
     margin-block-end: 0;
     list-style: none;
 } 
+
+    label  {
+        input[type="radio"]:checked & {
+            background-color: rgb(184, 75, 32);
+            color:white;
+        }
+      }
+input {
+    margin: .4rem;
+}
+ label {
+     padding-left: .5rem;
+     padding-right: .5rem;
+    cursor: pointer;
+}

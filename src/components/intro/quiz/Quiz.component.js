@@ -12,6 +12,7 @@ const radioInput = React.useRef();
 
 const onSubmit = (event) => {
   event.preventDefault();
+  console.warn("JHGJHGJGHJ");
   console.log(radioInput.current.value);
   dispatch({ type: "UPDATE_QUIZ_INPUT", payload: radioInput.current.value });
 };
@@ -21,8 +22,8 @@ const onSubmit = (event) => {
   const variants = item.variants;
   const step = variants.map((variant) => (
     <div>
-    <input type="radio" key={variant.toString()} value={variant.toString().toLowerCase()} name = {name} ref={radioInput}/>
-      <label for ={id}>
+      <label className = "radio-label">
+      <input type="radio" key={variant.toString()} value={variant.toString().toLowerCase()} name = {name} ref={radioInput}/>
       {variant}
     </label>
     </div>
@@ -32,7 +33,7 @@ const onSubmit = (event) => {
       <h3>{item.question}</h3>
       {step}
       <div>
-    <button type="submit">Submit</button>
+    <button type="submit">To the offers</button>
   </div>
     </form>
   );
