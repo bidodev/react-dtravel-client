@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-    input: null
+    input: "tropical"
 }
 
 const searchReducer = (state = INITIAL_STATE, action) => {

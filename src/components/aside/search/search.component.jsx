@@ -3,13 +3,18 @@ import { useDispatch } from "react-redux";
 import "./search.component.styles.scss";
 
 function Search() {
+  //1. Use dispatch
   const dispatch = useDispatch();
 
+  //2. Get the input field value
   const textInput = React.useRef();
 
   const submitValues = (event) => {
     event.preventDefault();
-    dispatch({ type: "UPDATE_INPUT", payload: textInput.current.value });
+  
+    setTimeout(() => {
+      dispatch({ type: "UPDATE_INPUT", payload: textInput.current.value });
+    }, 2000);
   };
 
   return (
@@ -17,8 +22,13 @@ function Search() {
       <span>
         <ion-icon name="search-outline"></ion-icon>
       </span>
-      <form onSubmit={submitValues}>
-        <input type="search" placeholder="Search" ref={textInput} />
+      <form>
+        <input
+          onChange={submitValues}
+          type="search"
+          placeholder="Search"
+          ref={textInput}
+        />
       </form>
     </div>
   );

@@ -1,16 +1,28 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import "./adventurousmood.component.scss";
 
 function AdventurousMood() {
+
+    //1. Use dispatch
+  const dispatch = useDispatch();
+
+
+  const submitValues = (event) => {
+    console.log(event.target.value)
+    //it's returning undefined..
+    dispatch({ type: "UPDATE_INPUT", payload: "rome" });
+  };
+
   return (
     <div className="aside-adventurous__mood">
       <h3>Adventurous Mood</h3>
-      <div className="aside-adventurous__mood-icons">
-        <ion-icon name="sunny-outline"></ion-icon>
-        <ion-icon name="snow-outline"></ion-icon>
-        <ion-icon name="map-outline"></ion-icon>
-        <ion-icon name="bicycle"></ion-icon>
-        <ion-icon name="business-outline"></ion-icon>
+      <div className="aside-adventurous__mood-icons" >
+        <ion-icon value="tropical" name="sunny-outline" onClick={submitValues}></ion-icon>
+        <ion-icon value="winter" name="snow-outline"></ion-icon>
+        <ion-icon value="random" name="map-outline"></ion-icon>
+        <ion-icon value="bike" name="bicycle"></ion-icon>
+        <ion-icon value="city" name="business-outline"></ion-icon>
       </div>
     </div>
   );
