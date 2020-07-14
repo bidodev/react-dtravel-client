@@ -7,14 +7,14 @@ import { useSelector } from "react-redux";
 
 const App = () => {
   const input = useSelector((state) => state.searchInput);
-
+  const quizInput = useSelector((state) => state.quizInput);
   return(
   
     <div className="App">
       <Intro />
       <Aside />
       {/*temporal for tests*/}
-      <OffersEndList input={input} />
+      <OffersEndList input={/* input ||  */quizInput} />
     </div>
   )
 };

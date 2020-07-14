@@ -12,16 +12,17 @@ const radioInput = React.useRef();
 
 const onSubmit = (event) => {
   event.preventDefault();
-  dispatch({ type: "UPDATE_INPUT", payload: radioInput.current.value });
+  console.log(radioInput.current.value);
+  dispatch({ type: "UPDATE_QUIZ_INPUT", payload: radioInput.current.value });
 };
   const item = props.value;
   const id = props.id;
   const name = props.name;
   const variants = item.variants;
-  const step = variants.map((variant, index) => (
+  const step = variants.map((variant) => (
     <div>
-    <input type="radio" key={variant.toString()} value={variant.toString().toLowerCase()} name = {name} />
-      <label>
+    <input type="radio" key={variant.toString()} value={variant.toString().toLowerCase()} name = {name} ref={radioInput}/>
+      <label for ={id}>
       {variant}
     </label>
     </div>
