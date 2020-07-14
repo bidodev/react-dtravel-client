@@ -9,11 +9,10 @@ import smoothScroll from "./smoothScroll";
 const Landing = () => {
   const [img, setImg] = useState(0);
 
-  const offersFullData = useSelector((state) => state.destinations);
-  const Urls = offersFullData.map((item) => item.src);
+  const Urls = useSelector((state) => state.urlImgs);
 
   const handleImg = () => {
-    const arrayItems = offersFullData.length - 1;
+    const arrayItems = Urls.length - 1;
     let numberImg = 0;
 
     if (img >= (arrayItems)) {
@@ -27,8 +26,8 @@ const Landing = () => {
 
   let imgStyle = {
     backgroundImage: `linear-gradient(
-            rgba(0, 0, 0, 0.4),
-            rgba(0, 0, 0, 0.8)
+            rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.6)
           ), url("${Urls[img]}")`,
   };
 

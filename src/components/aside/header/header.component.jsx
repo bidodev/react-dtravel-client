@@ -16,7 +16,7 @@ function Header() {
         </NavLink>
         <NavLink to="/blog">Blog</NavLink>
         <NavLink to="/about">About</NavLink>
-        <img src="/img/sophie.jpg" alt="avatar"></img>
+        <div className="account-img"><img src="/img/sophie2.jpg" alt="avatar"></img></div> 
       </div>
     </div>
   );

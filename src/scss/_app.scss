@@ -1,5 +1,5 @@
 body {
-  /* background-color: #000; */
+  background-color: #000; 
   overflow-x: hidden;
   box-sizing: border-box;
   padding: 0;
@@ -7,13 +7,13 @@ body {
 }
 
 .App {
-  margin: .5rem;
+  margin: 2vh 1vw;
   display: grid;
   height: 95.9vh;
   grid-template-rows: 100vh 100vh;
   grid-template-columns: 70vw 27vw;
   border-radius: 36px;
-  border: 4px solid rgb(42, 42, 42);
+  //border: 4px solid rgb(42, 42, 42);
 
   
 }
