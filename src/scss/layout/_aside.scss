@@ -27,14 +27,15 @@
       display: flex;
       align-items: center;
       justify-content: space-evenly;
-      width: 65%;
+      width: 75%;
       text-transform: uppercase;
       list-style: none;
+      font-family: "Nunito", sans-serif;
 
       a {
         color: #303030;
         font-weight: 600;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
       }
 
       .active {
