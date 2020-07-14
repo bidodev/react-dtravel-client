@@ -69,7 +69,7 @@
     &__carrousel {
 
       width: 100%;
-      height: 80%;
+      height: 70%;
       display: flex;
       overflow: hidden;
       scroll-behavior: smooth;
@@ -82,7 +82,7 @@
       align-items: center;
 
       ion-icon {
-        font-size: 1.3vw;
+        font-size: 1.5vw;
         --ionicon-stroke-width: 20px;
         &:hover{
           cursor: pointer;
