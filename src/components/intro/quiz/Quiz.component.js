@@ -7,34 +7,35 @@ import "./quiz.styles.scss";
 const ListItem = (props) => {
     const item = props.value;
     const id = props.id;
-    const variants = item.variants;
     const style = props.style;
+    const variants = item.variants;
     const step = variants.map((variant, index) =>
         <li key={variant.toString()} className = {variant}>
           {variant}
           {/* <img src = {`./img/${item.id}/${variant}.jpg`} alt = {item.productName}/> */}
         </li>);
       return (
-        <ul id ={id} className="quiz-item" style = {style}>
+        <ul id ={id} className="quiz-item" style={style}>
           <h3>{item.question}</h3>
           {step}
          </ul>
       );
 }
   const Quiz = () => {
-    const [style, setStyle] = useState("");
-    let currentListItem = 0;
-    const visibleStyle = "visibility: visible; opacity: 1;";
+   const [visible, setVisible] = useState("");
+    const [opacity, setOpacity] = useState(0); 
     const makeVisible = index => {
-      setStyle(style)
+     setVisible("visible");
+      setOpacity(1); 
     }
+    let currentListItem = 0;
     const forward  = () => {
       if (currentListItem === 4) {
         currentListItem = 0;
       } else {
         currentListItem++
       }
-      console.log(currentListItem)
+      makeVisible(currentListItem)
     }
     const back  = () => {
       if (currentListItem === 0) {
@@ -42,10 +43,10 @@ const ListItem = (props) => {
       } else {
         currentListItem--
       }
-      console.log(currentListItem)
+      makeVisible(currentListItem)
     }
     const listItems = questionsFullData.map((elem,index) => 
-      <ListItem key={elem.id.toString() + " " + index} value={elem}  id = {index + "-quiz-item"}/>
+      <ListItem key={elem.id.toString() + " " + index} value={elem}  id = {index + "-quiz-item"}  style = {{visibility: visible, opacity: opacity}} />
     );
     return (
       <div className="quiz-main">
