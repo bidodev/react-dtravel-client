@@ -1,9 +1,14 @@
-* {
-    padding: 0;
-}
+
+  * {
+    box-sizing: border-box;
+  }
 
 .quiz-main {
-    overflow-y: scroll;
+    background: whitesmoke;
+    overflow-y: auto;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid rgba(0, 0, 0, 0.25);
     height: 95vh;
     display: flex;
     justify-content: center;
@@ -16,23 +21,28 @@
     h3 {
         /* font-size: 3rem; */
         width: 85%;
+        color: rgb(54, 54, 54);
         /* padding-bottom: 3rem; */
     }
     div.back {
         height: 95vh;
         margin-top: 5rem;
+        ion-icon {
+            font-size: 4vw;
+            --ionicon-stroke-width: 60px;
+        }
     }
     div.forward {
-        height: 95vh;
+        height: 50vh;
         margin-top: 25rem;
+        ion-icon {
+            font-size: 6vw;
+            --ionicon-stroke-width: 60px;
+        }
     }
     button {
     border:none;
     background: none;
-    ion-icon {
-        font-size: 4vw;
-        --ionicon-stroke-width: 60px;
-    }
 } 
 }
 .quiz-list {
@@ -71,6 +81,10 @@ ul {
             color:white;
         }
       }
+      label:hover, label:focus {
+        background-color: rgb(184, 75, 32);
+            color:white;
+      }
 input {
     margin: .4rem;
 }
@@ -78,4 +92,9 @@ input {
      padding-left: .5rem;
      padding-right: .5rem;
     cursor: pointer;
+}
+button[type="submit"] {
+    background-color: rgb(92, 14, 105);
+    color:white;
+    border-radius: 4px;
 }

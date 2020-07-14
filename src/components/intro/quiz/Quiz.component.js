@@ -33,7 +33,7 @@ const onSubmit = (event) => {
       <h3>{item.question}</h3>
       {step}
       <div>
-    <button type="submit">To the offers</button>
+    <button type="submit">I've chosen!</button>
   </div>
     </form>
   );
