@@ -83,6 +83,12 @@
   background: none;
   border:none;
   text-align: left;
+  &:focus {
+    outline: none;
+  }
+  &:focus::placeholder {
+    color: transparent;
+  }
 /*   &::first-letter {
     font-weight: 600;
   } */
