@@ -15,22 +15,11 @@
   },
   {
       "id": "prices",
-      "question": "And what about the price...:",
+      "question": "And what about the price...",
       "variants": [
         "low",
         "normal",
         "high"
-    ]
-    },
-    {
-      "id": "Mood",
-      "question": "What fits your style better:",
-      "variants": [
-        "Boat",
-        "Airplane",
-        "Car",
-        "Bicycle",
-        "On foot"
     ]
     },
     {
