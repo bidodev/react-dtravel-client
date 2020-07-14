@@ -22,7 +22,7 @@ class Card extends Component {
     };
   };
   render() {
-    const { id, src, productName, description, country } = this.props;
+    const { id, src, productName, country } = this.props;
 
     return (
       <React.Fragment>
