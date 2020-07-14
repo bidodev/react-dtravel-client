@@ -16,20 +16,23 @@ const onSubmit = (event) => {
 };
   const item = props.value;
   const id = props.id;
-  /* const style = props.style;  */
+  const name = props.name;
   const variants = item.variants;
   const step = variants.map((variant, index) => (
-    <form onSubmit={onSubmit}>
-    <input type="radio" key={variant.toString()} value={variant.toString().toLowerCase()} />
+    <div>
+    <input type="radio" key={variant.toString()} value={variant.toString().toLowerCase()} name = {name} />
       <label>
       {variant}
     </label>
-    </form>
+    </div>
   ));
   return (
-    <form id={id} className="quiz-item">
+    <form id={id} className="quiz-item" onSubmit={onSubmit}>
       <h3>{item.question}</h3>
       {step}
+      <div>
+    <button type="submit">Submit</button>
+  </div>
     </form>
   );
 };
@@ -38,6 +41,7 @@ const Quiz = () => {
     <ListItem
       key={elem.id.toString() + " " + index}
       value={elem}
+      name = {elem.id.toString()}
       id={
         index + "-quiz-item"
       } /* style = {{visibility: visible, opacity: opacity} }*/
