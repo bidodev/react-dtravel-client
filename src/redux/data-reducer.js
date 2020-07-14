@@ -12,4 +12,5 @@ const destinationsReducer = (state = data, action) => {
     }
 
 }
+
 export default destinationsReducer;

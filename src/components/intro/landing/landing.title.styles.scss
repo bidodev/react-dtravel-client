@@ -75,3 +75,18 @@
     }
   }
 }
+.to-offers {
+  padding-top: 1rem;
+  color: white;
+  font-weight: 700;
+  font-size: 1.4rem;
+  background: none;
+  border:none;
+  text-align: left;
+/*   &::first-letter {
+    font-weight: 600;
+  } */
+  a, a:hover, a:focus {
+    text-decoration: none;
+  }
+}

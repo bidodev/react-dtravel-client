@@ -1,4 +1,4 @@
-.offers {
+.offers-list {
   /* grid */
   /* .aside takes all horizontal space */
   grid-row: 2;
@@ -20,12 +20,15 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      border-radius: 20px;
-      border: 1px solid black;
+/*       border-radius: 20px;
+      border: 1px solid black; */
       background-color: white;
       h3 {
         margin: 1.5vh 0;
         text-align: center;
+      }
+      h3::first-letter {
+        text-transform: uppercase;
       }
       .img-container {
         width: 100%;

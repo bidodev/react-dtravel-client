@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
+/* import smoothScroll from "./smoothScroll" */
 import "./landing.title.styles.scss";
+import smoothScroll from "./smoothScroll";
 
 const Landing = () => {
   const [img, setImg] = useState(0);
@@ -49,6 +51,9 @@ const Landing = () => {
             Start the Quiz
           </button>
         </Link>
+        <button type="button" className="to-offers" onClick={smoothScroll}>
+          {/* <a href = "#offers"> */}Check our offers{/* </a> */}
+          </button>
       </div>
 
       {/* onClick make the URL inside imgStyle change, you can pass it with props */}

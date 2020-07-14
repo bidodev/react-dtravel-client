@@ -20,7 +20,7 @@ const OffersEndList = ({input}) => {
     <ListItem key={id.toString()} {...restProps} />
   ));
   return (
-    <div className="offers">
+    <div className="offers-list" id="offers">
       <ul className="offers-list">{listItems}</ul>
     </div>
   );
