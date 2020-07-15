@@ -6,14 +6,12 @@ import QuestionItem from "./question-item.component"
 import "./quiz.styles.scss";
 
 const Quiz = () => {
-  const listItems = questionsFullData.map((elem, index) => (
+  const listItems = questionsFullData.map(({...props}, index) => (
     <QuestionItem
-      key={elem.id.toString() + " " + index}
-      value={elem}
-      name = {elem.id.toString()}
       id={
-        index + "-quiz-item"
-      } /* style = {{visibility: visible, opacity: opacity} }*/
+        index
+      }
+      {...props}
     />
     ));
   return (
@@ -29,7 +27,7 @@ const Quiz = () => {
         {listItems}
       </div>
       <div className="forward">
-        <button className="forward" /* onClick={handleClick} */>
+        <button className="forward">
           <a href="/#offers">
           <ion-icon name="chevron-forward-outline"></ion-icon>
           </a>

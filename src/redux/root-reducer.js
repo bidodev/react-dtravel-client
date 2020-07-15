@@ -3,14 +3,12 @@ import loginReducer from './login-reducer'
 import dataReducer from './data-reducer'
 import searchReducer from './search-input.reducer'
 import imgsBgReducer from './imgs-bg-reducer'
-import quizReducer from './quiz-redux'
 
 const rootReducer = combineReducers({
     login: loginReducer,
     destinations: dataReducer,
     searchInput: searchReducer,
-    urlImgs: imgsBgReducer,
-    quizInput: quizReducer
+    urlImgs: imgsBgReducer
 })
 
 export default rootReducer;
