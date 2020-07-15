@@ -8,13 +8,12 @@ import "./quiz.styles.scss";
 const ListItem = (props) => {
   const dispatch = useDispatch();
 
-const radioInput = React.useRef();
+const quizInput = React.useRef();
 
 const onSubmit = (event) => {
   event.preventDefault();
-  console.warn("JHGJHGJGHJ");
-  console.log(radioInput.current.value);
-  dispatch({ type: "UPDATE_QUIZ_INPUT", payload: radioInput.current.value });
+  console.log(quizInput.current.value);
+  dispatch({ type: "UPDATE_INPUT", payload: quizInput.current.value });
 };
   const item = props.value;
   const id = props.id;
@@ -23,7 +22,7 @@ const onSubmit = (event) => {
   const step = variants.map((variant) => (
     <div>
       <label className = "radio-label">
-      <input type="radio" key={variant.toString()} value={variant.toString().toLowerCase()} name = {name} ref={radioInput}/>
+      <input type="radio" key={variant.toString()} value={variant.toString().toLowerCase()} name = {name} ref={quizInput}/>
       {variant}
     </label>
     </div>
