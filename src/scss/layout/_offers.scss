@@ -62,9 +62,6 @@
         width: 40vw;
         display: flex;
         justify-content: center;
-        h3::first-letter {
-          text-transform: uppercase;
-        }
         span {
           font-weight: bold;
           color: #fdd33d;
@@ -77,6 +74,7 @@
         height: fit-content;
         .profile-img {
           height: 20rem;
+          margin-bottom: 1vh;
         }
         .gallery-container {
           height: 15vh;
