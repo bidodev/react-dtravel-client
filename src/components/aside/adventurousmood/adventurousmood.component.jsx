@@ -20,8 +20,8 @@ function AdventurousMood() {
       <div className="aside-adventurous__mood-icons" onClick={submitValues}>
         <ion-icon id="tropical" name="sunny-outline" >Icon</ion-icon>
         <ion-icon id="winter" name="snow-outline"></ion-icon>
-        <ion-icon id="driving" name="map-outline"></ion-icon>
-        <ion-icon id="bike" name="bicycle"></ion-icon>
+        <ion-icon id="mountain" name="map-outline"></ion-icon>
+        <ion-icon id="cycling" name="bicycle"></ion-icon>
         <ion-icon id="city" name="business-outline"></ion-icon>
       </div>
     </div>
