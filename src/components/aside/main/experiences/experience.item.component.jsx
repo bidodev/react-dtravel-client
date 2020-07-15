@@ -36,7 +36,7 @@ class Card extends Component {
           {this.state.isHovering && (
             <div >
               <li><h4>{productName.charAt(0).toUpperCase() + productName.slice(1)}</h4></li>
-              <li>{country.charAt(0).toUpperCase() + country.slice(1)}</li>
+              <li><ion-icon name="navigate-outline"></ion-icon>{country.charAt(0).toUpperCase() + country.slice(1)}</li>
             </div>
           )}
         </div>

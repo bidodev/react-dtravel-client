@@ -36,9 +36,6 @@ const Main = () => {
     return index >= startIndex && index <= finalIndex;
   });
 
-  console.log("filteredSearch", filteredSearch);
-  console.log("slicedResults", slicedResults);
-
   const previousCard = () => {
     if (startIndex === 0) {
       return;
@@ -60,8 +57,8 @@ const Main = () => {
       <h1>Discover</h1>
 
       <div className="aside-main__carrousel">
-        {slicedResults.map(({ ...item }) => (
-          <ExperienceItem {...item} />
+        {slicedResults.map(({id, ...item }) => (
+          <ExperienceItem key={id} {...item} />
         ))}
       </div>
       <div className="pagination">
