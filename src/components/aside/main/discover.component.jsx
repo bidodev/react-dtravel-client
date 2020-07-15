@@ -5,23 +5,18 @@ import { useSelector } from "react-redux";
 import handleOfferSearch from "../../offers/handleOfferSearch";
 
 const Main = () => {
-  
-  //obj to return for no match
-  const noOfferMatch = [
-    {
-      id: 404,
-      description: "Try one more time",
-      photo: "../public/img/404.jpg",
-      country: "Neverland",
-    },
-  ];
 
+  //obj to return for no match
+  //obj to return for no match
   //just a workarround to work..
+
   const [startIndex, setStartIndex] = useState(0);
-  const [finalIndex, setFinalIndex] = useState(2);
+  const [finalIndex, setFinalIndex] = useState(1);
 
   //1. We have to select our full data from the state
   const offersFullData = useSelector((state) => state.destinations);
+
+  const noOfferMatch = [offersFullData.find(element => element.id.toString() === "404")];
 
   //2. Check which input the user passed..
   const searchInput = useSelector((state) => state.searchInput);
@@ -32,18 +27,31 @@ const Main = () => {
     offersFullData
   );
 
-
-  const slicedResults = filteredSearch.slice(startIndex, finalIndex);
-
-  const handlePage = () => {
-    if (finalIndex >= offersFullData.length) {
-      setStartIndex(0);
-      setFinalIndex(2);
+  let slicedResults = []
+  slicedResults = [...filteredSearch].filter((elem, index) => {
+    if(filteredSearch.length === 1){
+      return index === 0;
     }
-    const start = startIndex + 1;
-    const final = finalIndex + 1;
-    setStartIndex(start);
-    setFinalIndex(final);
+    return index >= startIndex && index <= finalIndex;
+  });
+
+  console.log("filteredSearch", filteredSearch)
+  console.log("slicedResults", slicedResults)
+
+  const previousCard = () => {
+    if (startIndex === 0) {
+      return;
+    }
+    setStartIndex(startIndex - 1)
+    setFinalIndex(finalIndex - 1)
+  };
+
+  const nextCard = () => {
+    if (finalIndex === filteredSearch.length - 2) {
+      return;
+    }
+    setStartIndex(startIndex + 1)
+    setFinalIndex(finalIndex + 1)
   };
 
   return (
@@ -56,10 +64,10 @@ const Main = () => {
         ))}
       </div>
       <div className="pagination">
-        <ion-icon name="chevron-back-outline" onClick={handlePage}></ion-icon>
+        <ion-icon name="chevron-back-outline" onClick={previousCard}></ion-icon>
         <ion-icon
           name="chevron-forward-outline"
-          onClick={handlePage}
+          onClick={nextCard}
         ></ion-icon>
       </div>
     </div>

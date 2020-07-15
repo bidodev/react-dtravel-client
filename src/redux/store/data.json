@@ -227,8 +227,10 @@
     },
   {
       "id": 404,
+      "productName": "Neverland",
       "description": "Try one more time",
-      "photo": "../public/img/404.jpg",
+      "photo": "../public/img/404.png",
+      "src": "./img/404.png",
       "country": "Neverland"
     }
 
