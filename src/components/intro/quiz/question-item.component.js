@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
 import Btn from "./btn.component"
 
+const inputObj = {  }
 const QuestionItem = ({id, question, variants}) => {
-  console.log("QuestionItem rendered")
   const dispatch = useDispatch();
-  const inputObj = {  }
+
   const onSubmit = (event) => {
     event.preventDefault();
     const e = event.target;
