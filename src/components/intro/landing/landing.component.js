@@ -6,6 +6,8 @@ import { useSelector } from "react-redux";
 import "./landing.title.styles.scss";
 import smoothScroll from "./smoothScroll";
 
+console.log(smoothScroll)
+
 const Landing = () => {
   const [img, setImg] = useState(0);
 
