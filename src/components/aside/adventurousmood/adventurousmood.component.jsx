@@ -8,11 +8,11 @@ function AdventurousMood() {
   const dispatch = useDispatch();
 
   const submitValues = (event) => {
-    const value = event.target.value;
+    const value = event.target;
     console.log(value)
 
     //it's returning undefined..
-    dispatch({ type: "UPDATE_INPUT", payload: "city"});
+    dispatch({ type: "UPDATE_INPUT", payload: "tropical"});
   };
 
   return (

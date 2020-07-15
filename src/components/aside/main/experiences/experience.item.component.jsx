@@ -5,8 +5,6 @@ class Card extends Component {
   constructor(props) {
     super(props);
 
-    //this component is statefull, but only this component care about the this state,
-    //therefore we don't need to make component drilling.
     this.state = {
       isHovering: false,
     };
@@ -22,7 +20,6 @@ class Card extends Component {
     };
   };
   render() {
-    console.log("Props: render", this.props)
     const { id, src, productName, country } = this.props;
 
     return (
@@ -32,8 +29,6 @@ class Card extends Component {
           onMouseEnter={this.handleMouseHover}
           onMouseLeave={this.handleMouseHover}
         >
-          {/* <h5 className="title">
-            {productName.toUpperCase()}</h5> */}
           <img key={id} src={src} alt={productName} />
           {this.state.isHovering && (
             <div>
