@@ -7,22 +7,16 @@ import handleOfferSearch from "../../offers/handleOfferSearch";
 const Main = () => {
 
   //obj to return for no match
-  const noOfferMatch = [
-    {
-      id: 404,
-      productName: "Neverland",
-      description: "Try one more time",
-      src: "./img/404.jpg",
-      country: "Neverland",
-    },
-  ];
-
+  //obj to return for no match
   //just a workarround to work..
+
   const [startIndex, setStartIndex] = useState(0);
-  const [finalIndex, setFinalIndex] = useState(2);
+  const [finalIndex, setFinalIndex] = useState(1);
 
   //1. We have to select our full data from the state
   const offersFullData = useSelector((state) => state.destinations);
+
+  const noOfferMatch = [offersFullData.find(element => element.id.toString() === "404")];
 
   //2. Check which input the user passed..
   const searchInput = useSelector((state) => state.searchInput);
@@ -33,14 +27,31 @@ const Main = () => {
     offersFullData
   );
 
-  const slicedResults = filteredSearch.slice(startIndex, finalIndex);
+  let slicedResults = []
+  slicedResults = [...filteredSearch].filter((elem, index) => {
+    if(filteredSearch.length === 1){
+      return index === 0;
+    }
+    return index >= startIndex && index <= finalIndex;
+  });
+
+  console.log("filteredSearch", filteredSearch)
+  console.log("slicedResults", slicedResults)
 
   const previousCard = () => {
-    console.log("Previous Card")
+    if (startIndex === 0) {
+      return;
+    }
+    setStartIndex(startIndex - 1)
+    setFinalIndex(finalIndex - 1)
   };
 
   const nextCard = () => {
-    console.log("Next Card")
+    if (finalIndex === filteredSearch.length - 2) {
+      return;
+    }
+    setStartIndex(startIndex + 1)
+    setFinalIndex(finalIndex + 1)
   };
 
   return (
@@ -48,7 +59,7 @@ const Main = () => {
       <h1>Discover</h1>
 
       <div className="aside-main__carrousel">
-        {filteredSearch.map(({ ...item }) => (
+        {slicedResults.map(({ ...item }) => (
           <ExperienceItem {...item} />
         ))}
       </div>
