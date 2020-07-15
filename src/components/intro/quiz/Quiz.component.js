@@ -1,45 +1,13 @@
 import React, { useState } from "react";
 import questionsFullData from "./questions.json";
-import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import QuestionItem from "./question-item.component"
 
 import "./quiz.styles.scss";
 
-const ListItem = (props) => {
-  const dispatch = useDispatch();
-
-const quizInput = React.useRef();
-
-const onSubmit = (event) => {
-  event.preventDefault();
-  console.log(quizInput.current.value);
-  dispatch({ type: "UPDATE_INPUT", payload: quizInput.current.value });
-};
-  const item = props.value;
-  const id = props.id;
-  const name = props.name;
-  const variants = item.variants;
-  const step = variants.map((variant) => (
-    <div>
-      <label className = "radio-label">
-      <input type="radio" key={variant.toString()} value={variant.toString().toLowerCase()} name = {name} ref={quizInput}/>
-      {variant}
-    </label>
-    </div>
-  ));
-  return (
-    <form id={id} className="quiz-item" onSubmit={onSubmit}>
-      <h3>{item.question}</h3>
-      {step}
-      <div>
-    <button type="submit">I've chosen!</button>
-  </div>
-    </form>
-  );
-};
 const Quiz = () => {
   const listItems = questionsFullData.map((elem, index) => (
-    <ListItem
+    <QuestionItem
       key={elem.id.toString() + " " + index}
       value={elem}
       name = {elem.id.toString()}
