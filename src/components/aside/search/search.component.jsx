@@ -14,7 +14,7 @@ function Search() {
   
     setTimeout(() => {
       dispatch({ type: "UPDATE_INPUT", payload: textInput.current.value });
-    }, 2000);
+    }, 1500);
   };
 
   return (
@@ -22,14 +22,12 @@ function Search() {
       <span>
         <ion-icon name="search-outline"></ion-icon>
       </span>
-      <form>
         <input
           onChange={submitValues}
           type="search"
           placeholder="Search"
           ref={textInput}
         />
-      </form>
     </div>
   );
 }

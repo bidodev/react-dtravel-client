@@ -22,6 +22,7 @@ class Card extends Component {
     };
   };
   render() {
+    console.log("Props: render", this.props)
     const { id, src, productName, country } = this.props;
 
     return (

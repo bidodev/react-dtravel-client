@@ -12,11 +12,14 @@ const Main = () => {
 
   //2. Check which input the user passed..
   const searchInput = useSelector((state) => state.searchInput);
-
+  
+ 
   //THIS FUNCTION IS just a quick fix, the filteredData must return from the Alex's search function.
   const filteredData = offersFullData.filter((exp) =>
     exp.description.toLowerCase().includes(searchInput.input.toLowerCase())
   );
+
+  //if filteredData return 0 results, we have to give someRandom suggestion to the user..
 
   const slicedResults = filteredData.slice(startIndex, finalIndex);
 

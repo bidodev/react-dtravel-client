@@ -1,22 +1,26 @@
 import React from "react";
-import {NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Header() {
   return (
     <div className="aside-header">
-      <div className="aside-header__menu"><ion-icon name="grid-outline"></ion-icon></div>
-      <div className="aside-header__nav">
+      <div className="aside-header__menu">
+        {" "}
         <NavLink
           to="/"
           activeStyle={{
-            fontWeight: "bold",
+            color: "orange",
           }}
         >
-          Home
+          <ion-icon name="home-outline"></ion-icon>
         </NavLink>
+      </div>
+      <div className="aside-header__nav">
         <NavLink to="/blog">Blog</NavLink>
         <NavLink to="/about">About</NavLink>
-        <div className="account-img"><img src="/img/sophie2.jpg" alt="avatar"></img></div> 
+        <div className="account-img">
+          <img src="/img/sophie2.jpg" alt="avatar"></img>
+        </div>
       </div>
     </div>
   );
