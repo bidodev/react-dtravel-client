@@ -75,8 +75,8 @@ const handleOfferSearch = ({input}, defaultItem, fulldata) => {
         });
       }
     }
-    console.log("input " + inputElem)
-    console.log("value " + value)
+    //console.log("input " + inputElem)
+    //console.log("value " + value)
       if ((spellNumOfMatches.current >= spellNumOfMatches.min) || (value === inputElem)) {
         console.warn(value)
         console.warn("PASSED " + inputElem)
