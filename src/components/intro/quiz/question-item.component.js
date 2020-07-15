@@ -8,7 +8,7 @@ const QuestionItem = (props) => {
   
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log(quizInput.current.value);
+    console.warn(quizInput.current);
     dispatch({ type: "UPDATE_INPUT", payload: quizInput.current.value });
   };
     const item = props.value;
@@ -16,22 +16,17 @@ const QuestionItem = (props) => {
     const name = props.name;
     const variants = item.variants;
     const step = variants.map((variant) => (
-      <div>
-          <button type="submit">
-        <label className = "radio-label">
-        <input type="radio" key={variant.toString()} value={variant.toString().toLowerCase()} name = {name} ref={quizInput}/>
+        <form id={id} className="quiz-item">
+          <button type="submit" key={variant.toString()} value={variant.toString().toLowerCase()} name = {name} ref={quizInput} onSubmit={onSubmit}>
         {variant}
-      </label>
       </button>
-      </div>
+      </form>
     ));
     return (
-      <form id={id} className="quiz-item" onSubmit={onSubmit}>
+        <div>
         <h3>{item.question}</h3>
         {step}
-        <div>
     </div>
-      </form>
     );
   };
 
