@@ -9,12 +9,14 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 3fr));
     gap: 3vh;
+    //grid-auto-rows: fit-content;
+    grid-auto-flow: dense;
     // border-radius: 20px;
     // border: 1px solid black;
     // background-color: white;
 
     .offers-item {
-      width: 24rem;
+      // width: 24rem;
       // margin-left: 0.5rem;
       // margin-right: 0.5rem;
       display: flex;
@@ -55,6 +57,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly;
+      grid-column: span 2;
       h3 {
         width: 40vw;
         display: flex;
@@ -71,9 +74,9 @@
       .img-container {
         display: flex;
         flex-direction: column;
-        height: 50vh;
+        height: fit-content;
         .profile-img {
-          height: 35vh;
+          height: 20rem;
         }
         .gallery-container {
           height: 15vh;
