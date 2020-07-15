@@ -8,22 +8,21 @@ function AdventurousMood() {
   const dispatch = useDispatch();
 
   const submitValues = (event) => {
-    const value = event.target;
-    console.log(value)
+    const valueMood = event.target.id;
 
     //it's returning undefined..
-    dispatch({ type: "UPDATE_INPUT", payload: "tropical"});
+    dispatch({ type: "UPDATE_INPUT", payload: valueMood});
   };
 
   return (
     <div className="aside-adventurous__mood">
       <h3>Adventurous Mood</h3>
       <div className="aside-adventurous__mood-icons" onClick={submitValues}>
-        <ion-icon value="tropical" name="sunny-outline" >Icon</ion-icon>
-        <ion-icon value="winter" name="snow-outline"></ion-icon>
-        <ion-icon value="driving" name="map-outline"></ion-icon>
-        <ion-icon value="bike" name="bicycle"></ion-icon>
-        <ion-icon value="city" name="business-outline"></ion-icon>
+        <ion-icon id="tropical" name="sunny-outline" >Icon</ion-icon>
+        <ion-icon id="winter" name="snow-outline"></ion-icon>
+        <ion-icon id="mountain" name="map-outline"></ion-icon>
+        <ion-icon id="cycling" name="bicycle"></ion-icon>
+        <ion-icon id="city" name="business-outline"></ion-icon>
       </div>
     </div>
   );
