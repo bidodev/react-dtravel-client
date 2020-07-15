@@ -148,7 +148,7 @@
       "src": "./img/toubkal.jpg",
       "country": "marocco ",
       "continent": "africa",
-      "type": ["winter","mountain"],
+      "type": "mountain",
       "difficulty": "extreme",
       "prices": "low",
       "bestMatch": false
@@ -172,7 +172,7 @@
       "src": "./img/hintertux.jpg",
       "country": "austria",
       "continent": "europe",
-      "type": ["mountain", "winter"],
+      "type": "mountain",
       "difficulty": "medium",
       "prices": "normal",
       "bestMatch": false
@@ -220,7 +220,7 @@
       "src": "./img/havana.jpg",
       "country": " cuba",
       "continent": "south america",
-      "type": ["city","tropical"],
+      "type": "city",
       "difficulty": "medium",
       "prices": "normal",
       "bestMatch": false
