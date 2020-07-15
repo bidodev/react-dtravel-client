@@ -3,17 +3,14 @@ import handleOfferSearch from "./handleOfferSearch";
 import { useSelector } from 'react-redux';
 import ListItem from './list-item.component'
 
-//obj to return for no match
-const noOfferMatch = [{
-  id: 404,
-  description: "Try one more time",
-  photo: "../public/img/404.jpg",
-  country: "Neverland",
-}];
+
 
 const OffersEndList = ({input}) => {
   //grabing the data you need from the state.
-  const offersFullData = useSelector(state => state.destinations)
+  const offersFullData = useSelector(state => state.destinations);
+
+  //obj to return for no match
+  const noOfferMatch = [offersFullData.find(element => element.id.toString() === "404")];
   const offersArr = handleOfferSearch(input, noOfferMatch, offersFullData);
 
   const listItems = offersArr.map(({id, ...restProps}) => (
