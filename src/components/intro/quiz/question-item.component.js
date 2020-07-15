@@ -1,38 +1,34 @@
-import React from "react";
+import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
+import Btn from "./btn.component"
 
-const QuestionItem = (props) => {
-    const dispatch = useDispatch();
-  
-  const quizInput = React.useRef();
-  
+const inputObj = {  }
+const QuestionItem = ({id, question, variants}) => {
+  const dispatch = useDispatch();
+
   const onSubmit = (event) => {
     event.preventDefault();
-    console.log(quizInput.current.value);
-    dispatch({ type: "UPDATE_INPUT", payload: quizInput.current.value });
+    const e = event.target;
+    inputObj[e.name] = e.value;
+    console.warn(inputObj);
+    const quizInput = Object.values(inputObj)
+    console.warn(quizInput);
+    dispatch({ type: "UPDATE_INPUT", payload: quizInput});
   };
-    const item = props.value;
-    const id = props.id;
-    const name = props.name;
-    const variants = item.variants;
-    const step = variants.map((variant) => (
-      <div>
-          <button type="submit">
-        <label className = "radio-label">
-        <input type="radio" key={variant.toString()} value={variant.toString().toLowerCase()} name = {name} ref={quizInput}/>
-        {variant}
-      </label>
-      </button>
-      </div>
+  const btns = variants.map((variant, index) => (
+    <Btn
+    key = {index}
+    name = {id}
+    variant = {variant}
+    onSubmit = {onSubmit}
+  />
     ));
     return (
-      <form id={id} className="quiz-item" onSubmit={onSubmit}>
-        <h3>{item.question}</h3>
-        {step}
-        <div>
+        <div id={id}>
+        <h3>{question}</h3>
+        {btns}
     </div>
-      </form>
     );
   };
 
-  export default QuestionItem
+  export default QuestionItem;

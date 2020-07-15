@@ -5,8 +5,13 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
   console.log("numOfCalls " + numOfCalls); */
   //prevent empty input treating
   if (input === undefined || input === null) {
-/*     console.log(numOfCalls + ": input is empty"); */
-    return fulldata;
+    const firstEightItems = [];
+    (() => {
+      for (let i = 0; i < 8; i++) {
+        firstEightItems.push(fulldata[i])
+      }
+    })();
+    return firstEightItems;
   }
   //search goes a bit smarter
   //------
@@ -31,6 +36,7 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
   fulldata = fulldata.constructor !== Array ? fulldata.split(" ") : fulldata;
   //first, handling a loop for an outer cycle, JSON/array of objects
   fulldata.forEach((fulldataElem) => {
+    if(fulldataElem.id.toString() === "404") { return}
     //checking every item {currentObj} in offers.db how it meets the query input
     inputArr.forEach((inputElem) => {
       inputElem = inputElem.toLowerCase();
@@ -46,8 +52,8 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
           continue;
         }
         if (value === inputElem) {
-          console.warn(value);
-          console.warn("PASSED " + inputElem);
+/*           console.warn(value);
+          console.warn("PASSED " + inputElem); */
           numOfMatches.current++;
         } else {
           //same idea for spellCheck
@@ -102,8 +108,8 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
             spellNumOfMatches.current = 100;
           }
           if (spellNumOfMatches.current >= spellNumOfMatches.min) {
-            console.warn(value);
-            console.warn("PASSED " + inputElem);
+/*             console.warn(value);
+            console.warn("PASSED " + inputElem); */
             numOfMatches.current++;
           }
         }
