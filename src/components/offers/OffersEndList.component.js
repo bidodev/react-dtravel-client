@@ -12,9 +12,9 @@ const OffersEndList = ({input}) => {
   //obj to return for no match
   const noOfferMatch = [offersFullData.find(element => element.id.toString() === "404")];
   const offersArr = handleOfferSearch(input, noOfferMatch, offersFullData);
-
+  console.warn("TEST")
   const listItems = offersArr.map(({id, ...restProps}) => (
-    <ListItem key={id.toString()} {...restProps} />
+    <ListItem key={id.toString()} {...restProps}/>
   ));
   return (
     <div className="offers-list" id="offers">
