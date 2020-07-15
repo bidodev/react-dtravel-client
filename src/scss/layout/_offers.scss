@@ -60,6 +60,9 @@
         width: 30vw;
         display: flex;
         justify-content: flex-start;
+        h3::first-letter {
+          text-transform: uppercase;
+        }
         span {
           font-weight: bold;
           color: #fdd33d;

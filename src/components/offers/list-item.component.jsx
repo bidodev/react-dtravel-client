@@ -16,22 +16,23 @@ function ListItem({
         <Fragment>
           <h3>
             <span>{"⭐ Best Match"}</span>
-            {productName.charAt(0).toUpperCase() + productName.slice(1)}
+            {productName}
           </h3>
           <div className="img-container">
             <div className="profile-img">
               <img src={src} alt={productName} />
             </div>
-
-            <div className="gallery-container">
+{src2? 
+           ( <div className="gallery-container">
               {src2.map((element) => {
                 return <img src={element} alt={productName} />;
               })}
-            </div>
+            </div>) : null
+}
           </div>
           <p>{description}</p>
           <p>
-            Continent: {continent.charAt(0).toUpperCase() + continent.slice(1)}
+            Continent: {continent}
           </p>
           <p>Prices: {prices}</p>
         </Fragment>
