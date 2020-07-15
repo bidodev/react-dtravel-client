@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 
 const App = () => {
   const input = useSelector((state) => state.searchInput);
-  const quizInput = useSelector((state) => state.quizInput);
+  /* const quizInput = useSelector((state) => state.quizInput); */
   return(
   
     <div className="App">
