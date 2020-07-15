@@ -16,7 +16,7 @@ function ListItem({
         <Fragment>
           <h3>
             <span>{"⭐ Best Match"}</span>
-            {productName}
+            {productName.charAt(0).toUpperCase() + productName.slice(1)}
           </h3>
           <div className="img-container">
             <div className="profile-img">

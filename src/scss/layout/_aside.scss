@@ -3,7 +3,7 @@
   /* .aside is fixed for main-about-quiz, but not for Offers */
   grid-row: 1;
   grid-column: 2 /3;
-  /*  */ 
+  /*  */
   padding: 0 2%;
   background-color: #fff;
   border-top-right-radius: 30px;
@@ -16,17 +16,16 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    
+
     &__menu {
       margin-left: 1vw;
-
     }
 
     &__nav {
       display: flex;
       align-items: center;
       justify-content: space-evenly;
-      width: 60%;
+      width: 80%;
       text-transform: uppercase;
       list-style: none;
       font-family: "Nunito", sans-serif;
@@ -43,14 +42,15 @@
       }
 
       .active {
+        //text-decoration: underline;
+        font-weight: bold;
         color: #f75d37;
-        text-decoration: underline;
       }
 
       .account-img {
         width: 36px;
         height: 36px;
-        img{
+        img {
           width: 100%;
           object-fit: cover;
           border-radius: 50%;
@@ -78,7 +78,7 @@
       scroll-behavior: smooth;
     }
 
-    .pagination{
+    .pagination {
       width: 100%;
       display: flex;
       justify-content: space-evenly;
@@ -87,7 +87,7 @@
       ion-icon {
         font-size: 1.5vw;
         --ionicon-stroke-width: 20px;
-        &:hover{
+        &:hover {
           cursor: pointer;
           opacity: 0.5;
         }
