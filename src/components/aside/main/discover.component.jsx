@@ -2,7 +2,20 @@ import React, { useState } from "react";
 import ExperienceItem from "./experiences/experience.item.component";
 import { useSelector } from "react-redux";
 
+import handleOfferSearch from "../../offers/handleOfferSearch";
+
 const Main = () => {
+  
+  //obj to return for no match
+  const noOfferMatch = [
+    {
+      id: 404,
+      description: "Try one more time",
+      photo: "../public/img/404.jpg",
+      country: "Neverland",
+    },
+  ];
+
   //just a workarround to work..
   const [startIndex, setStartIndex] = useState(0);
   const [finalIndex, setFinalIndex] = useState(2);
@@ -12,16 +25,15 @@ const Main = () => {
 
   //2. Check which input the user passed..
   const searchInput = useSelector((state) => state.searchInput);
-  
- 
-  //THIS FUNCTION IS just a quick fix, the filteredData must return from the Alex's search function.
-  const filteredData = offersFullData.filter((exp) =>
-    exp.description.toLowerCase().includes(searchInput.input.toLowerCase())
+
+  const filteredSearch = handleOfferSearch(
+    searchInput,
+    noOfferMatch,
+    offersFullData
   );
 
-  //if filteredData return 0 results, we have to give someRandom suggestion to the user..
 
-  const slicedResults = filteredData.slice(startIndex, finalIndex);
+  const slicedResults = filteredSearch.slice(startIndex, finalIndex);
 
   const handlePage = () => {
     if (finalIndex >= offersFullData.length) {
