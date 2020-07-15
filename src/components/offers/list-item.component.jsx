@@ -22,18 +22,16 @@ function ListItem({
             <div className="profile-img">
               <img src={src} alt={productName} />
             </div>
-{src2? 
-           ( <div className="gallery-container">
-              {src2.map((element) => {
-                return <img src={element} alt={productName} />;
-              })}
-            </div>) : null
-}
+            {src2 ? (
+              <div className="gallery-container">
+                {src2.map((element) => {
+                  return <img src={element} alt={productName} />;
+                })}
+              </div>
+            ) : null}
           </div>
           <p>{description}</p>
-          <p>
-            Continent: {continent}
-          </p>
+          <p>Continent: {continent}</p>
           <p>Prices: {prices}</p>
         </Fragment>
       ) : (
