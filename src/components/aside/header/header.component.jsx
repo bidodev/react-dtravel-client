@@ -9,7 +9,7 @@ function Header() {
         <NavLink
           to="/"
           activeStyle={{
-            color: "#303030",
+            color: " #f75d37",
           }}
         >
           Home
