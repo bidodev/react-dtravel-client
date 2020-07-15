@@ -10,7 +10,7 @@
 
   ion-icon {
     position: relative;
-    color: #303030;
+    color: rgba(48, 48, 48, 0.534);
     font-size: 20px;
     display: flex;
     align-items: center;
@@ -19,12 +19,12 @@
 
   input {
 
-    width: 30vw;
+    width: 23vw;
     border: none;
     border-bottom: 1px solid rgba(48, 48, 48, 0.3);
     font-size: 0.82vw;
     letter-spacing: 0.4px;
-    text-indent: 1.2rem;
+    text-indent: 1.5rem;
 
     &:focus {
       outline: none;
