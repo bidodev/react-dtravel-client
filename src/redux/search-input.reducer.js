@@ -1,5 +1,5 @@
 const INITIAL_STATE = {
-    input: "tropical"
+    input: null
 }
 
 const searchReducer = (state = INITIAL_STATE, action) => {
@@ -7,7 +7,7 @@ const searchReducer = (state = INITIAL_STATE, action) => {
         case 'UPDATE_INPUT':
             return {
                 ...state,
-                input: action.payload
+                input: (action.payload) ? action.payload : null
             };
         default:
             return state;

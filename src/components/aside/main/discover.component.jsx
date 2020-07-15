@@ -2,36 +2,56 @@ import React, { useState } from "react";
 import ExperienceItem from "./experiences/experience.item.component";
 import { useSelector } from "react-redux";
 
+import handleOfferSearch from "../../offers/handleOfferSearch";
+
 const Main = () => {
+
+  //obj to return for no match
+  //obj to return for no match
   //just a workarround to work..
+
   const [startIndex, setStartIndex] = useState(0);
-  const [finalIndex, setFinalIndex] = useState(2);
+  const [finalIndex, setFinalIndex] = useState(1);
 
   //1. We have to select our full data from the state
   const offersFullData = useSelector((state) => state.destinations);
 
+  const noOfferMatch = [offersFullData.find(element => element.id.toString() === "404")];
+
   //2. Check which input the user passed..
   const searchInput = useSelector((state) => state.searchInput);
-  
- 
-  //THIS FUNCTION IS just a quick fix, the filteredData must return from the Alex's search function.
-  const filteredData = offersFullData.filter((exp) =>
-    exp.description.toLowerCase().includes(searchInput.input.toLowerCase())
+
+  const filteredSearch = handleOfferSearch(
+    searchInput,
+    noOfferMatch,
+    offersFullData
   );
 
-  //if filteredData return 0 results, we have to give someRandom suggestion to the user..
-
-  const slicedResults = filteredData.slice(startIndex, finalIndex);
-
-  const handlePage = () => {
-    if (finalIndex >= offersFullData.length) {
-      setStartIndex(0);
-      setFinalIndex(2);
+  let slicedResults = []
+  slicedResults = [...filteredSearch].filter((elem, index) => {
+    if(filteredSearch.length === 1){
+      return index === 0;
     }
-    const start = startIndex + 1;
-    const final = finalIndex + 1;
-    setStartIndex(start);
-    setFinalIndex(final);
+    return index >= startIndex && index <= finalIndex;
+  });
+
+  console.log("filteredSearch", filteredSearch)
+  console.log("slicedResults", slicedResults)
+
+  const previousCard = () => {
+    if (startIndex === 0) {
+      return;
+    }
+    setStartIndex(startIndex - 1)
+    setFinalIndex(finalIndex - 1)
+  };
+
+  const nextCard = () => {
+    if (finalIndex === filteredSearch.length - 2) {
+      return;
+    }
+    setStartIndex(startIndex + 1)
+    setFinalIndex(finalIndex + 1)
   };
 
   return (
@@ -44,10 +64,10 @@ const Main = () => {
         ))}
       </div>
       <div className="pagination">
-        <ion-icon name="chevron-back-outline" onClick={handlePage}></ion-icon>
+        <ion-icon name="chevron-back-outline" onClick={previousCard}></ion-icon>
         <ion-icon
           name="chevron-forward-outline"
-          onClick={handlePage}
+          onClick={nextCard}
         ></ion-icon>
       </div>
     </div>
