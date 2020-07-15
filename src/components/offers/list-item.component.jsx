@@ -1,9 +1,10 @@
 import React from "react";
 
 
-function ListItem({productName, src, description, continent, prices}) {
+function ListItem({productName, src, description, continent, prices, bestMatch}) {
+  const classNameForBestMatch = bestMatch ? "best-match" : "common";
   return (
-    <div className="offers-item">
+    <div className={"offers-item " + classNameForBestMatch}>
       <h3>{productName}</h3>
       <div className="img-container">
         <img src={src} alt={productName} />
