@@ -2,7 +2,8 @@
 /* let numOfCalls = 0; */
 const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
   let numOfBestMatches = 0;
-  /* console.warn("handleOfferSearch was called") */
+  console.warn("handleOfferSearch was called")
+  console.log(input)
   //prevent empty input treating
   if (input === undefined || input === null) {
     const firstEightItems = [];

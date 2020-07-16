@@ -236,10 +236,15 @@
   {
       "id": 404,
       "productName": "Neverland",
+      "continent": "Neverland",
       "description": "Try one more time",
       "photo": "../public/img/404.png",
       "src": "./img/404.png",
-      "country": "Neverland"
+      "country": "Neverland",
+      "prices": "sure, you want to know",
+      "type": "Neverland",
+      "difficulty": "easy",
+      "bestMatch": false
     }
 
 ]
