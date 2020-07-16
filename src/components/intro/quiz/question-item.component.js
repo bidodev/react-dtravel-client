@@ -5,7 +5,6 @@ import Btn from "./btn.component"
 const inputObj = {  }
 const QuestionItem = forwardRef(({id, question, variants}, ref) => {
   const dispatch = useDispatch();
-
   const onSubmit = (event) => {
     event.preventDefault();
     const e = event.target;
@@ -22,7 +21,7 @@ const QuestionItem = forwardRef(({id, question, variants}, ref) => {
   />
     ));
     return (
-        <div id={id} ref={ref}>
+        <div id={id} ref={ref} className = "quiz-item">
         <h3>{question}</h3>
         {btns}
     </div>
