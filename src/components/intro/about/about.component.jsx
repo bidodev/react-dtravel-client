@@ -1,7 +1,18 @@
 import React from "react";
 
-function About() {
-  return <div className="about">About Component</div>;
-}
+/* import smoothScroll from "./smoothScroll" */
+import "../landing/landing.title.styles.scss";
+
+
+const About = () => {
+
+  return (
+    <div className="main-title image">
+
+
+
+    </div>
+  );
+};
 
 export default About;
