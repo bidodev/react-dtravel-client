@@ -13,7 +13,6 @@ function AdventurousMood() {
 
     //it's returning undefined..
     dispatch({ type: "UPDATE_INPUT", payload: valueMood });
-    smoothScroll();
   };
 
   return (
