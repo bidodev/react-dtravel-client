@@ -13,7 +13,9 @@ import Quiz from "./quiz/Quiz.component";
 //The intro CSS Class control the size / border and fallback background of the container only.
 
 //The Main Tittle, About, Blog are dynamic componenets, they will switch inside of the INTRO Component.
-const Intro = () => (
+const Intro = () => {
+
+  return (
     <div className="intro">
       <Switch>
         <Route exact path="/" component={Landing} />
@@ -22,6 +24,7 @@ const Intro = () => (
         <Route exact path="/blog" component={Blog} />
       </Switch>
     </div>
-);
+  )
+};
   
 export default Intro;

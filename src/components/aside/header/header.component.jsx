@@ -4,18 +4,16 @@ import { NavLink } from "react-router-dom";
 function Header() {
   return (
     <div className="aside-header">
-      <div className="aside-header__menu">
-        {" "}
+      <div className="aside-header__menu"></div>
+      <div className="aside-header__nav">
         <NavLink
           to="/"
           activeStyle={{
-            color: "orange",
+            color: " #f75d37",
           }}
         >
-          <ion-icon name="home-outline"></ion-icon>
+          Home
         </NavLink>
-      </div>
-      <div className="aside-header__nav">
         <NavLink to="/blog">Blog</NavLink>
         <NavLink to="/about">About</NavLink>
         <div className="account-img">

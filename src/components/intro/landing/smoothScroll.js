@@ -9,4 +9,6 @@ const smoothScroll = () => {
   });
 };
 
-export default smoothScroll;
+
+
+export default smoothScroll

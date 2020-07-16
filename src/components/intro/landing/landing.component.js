@@ -6,6 +6,8 @@ import { useSelector } from "react-redux";
 import "./landing.title.styles.scss";
 import smoothScroll from "./smoothScroll";
 
+console.log(smoothScroll)
+
 const Landing = () => {
   const [img, setImg] = useState(0);
 
@@ -25,9 +27,9 @@ const Landing = () => {
   };
 
   let imgStyle = {
-    backgroundImage: `linear-gradient(
-            rgba(0, 0, 0, 0.2),
-            rgba(0, 0, 0, 0.6)
+    backgroundImage: `linear-gradient(to left bottom,
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.7)
           ), url("${Urls[img]}")`,
   };
 
