@@ -1,4 +1,4 @@
-import React, { useState, createRef } from "react";
+import React from "react";
 import questionsFullData from "./questions.json";
 import { Link } from "react-router-dom";
 import QuestionItem from "./question-item.component";
@@ -51,26 +51,34 @@ const Quiz = () => {
   ));
   return (
     <div className="quiz-main">
-      <Link to="/">
-        <button className="home">
+      <div  className="home">
+      <Link to="/" >
+        <button>
           Home
         </button>
+{/*         <div className = "pseudo-img"></div> */}
       </Link>
+      </div>
       <div className="back">
-        <button className="back" onClick={back}>
+        <button onClick={back}>
           <ion-icon name="chevron-back-outline"></ion-icon>
         </button>
       </div>
       <div className="quiz-list">{listItems}</div>
       <div className="forward">
-        <button className="forward" onClick={forward}>
+        <button onClick={forward}>
           <ion-icon name="chevron-forward-outline"></ion-icon>
         </button>
       </div>
-      <div className="forward">
-        <button className="quiz-to-offers" onClick={smoothScroll}>
+      <div className="quiz-to-offers">
+        <button onClick={smoothScroll}>
           Offers
         </button>
+   {/*      <div className = "pseudo-img"></div> */}
+      </div>
+      <div className="quiz-logo">
+        <p onClick={smoothScroll}> do the travel
+          <span>.</span></p>
       </div>
     </div>
   );
