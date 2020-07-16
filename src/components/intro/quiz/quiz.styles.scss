@@ -26,7 +26,7 @@ $black: #282936;
 }
 
 .quiz-main {
-  background: #cbdfda;
+  background: #e9e9e9;
   background-size: cover;
   margin: 0 auto;
   height: 95vh;
@@ -195,7 +195,7 @@ button {
               margin: auto;
               background: $white;
               &.arrow {
-                @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+                @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 0.5));
                 left: 0.625rem;
                 width: 1.125rem;
                 height: 0.125rem;
