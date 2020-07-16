@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef }  from "react";
 import questionsFullData from "./questions.json";
 import { Link } from "react-router-dom";
 import QuestionItem from "./question-item.component"
@@ -14,6 +14,10 @@ const Quiz = () => {
       {...props}
     />
     ));
+    const quizInput = useRef();
+    const test = () => {
+console.log(quizInput.current)
+    }
   return (
     <div className="quiz-main">
       <div className="back">
@@ -23,14 +27,14 @@ const Quiz = () => {
         </button>
         </Link>
       </div>
-      <div className="quiz-list">       
+      <div className="quiz-list" ref={quizInput} onClick={test}>       
         {listItems}
       </div>
       <div className="forward">
-        <button className="forward">
-          <a href="/#offers">
+        <button className="forward" /* onClick={forward} */>
+          {/* <a href="/#offers"> */}
           <ion-icon name="chevron-forward-outline"></ion-icon>
-          </a>
+          {/* </a> */}
         </button>
       </div>
     </div>

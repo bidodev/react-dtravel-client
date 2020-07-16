@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useRef }  from "react";
 import { useDispatch } from "react-redux";
 import Btn from "./btn.component"
 
 const inputObj = {  }
 const QuestionItem = ({id, question, variants}) => {
+  const quizInput = useRef();
+  console.log(quizInput)
   const dispatch = useDispatch();
 
   const onSubmit = (event) => {
