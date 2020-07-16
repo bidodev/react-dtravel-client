@@ -1,5 +1,4 @@
-
-  * {
+* {
     box-sizing: border-box;
   }
 
@@ -35,7 +34,11 @@
     button {
     border:none;
     background: none;
-} 
+}
+.home, .quiz-to-offers {
+    color: rgb(24, 24, 24);
+    font-size: 2rem;
+}
 }
 .quiz-list {
     overflow-y: hidden;
