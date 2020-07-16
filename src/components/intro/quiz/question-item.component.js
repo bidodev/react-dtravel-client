@@ -9,7 +9,7 @@ const QuestionItem = forwardRef(({id, question, variants, style}, ref) => {
     event.preventDefault();
     const e = event.target;
     inputObj[e.name] = e.value;
-    const quizInput = Object.values(inputObj)
+    const quizInput = Object.values(inputObj);
     dispatch({ type: "UPDATE_INPUT", payload: quizInput});
   };
   const btns = variants.map((variant, index) => (
