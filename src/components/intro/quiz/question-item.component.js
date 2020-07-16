@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import Btn from "./btn.component"
 
 const inputObj = {  }
-const QuestionItem = forwardRef(({id, question, variants}, ref) => {
+const QuestionItem = forwardRef(({id, question, variants, style}, ref) => {
   const dispatch = useDispatch();
   const onSubmit = (event) => {
     event.preventDefault();
@@ -21,7 +21,7 @@ const QuestionItem = forwardRef(({id, question, variants}, ref) => {
   />
     ));
     return (
-        <div id={id} ref={ref} className = "quiz-item">
+        <div id={id} ref={ref} className = "quiz-item" style = {style}>
         <h3>{question}</h3>
         {btns}
     </div>
