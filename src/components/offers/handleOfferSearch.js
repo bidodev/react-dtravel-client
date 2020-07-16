@@ -1,10 +1,7 @@
 //
 /* let numOfCalls = 0; */
 const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
-  /* console.warn("handleOfferSearch called") */
-  /* console.log(fulldata) */
-/*   numOfCalls++;
-  console.log("numOfCalls " + numOfCalls); */
+  let numOfBestMatches = 0;
   //prevent empty input treating
   if (input === undefined || input === null) {
     fulldata.forEach(elem => elem.bestMatch = false);
@@ -131,7 +128,10 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
       numOfMatches.current >= inputArr.length
     ) {
       if (fulldataElem.constructor === Object) {
-        fulldataElem["bestMatch"] = true;
+        if (numOfBestMatches < 2) {
+          fulldataElem["bestMatch"] = true;
+          numOfBestMatches++;
+        }
       }
       resultObjsArr.push(fulldataElem);
     }
@@ -142,8 +142,11 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
     return defaultItem;
   }
   if (resultObjsArr.length === 1) {
+    if (numOfBestMatches < 2) {
     resultObjsArr[0]["bestMatch"] = true;
-  }
+    numOfBestMatches++;
+    }
+  } 
   //otherwise what we need
   console.log(resultObjsArr);
   return resultObjsArr;

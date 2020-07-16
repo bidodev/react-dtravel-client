@@ -24,19 +24,11 @@
         color: rgb(54, 54, 54);
         /* padding-bottom: 3rem; */
     }
-    div.back {
-        height: 95vh;
-        margin-top: 5rem;
-        ion-icon {
-            font-size: 4vw;
-            --ionicon-stroke-width: 60px;
-        }
-    }
-    div.forward {
+    div.forward, div.back {
         height: 50vh;
         margin-top: 25rem;
         ion-icon {
-            font-size: 6vw;
+            font-size: 4vw;
             --ionicon-stroke-width: 60px;
         }
     }
@@ -49,27 +41,36 @@
     overflow-y: hidden;
     margin-top: .5rem;
     margin-bottom: 2.5rem;
-/*     visibility: hidden;
+    visibility: hidden;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr; */
+    grid-template-rows: 1fr;
     
     .quiz-item {
-/*         grid-column: 1;
-        grid-row: 1; */
+        grid-column: 1;
+        grid-row: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
+    button {
+        padding-left: .5rem;
+        padding-right: .5rem;
+       cursor: pointer;
+   }
+   button:hover {
+       background-color: rgb(184, 75, 32);
+           color:white;
+     }
+     button:focus {
+       background-color: rgb(92, 14, 105);
+       color:white;
+   }
 }
 .bullets {
     opacity: .5;
 }
-/* .active-item {
-    opacity: 1;
-    visibility: visible;
-} */
 ul {
     margin-block-end: 0;
     list-style: none;
@@ -87,14 +88,4 @@ ul {
       }
 input {
     margin: .4rem;
-}
- label {
-     padding-left: .5rem;
-     padding-right: .5rem;
-    cursor: pointer;
-}
-button[type="submit"] {
-    background-color: rgb(92, 14, 105);
-    color:white;
-    border-radius: 4px;
 }
