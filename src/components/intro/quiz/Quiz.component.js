@@ -8,8 +8,10 @@ import "./quiz.styles.scss";
 const Quiz = () => {
   const refCollection = {};
   let currentFocus = 0;
+  const visible = "visible";
+  const opacity = 1;
   const setVisible = (index) => {
-    refCollection[index].style = "visibility: visible; opacity: 1" 
+    refCollection[index].style = `visibility: ${visible}; opacity: ${opacity}` 
   }
   const setInvisible = (index) => {
     refCollection[index].style = "" 
@@ -31,7 +33,9 @@ const Quiz = () => {
       setVisible(currentFocus);
   }
   const listItems = questionsFullData.map(({ ...props }, index) => (
-    <QuestionItem key={index} ref={(currentRef) => { refCollection[index] = currentRef; }} id={index} {...props} />
+    <QuestionItem key={index} ref={(currentRef) => { refCollection[index] = currentRef; }} id={index} {...props} style = {!index ?
+      {visibility: visible, opacity: opacity} : null
+    } />
   ));
   return (
     <div className="quiz-main">
