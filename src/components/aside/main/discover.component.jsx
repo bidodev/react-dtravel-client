@@ -22,15 +22,15 @@ const Main = () => {
   //2. Check which input the user passed..
   const searchInput = useSelector((state) => state.searchInput);
 
-  const filteredSearch = handleOfferSearch(
-    searchInput,
-    noOfferMatch,
-    offersFullData
-  );
+  // const filteredSearch = handleOfferSearch(
+  //   searchInput,
+  //   noOfferMatch,
+  //   offersFullData
+  // );
 
   let slicedResults = [];
-  slicedResults = [...filteredSearch].filter((elem, index) => {
-    if (filteredSearch.length === 1) {
+  slicedResults = [...offersFullData].filter((elem, index) => {
+    if (offersFullData.length === 1) {
       return index === 0;
     }
     return index >= startIndex && index <= finalIndex;
@@ -45,7 +45,7 @@ const Main = () => {
   };
 
   const nextCard = () => {
-    if (finalIndex === filteredSearch.length - 2) {
+    if (finalIndex === offersFullData.length - 2) {
       return;
     }
     setStartIndex(startIndex + 1);
