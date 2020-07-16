@@ -30,9 +30,14 @@ function ListItem({
               </div>
             ) : null}
           </div>
-          <p>{description}</p>
-          <p>Continent: {continent}</p>
-          <p>Prices: {prices}</p>
+          <p>
+            <ion-icon name="navigate-outline"></ion-icon>: &nbsp;
+            {continent.charAt(0).toUpperCase() + continent.slice(1)}
+          </p>
+          <p>
+            <ion-icon name="cash-outline"></ion-icon>: &nbsp; {prices}
+          </p>
+          <p className="description">{description}</p>
         </Fragment>
       ) : (
         <Fragment>
@@ -40,9 +45,14 @@ function ListItem({
           <div className="img-container">
             <img src={src} alt={productName} />
           </div>
-          <p>{description}</p>
-          <p>Continent: {continent}</p>
-          <p>Prices: {prices}</p>
+          <p>
+            <ion-icon name="navigate-outline"></ion-icon>: &nbsp;
+            {continent.charAt(0).toUpperCase() + continent.slice(1)}
+          </p>
+          <p>
+            <ion-icon name="cash-outline"></ion-icon>: &nbsp; {prices}
+          </p>
+          <p className="description">{description}</p>
         </Fragment>
       )}
     </div>
