@@ -1,7 +1,7 @@
 //
 /* let numOfCalls = 0; */
 const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
-  console.warn("handleOfferSearch called")
+  /* console.warn("handleOfferSearch called") */
   /* console.log(fulldata) */
 /*   numOfCalls++;
   console.log("numOfCalls " + numOfCalls); */
