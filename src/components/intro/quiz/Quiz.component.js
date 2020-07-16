@@ -17,7 +17,7 @@ const setInvisible = (index) => {
   refCollection[index].style = "";
 };
 const forward = () => {
-  console.warn("previousFocus " + currentFocus)
+  console.warn("previousFocus " + currentFocus);
   setInvisible(currentFocus);
   if (currentFocus < 3) {
     currentFocus++;
@@ -25,7 +25,7 @@ const forward = () => {
     currentFocus = 0;
   }
   setVisible(currentFocus);
-  console.warn("currentFocus " + currentFocus)
+  console.warn("currentFocus " + currentFocus);
 };
 const back = () => {
   setInvisible(currentFocus);
@@ -51,13 +51,15 @@ const Quiz = () => {
   ));
   return (
     <div className="quiz-main">
-      <div  className="home">
-      <Link to="/" >
-        <button>
-          Home
-        </button>
-{/*         <div className = "pseudo-img"></div> */}
-      </Link>
+      <div className="home">
+        <Link to="/">
+          <button class="offers">
+            <span class="circle" aria-hidden="true">
+              <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">HOME</span>
+          </button>
+        </Link>
       </div>
       <div className="back">
         <button onClick={back}>
@@ -71,14 +73,19 @@ const Quiz = () => {
         </button>
       </div>
       <div className="quiz-to-offers">
-        <button onClick={smoothScroll}>
-          Offers
+        <button class="offers" onClick={smoothScroll}>
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">OFFERS</span>
         </button>
-   {/*      <div className = "pseudo-img"></div> */}
       </div>
       <div className="quiz-logo">
-        <p onClick={smoothScroll}> do the travel
-          <span>.</span></p>
+        <p onClick={smoothScroll}>
+          {" "}
+          do the travel
+          <span>.</span>
+        </p>
       </div>
     </div>
   );
