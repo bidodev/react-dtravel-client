@@ -1,10 +1,13 @@
 //
 /* let numOfCalls = 0; */
 const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
+  console.warn("handleOfferSearch called")
+  /* console.log(fulldata) */
 /*   numOfCalls++;
   console.log("numOfCalls " + numOfCalls); */
   //prevent empty input treating
   if (input === undefined || input === null) {
+    fulldata.forEach(elem => elem.bestMatch = false);
     const firstEightItems = [];
     (() => {
       for (let i = 0; i < 8; i++) {
@@ -48,7 +51,11 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
       }
       //now we are inside of an Object
       for (let [key, value] of fulldataElemToArr) {
-        if (key === "description" || key === "src" || key === "bestMatch") {
+        if (key === "description" || key === "src") {
+          continue;
+        }
+        if (key === "bestMatch") {
+          value = false;
           continue;
         }
         if (value === inputElem) {
