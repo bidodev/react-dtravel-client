@@ -1,9 +1,13 @@
 body {
-  background-color: #000; 
+  background-color: #000;
   overflow-x: hidden;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .App {
@@ -29,7 +33,6 @@ body {
     background-color: black;
     outline: 1px solid black;
   }
-  
 }
 
 a {
