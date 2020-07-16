@@ -2,10 +2,9 @@
 /* let numOfCalls = 0; */
 const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
   let numOfBestMatches = 0;
+  /* console.warn("handleOfferSearch was called") */
   //prevent empty input treating
   if (input === undefined || input === null) {
-    //prevent redux caching
-    fulldata.forEach(elem => elem.bestMatch = false);
     const firstEightItems = [];
     (() => {
       for (let i = 0; i < 8; i++) {
@@ -37,6 +36,9 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
   fulldata = fulldata.constructor !== Array ? fulldata.split(" ") : fulldata;
   //first, handling a loop for an outer cycle, JSON/array of objects
   fulldata.forEach((fulldataElem) => {
+    //cache side effect
+    fulldataElem.bestMatch = false;
+    /* console.log(fulldataElem.bestMatch) */
     if(fulldataElem.id.toString() === "404") { return}
     //checking every item {currentObj} in offers.db how it meets the query input
     inputArr.forEach((inputElem) => {
@@ -50,11 +52,6 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
       //now we are inside of an Object
       for (let [key, value] of fulldataElemToArr) {
         if (key === "description" || key === "src") {
-          continue;
-        }
-        //prevent redux caching
-        if (key === "bestMatch") {
-          value = false;
           continue;
         }
         if (value === inputElem) {
