@@ -6,35 +6,38 @@ import smoothScroll from "../landing/smoothScroll";
 
 import "./quiz.styles.scss";
 
+const refCollection = {};
+let currentFocus = 0;
+const visible = "visible";
+const opacity = 1;
+const setVisible = (index) => {
+  refCollection[index].style = `visibility: ${visible}; opacity: ${opacity}`;
+};
+const setInvisible = (index) => {
+  refCollection[index].style = "";
+};
+const forward = () => {
+  console.warn("previousFocus " + currentFocus)
+  setInvisible(currentFocus);
+  if (currentFocus < 3) {
+    currentFocus++;
+  } else {
+    currentFocus = 0;
+  }
+  setVisible(currentFocus);
+  console.warn("currentFocus " + currentFocus)
+};
+const back = () => {
+  setInvisible(currentFocus);
+  if (currentFocus > 0) {
+    currentFocus--;
+  } else {
+    currentFocus = 3;
+  }
+  setVisible(currentFocus);
+};
+
 const Quiz = () => {
-  const refCollection = {};
-  let currentFocus = 0;
-  const visible = "visible";
-  const opacity = 1;
-  const setVisible = (index) => {
-    refCollection[index].style = `visibility: ${visible}; opacity: ${opacity}`;
-  };
-  const setInvisible = (index) => {
-    refCollection[index].style = "";
-  };
-  const forward = () => {
-    setInvisible(currentFocus);
-    if (currentFocus < 3) {
-      currentFocus++;
-    } else {
-      currentFocus = 0;
-    }
-    setVisible(currentFocus);
-  };
-  const back = () => {
-    setInvisible(currentFocus);
-    if (currentFocus > 0) {
-      currentFocus--;
-    } else {
-      currentFocus = 3;
-    }
-    setVisible(currentFocus);
-  };
   const listItems = questionsFullData.map(({ ...props }, index) => (
     <QuestionItem
       key={index}

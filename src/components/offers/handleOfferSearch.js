@@ -4,6 +4,7 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
   let numOfBestMatches = 0;
   //prevent empty input treating
   if (input === undefined || input === null) {
+    //prevent redux caching
     fulldata.forEach(elem => elem.bestMatch = false);
     const firstEightItems = [];
     (() => {
@@ -51,6 +52,7 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
         if (key === "description" || key === "src") {
           continue;
         }
+        //prevent redux caching
         if (key === "bestMatch") {
           value = false;
           continue;
@@ -90,6 +92,8 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
             } else {
               const inputSubStr = inputElem.substring(i, i + 3);
               if (valueToStr.includes(inputSubStr)) {
+/*                 console.warn(valueToStr);
+                console.warn("PASSED " + inputSubStr); */
                 spellNumOfMatches.current++;
               }
             }
@@ -100,15 +104,21 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
             } else {
               const inputSubStr = inputElem.substring(i, i + 4);
               if (valueToStr.includes(inputSubStr)) {
+/*                 console.warn(valueToStr);
+                console.warn("PASSED " + inputSubStr); */
                 spellNumOfMatches.current++;
                 spellNumOfMatches.current++;
               }
             }
           }
           if (inputElem[0] === valueToStr[0]) {
+/*             console.warn(valueToStr);
+            console.warn("PASSED " + inputElem); */
             spellNumOfMatches.current++;
           }
           if (inputElem.substring(0,4) === valueToStr.substring(0,4)) {
+/*             console.warn(valueToStr);
+            console.warn("PASSED " + inputElem); */
             spellNumOfMatches.current = 100;
           }
           if (spellNumOfMatches.current >= spellNumOfMatches.min) {
