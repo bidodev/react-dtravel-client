@@ -6,13 +6,13 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
   console.log(input)
   //prevent empty input treating
   if (input === undefined || input === null) {
-    const firstEightItems = [];
+    const firstNItems = [];
     (() => {
-      for (let i = 0; i < 8; i++) {
-        firstEightItems.push(fulldata[i])
+      for (let i = 0; i < 12; i++) {
+        firstNItems.push(fulldata[i])
       }
     })();
-    return firstEightItems;
+    return firstNItems;
   }
   //search goes a bit smarter
   //------
