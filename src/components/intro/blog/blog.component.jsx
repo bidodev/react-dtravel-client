@@ -1,7 +1,18 @@
 import React from "react";
 
-function Blog() {
-  return <div className="blog">Blog Component</div>;
-}
+/* import smoothScroll from "./smoothScroll" */
+import "../landing/landing.title.styles.scss";
+
+
+const Blog = () => {
+
+  return (
+    <div className="main-title image">
+
+
+
+    </div>
+  );
+};
 
 export default Blog;
