@@ -1,8 +1,8 @@
 # Find the vacation of your dreams with Dtravel!
 
-### A platform that helps you find a special vacation in line with your taste.
-### Check the filters to sort our destinations according to your wish, whether it is a tropical, snowy, hiking, cycling trip, or just a city tour.
-    Take our quiz for more personalized offers!
+ A platform that helps you find a special vacation in line with your taste.
+ Check the filters to sort our destinations according to your wish, whether it is a tropical, snowy, hiking, cycling trip, or just a city tour.
+### Take our quiz for more personalized offers!
 
 <br>
 
