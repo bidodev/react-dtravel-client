@@ -1,20 +1,18 @@
 //
 /* let numOfCalls = 0; */
 const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
-  /* console.warn("handleOfferSearch called") */
-  /* console.log(fulldata) */
-/*   numOfCalls++;
-  console.log("numOfCalls " + numOfCalls); */
+  let numOfBestMatches = 0;
+  console.warn("handleOfferSearch was called")
+  console.log(input)
   //prevent empty input treating
   if (input === undefined || input === null) {
-    fulldata.forEach(elem => elem.bestMatch = false);
-    const firstEightItems = [];
+    const firstNItems = [];
     (() => {
-      for (let i = 0; i < 8; i++) {
-        firstEightItems.push(fulldata[i])
+      for (let i = 0; i < 12; i++) {
+        firstNItems.push(fulldata[i])
       }
     })();
-    return firstEightItems;
+    return firstNItems;
   }
   //search goes a bit smarter
   //------
@@ -39,6 +37,9 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
   fulldata = fulldata.constructor !== Array ? fulldata.split(" ") : fulldata;
   //first, handling a loop for an outer cycle, JSON/array of objects
   fulldata.forEach((fulldataElem) => {
+    //cache side effect
+    fulldataElem.bestMatch = false;
+    /* console.log(fulldataElem.bestMatch) */
     if(fulldataElem.id.toString() === "404") { return}
     //checking every item {currentObj} in offers.db how it meets the query input
     inputArr.forEach((inputElem) => {
@@ -52,10 +53,6 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
       //now we are inside of an Object
       for (let [key, value] of fulldataElemToArr) {
         if (key === "description" || key === "src") {
-          continue;
-        }
-        if (key === "bestMatch") {
-          value = false;
           continue;
         }
         if (value === inputElem) {
@@ -93,6 +90,8 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
             } else {
               const inputSubStr = inputElem.substring(i, i + 3);
               if (valueToStr.includes(inputSubStr)) {
+/*                 console.warn(valueToStr);
+                console.warn("PASSED " + inputSubStr); */
                 spellNumOfMatches.current++;
               }
             }
@@ -103,15 +102,21 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
             } else {
               const inputSubStr = inputElem.substring(i, i + 4);
               if (valueToStr.includes(inputSubStr)) {
+/*                 console.warn(valueToStr);
+                console.warn("PASSED " + inputSubStr); */
                 spellNumOfMatches.current++;
                 spellNumOfMatches.current++;
               }
             }
           }
           if (inputElem[0] === valueToStr[0]) {
+/*             console.warn(valueToStr);
+            console.warn("PASSED " + inputElem); */
             spellNumOfMatches.current++;
           }
           if (inputElem.substring(0,4) === valueToStr.substring(0,4)) {
+/*             console.warn(valueToStr);
+            console.warn("PASSED " + inputElem); */
             spellNumOfMatches.current = 100;
           }
           if (spellNumOfMatches.current >= spellNumOfMatches.min) {
@@ -131,7 +136,10 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
       numOfMatches.current >= inputArr.length
     ) {
       if (fulldataElem.constructor === Object) {
-        fulldataElem["bestMatch"] = true;
+        if (numOfBestMatches < 2) {
+          fulldataElem["bestMatch"] = true;
+          numOfBestMatches++;
+        }
       }
       resultObjsArr.push(fulldataElem);
     }
@@ -142,8 +150,11 @@ const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
     return defaultItem;
   }
   if (resultObjsArr.length === 1) {
+    if (numOfBestMatches < 2) {
     resultObjsArr[0]["bestMatch"] = true;
-  }
+    numOfBestMatches++;
+    }
+  } 
   //otherwise what we need
   console.log(resultObjsArr);
   return resultObjsArr;

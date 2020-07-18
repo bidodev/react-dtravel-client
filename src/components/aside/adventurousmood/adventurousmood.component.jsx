@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import "./adventurousmood.component.scss";
+import smoothScroll from "../../intro/landing/smoothScroll";
 
 function AdventurousMood() {
 
@@ -11,7 +12,7 @@ function AdventurousMood() {
     const valueMood = event.target.id;
 
     //it's returning undefined..
-    dispatch({ type: "UPDATE_INPUT", payload: valueMood});
+    dispatch({ type: "UPDATE_INPUT", payload: valueMood });
   };
 
   return (

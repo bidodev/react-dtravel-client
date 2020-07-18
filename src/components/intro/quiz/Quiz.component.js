@@ -1,37 +1,91 @@
-import React, { useState } from "react";
+import React from "react";
 import questionsFullData from "./questions.json";
 import { Link } from "react-router-dom";
-import QuestionItem from "./question-item.component"
+import QuestionItem from "./question-item.component";
+import smoothScroll from "../landing/smoothScroll";
 
 import "./quiz.styles.scss";
 
+const refCollection = {};
+let currentFocus = 0;
+const visible = "visible";
+const opacity = 1;
+const setVisible = (index) => {
+  refCollection[index].style = `visibility: ${visible}; opacity: ${opacity}`;
+};
+const setInvisible = (index) => {
+  refCollection[index].style = "";
+};
+const forward = () => {
+  console.warn("previousFocus " + currentFocus);
+  setInvisible(currentFocus);
+  if (currentFocus < 3) {
+    currentFocus++;
+  } else {
+    currentFocus = 0;
+  }
+  setVisible(currentFocus);
+  console.warn("currentFocus " + currentFocus);
+};
+const back = () => {
+  setInvisible(currentFocus);
+  if (currentFocus > 0) {
+    currentFocus--;
+  } else {
+    currentFocus = 3;
+  }
+  setVisible(currentFocus);
+};
+
 const Quiz = () => {
-  const listItems = questionsFullData.map(({...props}, index) => (
+  const listItems = questionsFullData.map(({ ...props }, index) => (
     <QuestionItem
-      id={
-        index
-      }
+      key={index}
+      ref={(currentRef) => {
+        refCollection[index] = currentRef;
+      }}
+      id={index}
       {...props}
+      style={!index ? { visibility: visible, opacity: opacity } : null}
     />
-    ));
+  ));
   return (
     <div className="quiz-main">
-      <div className="back">
-      <Link to="/">
-        <button className="back">
-          <ion-icon name="chevron-back-outline"></ion-icon>
-        </button>
+      <div className="home">
+        <Link to="/">
+          <button class="offers">
+            <span class="circle" aria-hidden="true">
+              <span class="icon arrow"></span>
+            </span>
+            <span class="button-text">HOME</span>
+          </button>
         </Link>
       </div>
-      <div className="quiz-list">       
-        {listItems}
-      </div>
-      <div className="forward">
-        <button className="forward">
-          <a href="/#offers">
-          <ion-icon name="chevron-forward-outline"></ion-icon>
-          </a>
+      <div className="back">
+        <button onClick={back}>
+          <ion-icon name="chevron-back-outline"></ion-icon>
         </button>
+      </div>
+      <div className="quiz-list">{listItems}</div>
+      <div className="forward">
+        <button onClick={forward}>
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </div>
+      <div className="quiz-to-offers">
+        <button class="offers" onClick={smoothScroll}>
+          <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">OFFERS</span>
+        </button>
+      </div>
+      <div className="quiz-logo">
+        <p onClick={smoothScroll}>
+          {" "}
+          do the travel
+          <span>.</span>
+        </p>
       </div>
     </div>
   );

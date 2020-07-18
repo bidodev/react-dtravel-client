@@ -52,10 +52,12 @@ const Main = () => {
     setFinalIndex(finalIndex + 1);
   };
 
+
+  
   return (
     <div className="aside-main">
       <h1>Discover</h1>
-
+  
       <div className="aside-main__carrousel">
         {slicedResults.map(({id, ...item }) => (
           <ExperienceItem key={id} {...item} />

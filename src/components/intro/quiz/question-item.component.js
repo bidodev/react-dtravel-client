@@ -1,18 +1,15 @@
-import React, { useState } from 'react';
+import React, { forwardRef }  from "react";
 import { useDispatch } from "react-redux";
 import Btn from "./btn.component"
 
 const inputObj = {  }
-const QuestionItem = ({id, question, variants}) => {
+const QuestionItem = forwardRef(({id, question, variants, style}, ref) => {
   const dispatch = useDispatch();
-
   const onSubmit = (event) => {
     event.preventDefault();
     const e = event.target;
     inputObj[e.name] = e.value;
-    console.warn(inputObj);
-    const quizInput = Object.values(inputObj)
-    console.warn(quizInput);
+    const quizInput = Object.values(inputObj);
     dispatch({ type: "UPDATE_INPUT", payload: quizInput});
   };
   const btns = variants.map((variant, index) => (
@@ -24,11 +21,11 @@ const QuestionItem = ({id, question, variants}) => {
   />
     ));
     return (
-        <div id={id}>
+        <div id={id} ref={ref} className = "quiz-item" style = {style}>
         <h3>{question}</h3>
         {btns}
     </div>
     );
-  };
+  });
 
   export default QuestionItem;

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./experience.item.component.styles.scss";
-import {connect} from 'react-redux'
+import { connect } from "react-redux";
+
+import smoothScroll from "../../../intro/landing/smoothScroll";
 
 class Card extends Component {
   constructor(props) {
@@ -23,20 +25,34 @@ class Card extends Component {
   render() {
     const { id, src, productName, country } = this.props;
 
-
     return (
       <React.Fragment>
         <div
           className="card"
           onMouseEnter={this.handleMouseHover}
           onMouseLeave={this.handleMouseHover}
-          //onClick={()=> this.props.handleMouseClick(productName)}
+          onClick={() => {
+            this.props.handleMouseClick(productName);
+            smoothScroll();
+          }}
         >
-          <img className={id === 404 ? "img-404" : "img-card"} key={id} src={src} alt={productName} />
+          <img
+            className={id === 404 ? "img-404" : "img-card"}
+            key={id}
+            src={src}
+            alt={productName}
+          />
           {this.state.isHovering && (
-            <div >
-              <li><h4>{productName.charAt(0).toUpperCase() + productName.slice(1)}</h4></li>
-              <li><ion-icon name="navigate-outline"></ion-icon>{country.charAt(0).toUpperCase() + country.slice(1)}</li>
+            <div>
+              <li>
+                <h4>
+                  {productName.charAt(0).toUpperCase() + productName.slice(1)}
+                </h4>
+              </li>
+              <li>
+                <ion-icon name="navigate-outline"></ion-icon>
+                {country.charAt(0).toUpperCase() + country.slice(1)}
+              </li>
             </div>
           )}
         </div>
@@ -45,11 +61,12 @@ class Card extends Component {
   }
 }
 
-const mapDispachToProps = dispatch => {
+const mapDispachToProps = (dispatch) => {
   return {
     //not working as expected..
-     //handleMouseClick: (productName) => dispatch({ type: "UPDATE_INPUT", payload: productName }),
+    handleMouseClick: (productName) =>
+      dispatch({ type: "UPDATE_INPUT", payload: productName }),
   };
-}
+};
 
 export default connect(null, mapDispachToProps)(Card);
