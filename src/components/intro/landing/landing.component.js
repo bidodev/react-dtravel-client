@@ -52,9 +52,6 @@ const Landing = () => {
             Start the Quiz
           </button>
         </Link>
-        <button type="button" className="to-offers" onClick={smoothScroll}>
-          {/* <a href = "#offers"> */}Check our offers{/* </a> */}
-          </button>
       </div>
 
       {/* onClick make the URL inside imgStyle change, you can pass it with props */}
