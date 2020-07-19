@@ -1,27 +1,26 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import './header.component.styles.scss'
 
-function Header() {
+const Header = () => {
   return (
-    <div className="aside-header">
-      <div className="aside-header__menu"></div>
-      <div className="aside-header__nav">
-        <NavLink
-          to="/"
-          activeStyle={{
-            color: " #f75d37",
-          }}
-        >
-          Home
-        </NavLink>
-        <NavLink to="/blog">Blog</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <div className="account-img">
-          <img src="/img/sophie2.jpg" alt="avatar"></img>
-        </div>
-      </div>
-    </div>
+    <nav className="aside-header">
+      <ul className="aside-header__nav">
+        <li>
+          <NavLink to="/">Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/blog">Blog</NavLink>
+        </li>
+        <li>
+          <NavLink to="/about">About</NavLink>
+        </li>
+        <li>
+          <NavLink to="/login">Login</NavLink>
+        </li>
+      </ul>
+    </nav>
   );
-}
+};
 
 export default Header;

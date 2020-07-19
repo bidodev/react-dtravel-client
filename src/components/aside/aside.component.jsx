@@ -5,7 +5,6 @@ import Search from './search/search.component'
 import AdventurousMood from './adventurousmood/adventurousmood.component.jsx'
 
 function Aside() {
-    console.log("Aside Component Rendered")
     return (
         <div className="aside">
             <Header />

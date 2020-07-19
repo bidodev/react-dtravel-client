@@ -10,54 +10,7 @@
   border-bottom-right-radius: 30px;
   height: 95vh;
 
-  &-header {
-    height: 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
 
-    &__menu {
-      margin-left: 1vw;
-    }
-
-    &__nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-evenly;
-      width: 80%;
-      text-transform: uppercase;
-      list-style: none;
-      font-family: "Nunito", sans-serif;
-
-      a {
-        letter-spacing: 0.5px;
-        color: #303030;
-        font-weight: 600;
-        font-size: 1.1rem;
-      }
-
-      ion-icon {
-        font-size: 1.6rem;
-      }
-
-      .active {
-        //text-decoration: underline;
-        font-weight: bold;
-        color: #f75d37;
-      }
-
-      .account-img {
-        width: 36px;
-        height: 36px;
-        img {
-          width: 100%;
-          object-fit: cover;
-          border-radius: 50%;
-        }
-      }
-    }
-  }
   .aside-main {
     height: 60%;
     display: flex;

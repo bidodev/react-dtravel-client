@@ -49,7 +49,7 @@ const Landing = () => {
         </h5>
         <Link to="/quiz">
           <button type="button" className="btn btn-primary btn-lg">
-            Start the Quiz
+            Get Started
           </button>
         </Link>
       </div>

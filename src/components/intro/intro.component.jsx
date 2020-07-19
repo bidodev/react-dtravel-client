@@ -4,6 +4,7 @@ import { Switch, Route } from "react-router-dom";
 import Landing from "./landing/landing.component";
 import About from "./about/about.component";
 import Blog from "./blog/blog.component";
+import Login from "./login/login.component";
 import Quiz from "./quiz/Quiz.component";
 
 // About Intro Component
@@ -22,6 +23,7 @@ const Intro = () => {
         <Route exact path="/quiz" component={Quiz} />
         <Route exact path="/about" component={About} />
         <Route exact path="/blog" component={Blog} />
+        <Route exact path="/login" component={Login} />
       </Switch>
     </div>
   )
