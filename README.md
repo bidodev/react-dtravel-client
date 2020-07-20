@@ -1,11 +1,17 @@
 ## About: 
 This was a group project from **DCI's WEB Development Course**, which We attended between 2019 - 2021.
 
-### Credits v3.0 onwards goes to:
-- Bido: https://github.com/
-
+## V3
 #### New Features
 - [x] Authtentication using firebase / firestore
+- [x] Redux Hooks (useSelector, useDispatch)
+- [x] React Hooks (useState, useEffect)
+- [x] APP UX refactored.
+
+### Credits goes to:
+- Bido: https://github.com/
+
+
 
 ### Credits v2.0 goes to:
 - Bido: https://github.com/
