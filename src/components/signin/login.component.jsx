@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./login.component.styles.scss";
 
-import {signInWithGoogle} from '../../../firebase/firebase.utils'
+import {signInWithGoogle} from '../../firebase/firebase.utils'
 
 const Login = () => {
   const [userName, setUserName] = useState("");

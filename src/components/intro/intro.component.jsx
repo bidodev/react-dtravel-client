@@ -4,8 +4,10 @@ import { Switch, Route } from "react-router-dom";
 import Landing from "./landing/landing.component";
 import About from "./about/about.component";
 import Blog from "./blog/blog.component";
-import Login from "./login/login.component";
 import Quiz from "./quiz/Quiz.component";
+
+//pages
+import Login from "../../pages/login/login.component";
 
 // About Intro Component
 // Intro is one of the main component along aside.
