@@ -1,7 +1,14 @@
 ## About: 
 1. This was a group project from **DCI's WEB Development Course**, which We attended between 2019 - 2021.
 
-### Credits V2.0 goes to:
+### Credits v3.0 goes to:
+- Bido: https://github.com/
+
+#### New Features
+[x] Authtentication using firebase / firestore
+
+
+### Credits until V2.0 goes to:
 - Bido: https://github.com/
 - Alex: https://github.com/
 - Simona: https://github.com/
