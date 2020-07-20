@@ -1,3 +1,14 @@
+## About: 
+1. This was a group project from **DCI's WEB Development Course**, which We attended between 2019 - 2021.
+
+### Credits V2.0 goes to:
+- Bido: https://github.com/
+- Alex: https://github.com/
+- Simona: https://github.com/
+- Yaman: https://github.com/
+
+Download the V2.0: [Here](https://github.com/bidodev/dtravel/releases/tag/v2.0)
+
 # Find the vacation of your dreams with Dtravel!
 
  A platform that helps you find a special vacation in line with your taste.
@@ -5,7 +16,6 @@
 ### Take our quiz for more personalized offers!
 
 <br>
-
 
 ## Structure
 
@@ -80,24 +90,3 @@ Project
 <br>
 ![Imgur](https://imgur.com/S5mCULX.jpg)
 <br>
-
-
-
-
-# Roadmap
-### Stage 0  
-__working enviroment:__  ✓  
-discord  
-[Google slide](https://docs.google.com/presentation/d/1FkO7BHSw60o8P_f1mR4mIHRM8E0mICF0oV7wcK-d5dY/edit?usp=sharing)     
-__main concept:__   
-travel/vacation quiz ✓  
-__project name:__  
-???   
-### Stage 1   
-__Website content mindmap [Design doc/SRS]__ _in process_  
-|  
-|_ __wireframe__ //design  
-|  
-|_ __architecture__ //logic  
-
-__splitting the tasks__  
