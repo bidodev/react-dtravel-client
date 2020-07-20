@@ -1,13 +1,13 @@
 const INITIAL_STATE = {
-    logged: false
+    currentUser: null
 }
 
 const anotherReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
-        case 'TEST_ACTION':
+        case 'LOGIN_USER':
             return {
                 ...state,
-                logged: action.payload
+                currentUser: action.payload
             };
         default:
             return state;
