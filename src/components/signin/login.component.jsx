@@ -51,12 +51,12 @@ const Login = () => {
           label="password"
           handleInputValue={handleInputValue}
         />
-        <CustomButton type="submit">Sign In</CustomButton>
-        <input
-          type="submit"
-          onClick={signInWithGoogle}
-          value="Google Sign In"
-        />
+        <div className="buttons">
+          <CustomButton type="submit">Sign In</CustomButton>
+          <CustomButton onClick={signInWithGoogle} isGoogleSingIn>
+            Sign in with Google
+          </CustomButton>
+        </div>
       </form>
     </div>
   );
