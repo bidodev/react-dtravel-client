@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
-/* import smoothScroll from "./smoothScroll" */
 import "./landing.title.styles.scss";
-import smoothScroll from "./smoothScroll";
+//import smoothScroll from "./smoothScroll";
 
-console.log(smoothScroll)
 
 const Landing = () => {
   const [img, setImg] = useState(0);
