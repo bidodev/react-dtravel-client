@@ -1,13 +1,15 @@
 import React from 'react'
 
-//signIn
+import './authentication.styles.scss'
+
+//signIn Component
 import SignIn from "../components/signin/login.component"
 
 function Authentication() {
     return (
-        <React.Fragment>
+        <div className="authentication">
             <SignIn/>
-        </React.Fragment>
+        </div>
     )
 }
 

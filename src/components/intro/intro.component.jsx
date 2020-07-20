@@ -7,7 +7,7 @@ import Blog from "./blog/blog.component";
 import Quiz from "./quiz/Quiz.component";
 
 //pages
-import Login from "../../pages/login/login.component";
+import Authentication from "../../pages/authentication";
 
 // About Intro Component
 // Intro is one of the main component along aside.
@@ -25,7 +25,7 @@ const Intro = () => {
         <Route exact path="/quiz" component={Quiz} />
         <Route exact path="/about" component={About} />
         <Route exact path="/blog" component={Blog} />
-        <Route exact path="/login" component={Login} />
+        <Route exact path="/login" component={Authentication} />
       </Switch>
     </div>
   )

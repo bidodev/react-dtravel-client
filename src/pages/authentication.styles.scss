@@ -1,0 +1,17 @@
+.authentication {
+    /* position */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 95vh;
+ 
+    font-weight: 800;
+    
+    // border-radius: 30px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    background-color: #f5f5f5;  
+ }
+
+

@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import "./login.component.styles.scss";
 
-import {signInWithGoogle} from '../../firebase/firebase.utils'
+import { signInWithGoogle } from "../../firebase/firebase.utils";
+
+import FormInput from "../../components/forms/input.component";
+import CustomButton from "../../components/custom-button/custom-button.component";
 
 const Login = () => {
   const [userName, setUserName] = useState("");
@@ -13,31 +16,47 @@ const Login = () => {
   };
 
   //update localState
-  const handleValues = (event) => {
-    const inputValue = event.target.value;
+  const handleInputValue = (event) => {
+    const { value, name } = event.target;
 
-    switch (event.target.id) {
-      case "user":
-        return setUserName(inputValue);
+    switch (name) {
+      case "email":
+        return setUserName(value);
       case "password":
-        return setUserPassword(inputValue);
+        return setUserPassword(value);
       default:
     }
   };
 
   return (
-    <div className="main-title">
+    <div>
+      <div className="sign-in">
+        <h2 className="title">I already have an account</h2>
+        <span>Sign in with your email and password</span>
+      </div>
       <form onSubmit={handleLoginData}>
-        <input id="user" type="text" value={userName} onChange={handleValues} />
-        <input
-          id="password"
-          type="text"
-          value={userPassword}
-          onChange={handleValues}
+        <FormInput
+          name="email"
+          type="email"
+          value={userName}
+          required
+          label="email"
+          handleInputValue={handleInputValue}
         />
-        <button>Login</button>
-        <button onClick={signInWithGoogle}>Sign In</button>
-
+        <FormInput
+          name="password"
+          type="password"
+          value={userPassword}
+          required
+          label="password"
+          handleInputValue={handleInputValue}
+        />
+        <CustomButton type="submit">Sign In</CustomButton>
+        <input
+          type="submit"
+          onClick={signInWithGoogle}
+          value="Google Sign In"
+        />
       </form>
     </div>
   );
