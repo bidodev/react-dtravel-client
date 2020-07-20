@@ -7,7 +7,7 @@ import Aside from "./components/aside/aside.component";
 import { useDispatch } from "react-redux";
 
 //import authtentication from firebase
-import { auth } from "./firebase/firebase.utils.js";
+import { auth, createUserProfileDocument } from "./firebase/firebase.utils.js";
 
 const App = () => {
   //Use dispatch, similar to connect when not using Hooks
@@ -16,7 +16,8 @@ const App = () => {
   //2. Similar to componentDidMount when using class components.
   useEffect(() => {
     const unsubsribeFromAuth = null;
-    auth.onAuthStateChanged((user) => {
+    auth.onAuthStateChanged(async user => {
+      createUserProfileDocument(user)
     
       //Update our redux store with the newUser Object.
       dispatch({ type: "LOGIN_USER", payload: user });
@@ -26,7 +27,7 @@ const App = () => {
     return () => {
       unsubsribeFromAuth();
     };
-  }, [dispatch]);
+  });
 
   return (
     <div className="App">

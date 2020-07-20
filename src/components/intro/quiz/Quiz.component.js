@@ -53,11 +53,11 @@ const Quiz = () => {
     <div className="quiz-main">
       <div className="home">
         <Link to="/">
-          <button class="offers">
-            <span class="circle" aria-hidden="true">
-              <span class="icon arrow"></span>
+          <button className="offers">
+            <span className="circle" aria-hidden="true">
+              <span className="icon arrow"></span>
             </span>
-            <span class="button-text">HOME</span>
+            <span className="button-text">HOME</span>
           </button>
         </Link>
       </div>
