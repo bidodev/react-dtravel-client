@@ -1,9 +1,10 @@
 .authentication {
   /* position */
   display: flex;
+  height: 95vh;
   justify-content: space-around;
   align-items: center;
-  height: 95vh;
+  
   background-image: linear-gradient(rgba(#000, 0.5), rgba(#000, 0.5)),
     url("./authentication.jpg");
   background-size: cover;
@@ -14,5 +15,4 @@
   // border-radius: 30px;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
-  background-color: rgba(245, 245, 245, 1);
 }

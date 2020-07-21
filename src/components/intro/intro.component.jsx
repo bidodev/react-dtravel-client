@@ -6,7 +6,7 @@ import Landing from "./landing/landing.component";
 import About from "./about/about.component";
 import Quiz from "./quiz/Quiz.component";
 
-//pages
+//Sign In / Sign UP Page...
 import Authentication from "../../pages/authentication";
 
 // About Intro Component

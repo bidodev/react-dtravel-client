@@ -59,8 +59,8 @@ const Main = () => {
       <h1>Discover</h1>
   
       <div className="aside-main__carrousel">
-        {slicedResults.map(({id, ...item }) => (
-          <ExperienceItem key={id} {...item} />
+        {slicedResults.map(({...item }) => (
+          <ExperienceItem key={item.id} {...item} />
         ))}
       </div>
       <div className="pagination">

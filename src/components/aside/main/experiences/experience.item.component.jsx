@@ -22,6 +22,10 @@ class Card extends Component {
       isHovering: !state.isHovering,
     };
   };
+
+  sanitize = (str) => {
+    //function to sanitize country and description..
+  }
   render() {
     const { id, src, productName, country } = this.props;
 
@@ -32,8 +36,7 @@ class Card extends Component {
           onMouseEnter={this.handleMouseHover}
           onMouseLeave={this.handleMouseHover}
           onClick={() => {
-            this.props.handleMouseClick(productName);
-            smoothScroll();
+            this.props.handleMouseClick(id);
           }}
         >
           <img
@@ -46,12 +49,12 @@ class Card extends Component {
             <div>
               <li>
                 <h4>
-                  {productName.charAt(0).toUpperCase() + productName.slice(1)}
+                  {productName[0].toUpperCase() + productName.slice(1)}
                 </h4>
               </li>
               <li>
                 <ion-icon name="navigate-outline"></ion-icon>
-                {country.charAt(0).toUpperCase() + country.slice(1)}
+                {country[0].toUpperCase() + country.slice(1)}
               </li>
             </div>
           )}
@@ -64,8 +67,8 @@ class Card extends Component {
 const mapDispachToProps = (dispatch) => {
   return {
     //not working as expected..
-    handleMouseClick: (productName) =>
-      dispatch({ type: "UPDATE_INPUT", payload: productName }),
+    handleMouseClick: (id) => console.log("User clicked on the Experience wirh id", id)
+      //dispatch({ type: "UPDATE_INPUT", payload: id }),
   };
 };
 
