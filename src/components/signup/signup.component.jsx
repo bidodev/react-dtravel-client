@@ -64,28 +64,28 @@ const SignUp = () => {
           type="text"
           name="displayName"
           value={displayName}
-          label="Display Name"
+          label="name"
           handleInputValue={handleInputValue}
         />
         <FormInput
           type="email"
           name="email"
           value={userEmail}
-          label="Email"
+          label="email"
           handleInputValue={handleInputValue}
         />
         <FormInput
           type="password"
           name="password"
           value={userPassword}
-          label="Password"
+          label="password"
           handleInputValue={handleInputValue}
         />
         <FormInput
           type="password"
           name="confirmPassword"
           value={confirmPassword}
-          label="Confirm Password"
+          label="repeat password"
           handleInputValue={handleInputValue}
         />
         <div className="buttons">
