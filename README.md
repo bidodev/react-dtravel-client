@@ -1,16 +1,19 @@
 ## About: 
 This was a group project from **DCI's WEB Development Course**, which We attended between 2019 - 2021.
 
+## V4
+- [] APP UI refactored.
+- [] Search filters / using Firebase
+
 ## V3
-#### New Features
-- [x] Authtentication using firebase / firestore
+#### RoadMap
+- [x] Authtentication using Firebase / Firestore
 - [x] Redux Hooks (useSelector, useDispatch)
 - [x] React Hooks (useState, useEffect)
-- [x] APP UX refactored.
+- [] APP UX refactored.
 
 ### Credits goes to:
 - Bido: https://github.com/
-
 
 
 ### Credits v2.0 goes to:

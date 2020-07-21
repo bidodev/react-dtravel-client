@@ -16,7 +16,24 @@ const SignUp = () => {
     event.preventDefault();
 
     if (userPassword !== confirmPassword) {
-      console.log("Passwords dont match...");
+      alert("Passwords don't match...");
+      return;
+    }
+
+    try {
+      const { user } = await auth.createUserWithEmailAndPassword(
+        userEmail,
+        userPassword
+      );
+      if (await createUserProfileDocument(user, { displayName })) {
+        setDisplayName("");
+        setUserEmail("");
+        setUserPassword("");
+        setConfirmPassword("");
+        alert("Account Created with Sucess");
+      }
+    } catch (error) {
+      console.log("Error creating user", error.message);
     }
   };
 
@@ -70,12 +87,9 @@ const SignUp = () => {
           value={confirmPassword}
           label="Confirm Password"
           handleInputValue={handleInputValue}
-              />
-                      <div className="buttons">
-          <CustomButton type="submit">Sign In</CustomButton>
-          <CustomButton isGoogleSingIn>
-            Sign in with Google
-          </CustomButton>
+        />
+        <div className="buttons">
+          <CustomButton type="submit">Sign Up</CustomButton>
         </div>
       </form>
     </div>
