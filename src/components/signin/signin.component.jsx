@@ -1,18 +1,28 @@
 import React, { useState } from "react";
 import "./signin.component.styles.scss";
 
-import { signInWithGoogle } from "../../firebase/firebase.utils";
+import { auth, signInWithGoogle } from "../../firebase/firebase.utils";
 
 import FormInput from "../forms/input.component";
 import CustomButton from "../custom-button/custom-button.component";
 
 const Login = () => {
-  const [userName, setUserName] = useState("");
+  const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
 
   //update redux
-  const handleLoginData = (event) => {
+  const handleLoginData = async (event) => {
     event.preventDefault();
+
+    try {
+      await auth.signInWithEmailAndPassword(userEmail, userPassword);
+      setUserEmail("")
+      setUserPassword("")
+      alert("Logged with Sucess")
+      
+    } catch (error) {
+      console.log("Error in the login", error.message)
+    }
   };
 
   //update localState
@@ -21,7 +31,7 @@ const Login = () => {
 
     switch (name) {
       case "email":
-        return setUserName(value);
+        return setUserEmail(value);
       case "password":
         return setUserPassword(value);
       default:
@@ -38,7 +48,7 @@ const Login = () => {
         <FormInput
           name="email"
           type="email"
-          value={userName}
+          value={userEmail}
           required
           label="email"
           handleInputValue={handleInputValue}
