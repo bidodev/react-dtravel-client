@@ -15,19 +15,36 @@ const App = () => {
 
   //2. Similar to componentDidMount when using class components.
   useEffect(() => {
+    console.log("componentDidMount");
     const unsubsribeFromAuth = null;
-    auth.onAuthStateChanged(async user => {
-      createUserProfileDocument(user)
-    
-      //Update our redux store with the newUser Object.
-      dispatch({ type: "LOGIN_USER", payload: user });
+    auth.onAuthStateChanged(async (userAuth) => {
+      if (userAuth) {
+        const userRef = await createUserProfileDocument(userAuth);
+        userRef.onSnapshot((snapShot) => {
+          //Update our redux store with the newUser Object.
+          dispatch({
+            type: "LOGIN_USER",
+            payload: {
+              id: snapShot.id,
+              ...snapShot.data(),
+            },
+          });
+        });
+      }
+      else {
+        dispatch({
+          type: "LOGIN_USER",
+          payload: userAuth  //it will be null
+        });
+      }
     });
 
     //componetWillUnmount
     return () => {
+      console.log("componetWillUnmount");
       unsubsribeFromAuth();
     };
-  });
+  }, [dispatch]);
 
   return (
     <div className="App">
