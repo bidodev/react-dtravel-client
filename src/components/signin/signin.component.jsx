@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import "./login.component.styles.scss";
+import "./signin.component.styles.scss";
 
 import { signInWithGoogle } from "../../firebase/firebase.utils";
 
-import FormInput from "../../components/forms/input.component";
-import CustomButton from "../../components/custom-button/custom-button.component";
+import FormInput from "../forms/input.component";
+import CustomButton from "../custom-button/custom-button.component";
 
 const Login = () => {
   const [userName, setUserName] = useState("");

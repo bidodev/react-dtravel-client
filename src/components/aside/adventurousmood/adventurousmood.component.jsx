@@ -1,7 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import "./adventurousmood.component.scss";
-import smoothScroll from "../../intro/landing/smoothScroll";
 
 function AdventurousMood() {
 
