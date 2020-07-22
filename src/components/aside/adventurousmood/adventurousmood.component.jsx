@@ -10,7 +10,7 @@ function AdventurousMood() {
   const submitValues = (event) => {
     const valueMood = event.target.id;
 
-    //it's returning undefined..
+    //Update Search input to simulate a search with specific keywords..
     dispatch({ type: "UPDATE_INPUT", payload: valueMood });
   };
 

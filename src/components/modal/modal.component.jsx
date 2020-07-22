@@ -30,8 +30,9 @@ function ShowModal({ modalIsOpen, closeModal, data }) {
       >
         <div className={"offers-item"}>
             <h3>
-              <span>{"⭐"}{productName}</span>
-            </h3>
+            <span>{"⭐"}{productName}</span>
+          </h3>
+          <button onClick={closeModal}>Close</button>
             <div className="img-container">
               <div className="profile-img">
                 <img src={src} alt={productName} />
@@ -51,6 +52,7 @@ function ShowModal({ modalIsOpen, closeModal, data }) {
   );
 }
 
+//to be fixed
 // {src2 ? (
 //   <div className="gallery-container">
 //     {src2.map((element) => {
