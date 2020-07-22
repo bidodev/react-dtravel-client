@@ -1,34 +1,43 @@
 import React, { useState } from "react";
 import "./experience.item.component.styles.scss";
 
-
 const Card = ({ id, src, productName, country }) => {
   const [isHovering, setIsHovering] = useState(false);
 
+  /**
+   * Function to capitalize the first letter of each word.
+   * @param {*} str 
+   */
+  const sanitizeNames = (str) => {
+    return str.split(" ").map((el) => el.charAt(0).toUpperCase() + el.slice(1)).join(" ");
+  };
+
   return (
-      <div
-        className="card"
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
-      >
-        <img
-          className={id === 404 ? "img-404" : "img-card"}
-          key={id}
-          src={src}
-          alt={productName}
-        />
-        {isHovering && (
-          <div>
-            <li>
-              <h4>{productName[0].toUpperCase() + productName.slice(1)}</h4>
-            </li>
-            <li>
-              <ion-icon name="navigate-outline"></ion-icon>
-              {country[0].toUpperCase() + country.slice(1)}
-            </li>
-          </div>
-        )}
-      </div>
+    <div
+      className="card"
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+    >
+      <img
+        //this code is ugly, please fix this shit at some point..
+        //className={id === 404 ? "img-404" : "img-card"}
+        className={"img-card"}
+        key={id}
+        src={src}
+        alt={productName}
+      />
+      {isHovering && (
+        <div>
+          <li>
+            <h4>{sanitizeNames(productName)}</h4>
+          </li>
+          <li>
+            <ion-icon name="navigate-outline"></ion-icon>
+            {sanitizeNames(country)}
+          </li>
+        </div>
+      )}
+    </div>
   );
 };
 
