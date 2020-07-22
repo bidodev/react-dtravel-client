@@ -1,12 +1,13 @@
 import React from "react";
-import { useDispatch } from "react-redux";
 import "./adventurousmood.component.scss";
 
-function AdventurousMood() {
+import { useDispatch } from "react-redux";
 
-  //1. Use dispatch
+const AdventurousMood = () => {
+  // use Redux Hook Dispatch instead of connect
   const dispatch = useDispatch();
 
+  // function to update our redux state
   const submitValues = (event) => {
     const valueMood = event.target.id;
 
@@ -18,7 +19,9 @@ function AdventurousMood() {
     <div className="aside-adventurous__mood">
       <h3>Adventurous Mood</h3>
       <div className="aside-adventurous__mood-icons" onClick={submitValues}>
-        <ion-icon id="tropical" name="sunny-outline" >Icon</ion-icon>
+        <ion-icon id="tropical" name="sunny-outline">
+          Icon
+        </ion-icon>
         <ion-icon id="winter" name="snow-outline"></ion-icon>
         <ion-icon id="mountain" name="map-outline"></ion-icon>
         <ion-icon id="cycling" name="bicycle"></ion-icon>
@@ -26,6 +29,6 @@ function AdventurousMood() {
       </div>
     </div>
   );
-}
+};
 
 export default AdventurousMood;

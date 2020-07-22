@@ -10,7 +10,7 @@ This was a group project from **DCI's WEB Development Course**, which We attende
 - [x] Authtentication using Firebase / Firestore
 - [x] Redux Hooks (useSelector, useDispatch)
 - [x] React Hooks (useState, useEffect)
-- [ ] APP UX refactored.
+- [X] APP UX refactored.
 
 ### Credits goes to:
 - Bido: https://github.com/

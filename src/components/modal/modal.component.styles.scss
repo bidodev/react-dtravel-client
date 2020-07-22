@@ -66,10 +66,12 @@
       height: 20rem;
       margin-bottom: 1vh;
     }
-    .gallery-container {
-      height: 15vh;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
-    }
+
   }
 }
+
+.gallery-container {
+    height: 15vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+  }
