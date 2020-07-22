@@ -9,7 +9,9 @@ function ShowModal({ modalIsOpen, closeModal, data }) {
   const customStyles = {
     content: {
       overflow: "hidden",
-      width: "95vw",
+      width: "60vw",
+      marginLeft: "2rem",
+      borderRadius: "30px"
     },
   };
 

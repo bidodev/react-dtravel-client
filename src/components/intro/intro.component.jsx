@@ -35,7 +35,6 @@ const Intro = () => {
   //2. Select the currentUser, if the user is not logged in, it will be null otherwise it will be an object.
 
   const currentUser = useSelector(({ login }) => login.currentUser);
-  console.log("CurrentUser", currentUser);
 
   return (
     <div className="intro">

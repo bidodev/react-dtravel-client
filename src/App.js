@@ -18,8 +18,7 @@ const App = () => {
   //2. Similar to componentDidMount when using class components.
   useEffect(() => {
     //console.log("componentDidMount");
-    const unsubsribeFromAuth = null;
-    auth.onAuthStateChanged(async (userAuth) => {
+    const unsubscribe = auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth);
         userRef.onSnapshot((snapShot) => {
@@ -43,7 +42,7 @@ const App = () => {
     //componetWillUnmount
     return () => {
       //console.log("componetWillUnmount");
-      unsubsribeFromAuth();
+      unsubscribe();
     };
   }, [dispatch]);
 
