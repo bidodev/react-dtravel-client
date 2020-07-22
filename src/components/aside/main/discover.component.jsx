@@ -3,7 +3,7 @@ import ExperienceItem from "./experiences/experience.item.component";
 import { useSelector } from "react-redux";
 
 import handleOfferSearch from "../../offers/handleOfferSearch";
-import ShowModal from "../../modal/modal-component";
+import ShowModal from "../../modal/modal.component";
 
 const Main = () => {
   //obj to return for no match
@@ -54,10 +54,11 @@ const Main = () => {
   };
 
   const [modalIsOpen, setIsOpen] = useState(false);
+  const [dataModal, setDataModal] = useState({});
 
-  function openModal(id) {
-    console.log(id)
+  function openModal(props) {
     setIsOpen(true);
+    setDataModal(props)
   }
 
   function closeModal() {
@@ -69,6 +70,7 @@ const Main = () => {
       <h1>Discover</h1>
       
       <ShowModal
+        data={dataModal}
         closeModal={closeModal}
         modalIsOpen={modalIsOpen}
       />
