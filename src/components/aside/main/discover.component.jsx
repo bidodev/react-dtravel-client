@@ -3,6 +3,7 @@ import ExperienceItem from "./experiences/experience.item.component";
 import { useSelector } from "react-redux";
 
 import handleOfferSearch from "../../offers/handleOfferSearch";
+import ShowModal from "../../modal/modal-component";
 
 const Main = () => {
   //obj to return for no match
@@ -52,15 +53,29 @@ const Main = () => {
     setFinalIndex(finalIndex + 1);
   };
 
+  const [modalIsOpen, setIsOpen] = useState(false);
 
-  
+  function openModal(id) {
+    console.log(id)
+    setIsOpen(true);
+  }
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   return (
     <div className="aside-main">
       <h1>Discover</h1>
-  
+      
+      <ShowModal
+        closeModal={closeModal}
+        modalIsOpen={modalIsOpen}
+      />
+
       <div className="aside-main__carrousel">
-        {slicedResults.map(({...item }) => (
-          <ExperienceItem key={item.id} {...item} />
+        {slicedResults.map(({ ...item }) => (
+          <ExperienceItem key={item.id} {...item} openModal={openModal} />
         ))}
       </div>
       <div className="pagination">

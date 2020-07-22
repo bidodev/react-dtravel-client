@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import "./experience.item.component.styles.scss";
 
-const Card = ({ id, src, productName, country }) => {
+
+
+const Card = ({ id, src, productName, country, openModal }) => {
   const [isHovering, setIsHovering] = useState(false);
+
 
   /**
    * Function to capitalize the first letter of each word.
@@ -13,10 +16,12 @@ const Card = ({ id, src, productName, country }) => {
   };
 
   return (
+    
     <div
       className="card"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
+      onClick={()=>openModal(id)}
     >
       <img
         //this code is ugly, please fix this shit at some point..

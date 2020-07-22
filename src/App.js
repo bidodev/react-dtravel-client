@@ -1,7 +1,8 @@
-import React, { useEffect } from "react";
+import React, { useEffect} from "react";
 
 import Intro from "./components/intro/intro.component";
 import Aside from "./components/aside/aside.component";
+
 
 //import userDispatch to dispatch actions to our react-reduces
 import { useDispatch } from "react-redux";
@@ -10,12 +11,13 @@ import { useDispatch } from "react-redux";
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils.js";
 
 const App = () => {
+
   //Use dispatch, similar to connect when not using Hooks
   const dispatch = useDispatch();
 
   //2. Similar to componentDidMount when using class components.
   useEffect(() => {
-    console.log("componentDidMount");
+    //console.log("componentDidMount");
     const unsubsribeFromAuth = null;
     auth.onAuthStateChanged(async (userAuth) => {
       if (userAuth) {
@@ -30,18 +32,17 @@ const App = () => {
             },
           });
         });
-      }
-      else {
+      } else {
         dispatch({
           type: "LOGIN_USER",
-          payload: userAuth  //it will be null
+          payload: userAuth, //it will be null
         });
       }
     });
 
     //componetWillUnmount
     return () => {
-      console.log("componetWillUnmount");
+      //console.log("componetWillUnmount");
       unsubsribeFromAuth();
     };
   }, [dispatch]);
