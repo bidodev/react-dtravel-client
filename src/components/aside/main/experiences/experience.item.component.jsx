@@ -6,7 +6,6 @@ const Card = ({ id, src, productName, country }) => {
   const [isHovering, setIsHovering] = useState(false);
 
   return (
-    <React.Fragment>
       <div
         className="card"
         onMouseEnter={() => setIsHovering(true)}
@@ -30,7 +29,6 @@ const Card = ({ id, src, productName, country }) => {
           </div>
         )}
       </div>
-    </React.Fragment>
   );
 };
 
