@@ -31,7 +31,7 @@ import Authentication from "../../pages/authentication";
 //   },
 
 const Intro = () => {
-  //1. Select only login from our redux store using destructuring
+  //1. Select only login from our state using destructuring
   //2. Select the currentUser, if the user is not logged in, it will be null otherwise it will be an object.
 
   const currentUser = useSelector(({ login }) => login.currentUser);
