@@ -35,7 +35,7 @@ const Landing = () => {
     <div className="main-title image" style={imgStyle}>
       {/* LOGO */}
       <div className="logo">
-        <p> do the travel
+        <p>dtravel
           <span>.</span></p>
       </div>
       {/* Content part */}

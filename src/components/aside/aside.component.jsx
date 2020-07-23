@@ -6,11 +6,11 @@ import { useSelector } from "react-redux";
 import AdventurousMood from "./adventurousmood/adventurousmood.component.jsx";
 
 function Aside() {
-  const LoginPage = () => {
-    return (
-      <div>
-        <h1>Login Panel</h1>
-      </div>
+  const LoginPage = ({ CurrentUser }) => {
+    return CurrentUser === null ? (
+      ""
+    ) : (
+      <div>Welcome: {currentUser.displayName}</div>
     );
   };
 
@@ -28,7 +28,7 @@ function Aside() {
   return (
     <div className="aside">
       <Header />
-      {currentUser ? <LoginPage /> : <NotSignedIn />}
+      {currentUser ? <LoginPage currentUser={currentUser} /> : <NotSignedIn />}
     </div>
   );
 }

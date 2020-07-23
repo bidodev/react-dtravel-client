@@ -3,7 +3,8 @@
   display: flex;
   height: 95vh;
   justify-content: space-around;
-  align-items: center;
+  padding-top: 20vh;
+  align-items: flex-start;
   
   background-image: linear-gradient(rgba(#000, 0.5), rgba(#000, 0.5)),
     url("./authentication.jpg");
