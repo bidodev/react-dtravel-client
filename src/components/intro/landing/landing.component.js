@@ -32,11 +32,10 @@ const Landing = () => {
   };
 
   return (
-    <div className="main-title image" style={imgStyle}>
+    <div className="main-title" style={imgStyle}>
       {/* LOGO */}
       <div className="logo">
-        <p>dtravel
-          <span>.</span></p>
+        <p>dtravel<span>.</span></p>
       </div>
       {/* Content part */}
       <div className="content">

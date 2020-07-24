@@ -2,12 +2,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
 
   h3 {
     margin: 1.5vh 0;
     text-align: center;
     text-transform: uppercase;
     color: #f75d37;
+  }
+
+  .exp-infos{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 30rem;
+
+  }
+  .exp-infos {
+
+    span {
+      display: flex;
+      align-items: center;
+      width: auto;
+    }
   }
 
   .img-container {
