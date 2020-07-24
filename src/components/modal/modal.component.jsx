@@ -20,7 +20,7 @@ function ShowModal({ modalIsOpen, closeModal, data }) {
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
-        contentLabel="Example Modal"
+        contentLabel="Offers Modal"
         style={customStyles}
       >
         <div className={"offers-item"}>
