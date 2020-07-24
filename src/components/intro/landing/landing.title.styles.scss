@@ -1,4 +1,5 @@
 .main-title {
+  //border: 1px solid red;
   /* position */
   display: flex;
   flex-direction: column;
@@ -20,12 +21,11 @@
 
   .logo {
     //border: 1px solid green;
-    width: 20vw;
+    padding-left: 5vw;
+    width: auto;
     height: 25%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-family: "Nunito", sans-serif;
     p {
       font-size: 1.6vw;
    
@@ -36,10 +36,11 @@
   }
   .content {
     //border: 1px solid red;
-    width: 50vw;
+    width: auto;
     height: 40%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: space-around;
     padding-left: 5vw;
     & :first-child,

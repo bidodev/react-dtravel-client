@@ -18,23 +18,26 @@ const INITIAL_STATE = [
     bestMatch: false,
   },
   {
-    "id": 1,
-    "productName": "maui",
-    "description": "Whether you're driving along the Road to Hana, enjoying a bird's-eye view of the lush coastline from a helicopter, snorkeling with sea turtles or simply relaxing on the island's honey- or black-colored beaches, you'll find that Maui is unlike any other tropical destination. Don't miss a chance to visit Haleakala National Park, which is home to the world's largest dormant volcano. You should also attend a luau for a dose of local culture and a taste of Hawaiian specialties like poi, poke and mahimahi.",
-    "src": "./img/maui.jpg",
-    "country": "hawaii",
-    "continent": "north america",
-    "type": "tropical",
-    "difficulty": "easy",
-    "prices": "high",
-    "bestMatch": false
-  }
+    id: 1,
+    productName: "maui",
+    description:
+      "Whether you're driving along the Road to Hana, enjoying a bird's-eye view of the lush coastline from a helicopter, snorkeling with sea turtles or simply relaxing on the island's honey- or black-colored beaches, you'll find that Maui is unlike any other tropical destination. Don't miss a chance to visit Haleakala National Park, which is home to the world's largest dormant volcano. You should also attend a luau for a dose of local culture and a taste of Hawaiian specialties like poi, poke and mahimahi.",
+    src: "./img/maui.jpg",
+    country: "hawaii",
+    continent: "north america",
+    type: "tropical",
+    difficulty: "easy",
+    prices: "high",
+    bestMatch: false,
+  },
 ];
 
 const destinationsReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case "UPDATE_DATA":
-      return action.payload
+      return action.payload;
+    case "UPDATE_BACKGROUNDS":
+      return action.payload;
     default:
       return state;
   }

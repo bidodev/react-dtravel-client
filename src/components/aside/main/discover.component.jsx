@@ -65,6 +65,10 @@ const Main = () => {
     setIsOpen(false);
   }
 
+  const addWishList =(offerID) => {
+
+  }
+
   return (
     <div className="aside-main">
       <h1>Discover</h1>
@@ -77,7 +81,7 @@ const Main = () => {
 
       <div className="aside-main__carrousel">
         {slicedResults.map(({ ...item }) => (
-          <ExperienceItem key={item.id} {...item} openModal={openModal} />
+          <ExperienceItem key={item.id} {...item} openModal={openModal} addWishList={addWishList} />
         ))}
       </div>
       <div className="pagination">
