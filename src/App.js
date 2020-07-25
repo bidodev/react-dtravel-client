@@ -19,7 +19,7 @@ const App = () => {
     axios("https://my-json-server.typicode.com/bidodev/dtravel.api/db").then((res) => {
       dispatch({
         type: "UPDATE_DATA",
-        payload: res.data.destinations,
+        payload: res.data,
       });
       console.log(res.data)
     })

@@ -14,7 +14,7 @@ const Main = () => {
   const [finalIndex, setFinalIndex] = useState(1);
 
   //1. We have to select our full data from the state
-  const offersFullData = useSelector((state) => state.destinations);
+  const offersFullData = useSelector(({data}) => data.destinations);
 
   const noOfferMatch = [
     offersFullData.find((element) => element.id.toString() === "404"),
