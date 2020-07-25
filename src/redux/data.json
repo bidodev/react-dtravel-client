@@ -4,47 +4,88 @@
       "id": 0,
       "productName": "bora bora",
       "description": "What this small island may lack in size it makes up for in sheer tropical beauty. Here, you'll find picturesque beaches, lush jungles and luxurious resorts. The island's dormant volcano, Mount Otemanu, makes for a great photo-op or challenging hike, and the friendly Bora Bora locals can help you catch a glimpse of the island's best sights during an off-road excursion. To relax, head to Matira Beach for crystal-clear water and soft sand. Although a trip to Bora Bora is very high, most travelers say it's worth every penny. ",
-      "cover": "https://i.imgur.com/5E48mGu.jpg",
-      "extraImgs": [
-        "https://i.imgur.com/vemwigz.jpg",
-        "https://i.imgur.com/6o9yv9h.jpg",
-        "https://i.imgur.com/Jf3gNMA.jpg"
-      ],
       "country": "French Polynesia, France",
-      "continent": "australia and oceania",
+      "continent": "Australia and Oceania",
       "type": "tropical",
       "difficulty": "easy",
-      "prices": "high",
-      "bestMatch": false
+      "prices": "High",
+      "bestMatch": false,
+      "cover": {
+        "url": "https://i.imgur.com/5E48mGu.jpg",
+        "description": "Bora Bora Cover"
+      },
+      "extraImgs": [
+        {
+          "url": "https://i.imgur.com/vemwigz.jpg",
+          "description": "Bora Bora Image 1 - Put some description"
+        },
+        {
+          "url": "https://i.imgur.com/6o9yv9h.jpg",
+          "description": "Bora Bora Image 2 - Put some description"
+        },
+        {
+          "url": "https://i.imgur.com/Jf3gNMA.jpg",
+          "description": "Bora Bora Image 3 - Put some description"
+        }
+      ]
     },
     {
       "id": 1,
-      "productName": "maui",
+      "productName": "Maui",
       "description": "Whether you're driving along the Road to Hana, enjoying a bird's-eye view of the lush coastline from a helicopter, snorkeling with sea turtles or simply relaxing on the island's honey- or black-colored beaches, you'll find that Maui is unlike any other tropical destination. Don't miss a chance to visit Haleakala National Park, which is home to the world's largest dormant volcano. You should also attend a luau for a dose of local culture and a taste of Hawaiian specialties like poi, poke and mahimahi.",
-      "cover": "https://i.imgur.com/PWSiFTw.jpgg",
-      "extraImgs": [
-        "https://i.imgur.com/R6Qsh8v.jpg",
-        "https://i.imgur.com/IujoC6j.jpg",
-        "https://i.imgur.com/4OOCLos.jpg"
-      ],
       "country": "hawaii",
-      "continent": "north america",
+      "continent": "North America",
       "type": "tropical",
       "difficulty": "easy",
-      "prices": "high",
-      "bestMatch": false
+      "prices": "High",
+      "bestMatch": false,
+      "cover": {
+        "url": "https://i.imgur.com/PWSiFTw.jpgg",
+        "description": "Maui Cover"
+      },
+      "extraImgs": [
+        {
+          "url": "https://i.imgur.com/R6Qsh8v.jpg",
+          "description": "Maui Image 1 - Put some description"
+        },
+        {
+          "url": "https://i.imgur.com/IujoC6j.jpg",
+          "description": "Maui Image 2 - Put some description"
+        },
+        {
+          "url": "https://i.imgur.com/4OOCLos.jpg",
+          "description": "Maui Image 3 - Put some description"
+        }
+      ]
     },
     {
       "id": 2,
       "productName": "rome",
       "description": "When you visit the Eternal City, prepare to cross a few must-see attractions – including the Colosseum, the Trevi Fountain and the Pantheon – off of your bucket list. Additional treasures, such as St. Peter's Basilica and the Sistine Chapel, can be found in nearby Vatican City. Escape the tourist crowds by taking a twilight stroll along the cobblestone streets of Trastevere, or head to Mercato Centrale Roma to sample local delicacies like gelato and pizza. Before leaving, peruse some of Rome's lesser-known museums, art galleries and boutiques.",
-      "cover": "./img/rome.jpg",
       "country": "italy",
-      "continent": "europe",
+      "continent": "Europe",
       "type": "city",
       "difficulty": "easy",
-      "prices": "low",
-      "bestMatch": false
+      "prices": "Low",
+      "bestMatch": false,
+      "cover": {
+        "url": "./img/rome.jpg",
+        "description": "The Colosseum or Coliseum, also known as the Flavian Amphitheatre"
+      },
+      "extraImgs": [
+        {
+          "url": "https://i.imgur.com/vemwigz.jpg",
+          "description": "Bora Bora Image 1 - Put some description"
+        },
+        {
+          "url": "https://i.imgur.com/6o9yv9h.jpg",
+          "description": "Bora Bora Image 2 - Put some description"
+        },
+        {
+          "url": "https://i.imgur.com/Jf3gNMA.jpg",
+          "description": "Bora Bora Image 3 - Put some description"
+        }
+      ]
     },
     {
       "id": 3,

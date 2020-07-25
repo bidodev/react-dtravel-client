@@ -20,7 +20,7 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
   const customStyles = {
     content: {
       overflow: "hidden",
-      width: "60vw",
+      width: "63vw",
       marginLeft: "2rem",
       borderRadius: "30px",
     },
@@ -52,6 +52,7 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
         onRequestClose={closeModal}
         contentLabel="Offers Modal"
         style={customStyles}
+        overlayClassName="overlay"
       >
         <div className="offers-item">
           <h3>
@@ -64,20 +65,21 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
           </h3>
           
           <Carousel {...getConfigurableProps}>
-              {extraImgs ? [cover, ...extraImgs].map((img) => (
+              {extraImgs ? [cover, ...extraImgs].map(({url, description}) => (
                 <div>
-                  <img src={img} alt={productName}/>
+                  <img src={url} alt={description} />
+                  <p className="legend">{description}</p>
                 </div>
               )) : null}
           </Carousel>
 
           <div className="exp-infos">
-            <span>
-              <ion-icon name="navigate-outline"></ion-icon>:{continent}
-            </span>
-            <span>
-              <ion-icon name="cash-outline"></ion-icon>:{prices}
-            </span>
+            <li>
+              <ion-icon name="navigate-outline"></ion-icon>{continent}
+            </li>
+            <li>
+              <ion-icon name="cash-outline"></ion-icon>{prices}
+            </li>
           </div>
           <p className="description">{description}</p>
         </div>
