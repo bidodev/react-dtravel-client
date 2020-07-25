@@ -9,7 +9,7 @@ import "./landing.title.styles.scss";
 const Landing = () => {
   const [img, setImg] = useState(0);
 
-  const Urls = useSelector((state) => state.urlImgs);
+  const Urls = useSelector(({data}) => data.backgrounds);
 
   const handleImg = () => {
     const arrayItems = Urls.length - 1;
