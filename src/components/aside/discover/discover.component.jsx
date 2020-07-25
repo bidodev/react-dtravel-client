@@ -76,8 +76,8 @@ const Main = () => {
     <div className="aside-main">
       <h2>Discover</h2>
       <nav>
-        <Link to="experiences">Experiences</Link>
         <Link to="places">Places</Link>
+        <Link to="experiences">Experiences</Link>
         <Link to="housings">Housings</Link>
       </nav>
       

@@ -69,21 +69,21 @@
       "prices": "Low",
       "bestMatch": false,
       "cover": {
-        "url": "./img/rome.jpg",
+        "url": "",
         "description": "The Colosseum or Coliseum, also known as the Flavian Amphitheatre"
       },
       "extraImgs": [
         {
-          "url": "https://i.imgur.com/vemwigz.jpg",
-          "description": "Bora Bora Image 1 - Put some description"
+          "url": "",
+          "description": "Image 1 - Put some description"
         },
         {
-          "url": "https://i.imgur.com/6o9yv9h.jpg",
-          "description": "Bora Bora Image 2 - Put some description"
+          "url": "",
+          "description": "Image 2 - Put some description"
         },
         {
-          "url": "https://i.imgur.com/Jf3gNMA.jpg",
-          "description": "Bora Bora Image 3 - Put some description"
+          "url": "",
+          "description": "Image 3 - Put some description"
         }
       ]
     },
@@ -91,71 +91,146 @@
       "id": 3,
       "productName": "barcelona",
       "description": "This Spanish city is a feast for the eyes: Visitors can walk past medieval architecture in the Barri Gòtic, snap covers of the intricate Sagrada Família and marvel at Gaudí's whimsical creations in Park Güell. La Barceloneta Beach and the Parc de la Ciutadella are perfect places to pass the time on a sunny day before checking out the restaurants and bars along Las Ramblas, which buzzes at all hours of the night. For travelers who want to see Barcelona from above, a trek up Tibidabo is a must. ",
-      "cover": "./img/barcelona.jpg",
-      "additionalImages": [
-        "./img/barcelona2.jpg",
-        "./img/barcelona3.jpg",
-        "./img/barcelona4.jpg"
-      ],
       "country": "spain",
       "continent": "europe",
       "type": "city",
       "difficulty": "easy",
       "prices": "low",
-      "bestMatch": false
+      "bestMatch": false,
+      "cover": {
+        "url": "",
+        "description": "The Colosseum or Coliseum, also known as the Flavian Amphitheatre"
+      },
+      "extraImgs": [
+        {
+          "url": "",
+          "description": "Image 1 - Put some description"
+        },
+        {
+          "url": "",
+          "description": "Image 2 - Put some description"
+        },
+        {
+          "url": "",
+          "description": "Image 3 - Put some description"
+        }
+      ]
     },
     {
       "id": 4,
       "productName": "grand Canyon",
       "description": "Measuring roughly 277 miles long, 18 miles wide and a mile deep, the Grand Canyon offers plenty of outdoor activities for everyone from day-trippers to adventure junkies. Hike along the national park's popular Rim and Bright Angel trails for unparalleled vistas, cool off with a whitewater rafting excursion down the Colorado River or view the dramatic Arizona landscape from above during a helicopter tour. ",
-      "cover": "./img/grand-canyon.jpg",
       "country": "united states",
       "continent": "north america",
       "type": "mountain",
       "difficulty": "hard",
       "prices": "normal",
-      "bestMatch": false
+      "bestMatch": false,
+      "cover": {
+        "url": "",
+        "description": "The Colosseum or Coliseum, also known as the Flavian Amphitheatre"
+      },
+      "extraImgs": [
+        {
+          "url": "",
+          "description": "Image 1 - Put some description"
+        },
+        {
+          "url": "",
+          "description": "Image 2 - Put some description"
+        },
+        {
+          "url": "",
+          "description": "Image 3 - Put some description"
+        }
+      ]
     },
     {
       "id": 5,
       "productName": "the Basho Wayfarer",
       "description": "Japan boasts numerous ancient trails, connecting temples and cities. This self-guided trip follows a route taken by the poet Matsuo Basho over 300 years ago. The six-day trek starts in Sendai and works its way through the northern Tohoku region, passing through the UNESCO World Heritage Site of Hiraizumi and along the ancient Dewa Kaido path, with its beech and cherry forests, before heading into the mountains of Natagiri-toge and finishing at the temple of Yamadera.",
-      "cover": "./img/basho-way.jpg",
       "country": "japan",
       "continent": "asia",
       "type": "mountain",
       "difficulty": "medium",
       "prices": "high",
-      "bestMatch": false
+      "bestMatch": false,
+      "cover": {
+        "url": "",
+        "description": "The Colosseum or Coliseum, also known as the Flavian Amphitheatre"
+      },
+      "extraImgs": [
+        {
+          "url": "",
+          "description": "Image 1 - Put some description"
+        },
+        {
+          "url": "",
+          "description": "Image 2 - Put some description"
+        },
+        {
+          "url": "",
+          "description": "Image 3 - Put some description"
+        }
+      ]
     },
     {
       "id": 6,
       "productName": "lechweg Trail",
       "description": "Starting in the Bavarian town of Fussen, this nine-day route follows the Lechweg river to its source in the Austrian state of Vorarlberg. Passing the royal castles of a King Ludwig II of Bavaria, Germany as well as crystal clear lakes, the trail heads through the Tiroler Lech National Park, a protected area with lush meadows, turquoise water and ibex at every turn.",
-      "cover": "./img/lechweg.jpg",
       "country": "germany",
       "continent": "europe",
       "type": "mountain",
       "difficulty": "extreme",
       "prices": "low",
-      "bestMatch": false
+      "bestMatch": false,
+      "cover": {
+        "url": "",
+        "description": "The Colosseum or Coliseum, also known as the Flavian Amphitheatre"
+      },
+      "extraImgs": [
+        {
+          "url": "",
+          "description": "Image 1 - Put some description"
+        },
+        {
+          "url": "",
+          "description": "Image 2 - Put some description"
+        },
+        {
+          "url": "",
+          "description": "Image 3 - Put some description"
+        }
+      ]
     },
     {
       "id": 7,
       "productName": "phuket",
       "description": "Located in southern Thailand, Phuket offers something for everyone, especially budget-minded travelers. Everything from accommodations to spa treatments to boat tours come with a low price tag. For stunning scenery, check out the limestone cliffs of Phang Nga Bay and lounge on Phuket's gorgeous white sand beaches. Other must-sees include Wat Chalong Temple and the Big Buddha. Once the sun sets, take part in the island's lively nightlife scene.",
-      "cover": "./img/phuket.jpg",
-      "additionalImages": [
-        "./img/phuket2.jpg",
-        "./img/phuket3.jpg",
-        "./img/phuket4.jpg"
-      ],
       "country": "thailand",
       "continent": "asia",
       "type": "tropical",
       "difficulty": "medium",
       "prices": "normal",
-      "bestMatch": false
+      "bestMatch": false,
+      "cover": {
+        "url": "",
+        "description": "The Colosseum or Coliseum, also known as the Flavian Amphitheatre"
+      },
+      "extraImgs": [
+        {
+          "url": "",
+          "description": "Image 1 - Put some description"
+        },
+        {
+          "url": "",
+          "description": "Image 2 - Put some description"
+        },
+        {
+          "url": "",
+          "description": "Image 3 - Put some description"
+        }
+      ]
     },
     {
       "id": 8,
@@ -323,5 +398,125 @@
   "backgrounds": [
     "https://i.imgur.com/oHxsM3J.jpg",
     "https://i.imgur.com/JvXS56o.jpg"
+  ],
+  "experiences": [
+    {
+      "id": 0,
+      "productName": "bora bora",
+      "description": "What this small island may lack in size it makes up for in sheer tropical beauty. Here, you'll find picturesque beaches, lush jungles and luxurious resorts. The island's dormant volcano, Mount Otemanu, makes for a great photo-op or challenging hike, and the friendly Bora Bora locals can help you catch a glimpse of the island's best sights during an off-road excursion. To relax, head to Matira Beach for crystal-clear water and soft sand. Although a trip to Bora Bora is very high, most travelers say it's worth every penny. ",
+      "country": "French Polynesia, France",
+      "continent": "Australia and Oceania",
+      "type": "tropical",
+      "difficulty": "easy",
+      "prices": "High",
+      "bestMatch": false,
+      "cover": {
+        "url": "https://i.imgur.com/5E48mGu.jpg",
+        "description": "Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia"
+      },
+      "extraImgs": [
+        {
+          "url": "https://i.imgur.com/vemwigz.jpg",
+          "description": "Bora Bora Image 1 - Put some description"
+        },
+        {
+          "url": "https://i.imgur.com/6o9yv9h.jpg",
+          "description": "Bora Bora Image 2 - Put some description"
+        },
+        {
+          "url": "https://i.imgur.com/Jf3gNMA.jpg",
+          "description": "Bora Bora Image 3 - Put some description"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "productName": "Maui",
+      "description": "Whether you're driving along the Road to Hana, enjoying a bird's-eye view of the lush coastline from a helicopter, snorkeling with sea turtles or simply relaxing on the island's honey- or black-colored beaches, you'll find that Maui is unlike any other tropical destination. Don't miss a chance to visit Haleakala National Park, which is home to the world's largest dormant volcano. You should also attend a luau for a dose of local culture and a taste of Hawaiian specialties like poi, poke and mahimahi.",
+      "country": "Hawaii",
+      "continent": "North America",
+      "type": "tropical",
+      "difficulty": "easy",
+      "prices": "High",
+      "bestMatch": false,
+      "cover": {
+        "url": "https://i.imgur.com/PWSiFTw.jpgg",
+        "description": "Maui is an island in the Central Pacific, part of the Hawaiian archipelago."
+      },
+      "extraImgs": [
+        {
+          "url": "https://i.imgur.com/R6Qsh8v.jpg",
+          "description": "Maui Image 1 - Put some description"
+        },
+        {
+          "url": "https://i.imgur.com/IujoC6j.jpg",
+          "description": "Maui Image 2 - Put some description"
+        },
+        {
+          "url": "https://i.imgur.com/4OOCLos.jpg",
+          "description": "Maui Image 3 - Put some description"
+        }
+      ]
+    }
+  ],
+  "housing": [
+    {
+      "id": 0,
+      "productName": "bora bora",
+      "description": "What this small island may lack in size it makes up for in sheer tropical beauty. Here, you'll find picturesque beaches, lush jungles and luxurious resorts. The island's dormant volcano, Mount Otemanu, makes for a great photo-op or challenging hike, and the friendly Bora Bora locals can help you catch a glimpse of the island's best sights during an off-road excursion. To relax, head to Matira Beach for crystal-clear water and soft sand. Although a trip to Bora Bora is very high, most travelers say it's worth every penny. ",
+      "country": "French Polynesia, France",
+      "continent": "Australia and Oceania",
+      "type": "tropical",
+      "difficulty": "easy",
+      "prices": "High",
+      "bestMatch": false,
+      "cover": {
+        "url": "https://i.imgur.com/5E48mGu.jpg",
+        "description": "Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia"
+      },
+      "extraImgs": [
+        {
+          "url": "https://i.imgur.com/vemwigz.jpg",
+          "description": "Bora Bora Image 1 - Put some description"
+        },
+        {
+          "url": "https://i.imgur.com/6o9yv9h.jpg",
+          "description": "Bora Bora Image 2 - Put some description"
+        },
+        {
+          "url": "https://i.imgur.com/Jf3gNMA.jpg",
+          "description": "Bora Bora Image 3 - Put some description"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "productName": "Maui",
+      "description": "Whether you're driving along the Road to Hana, enjoying a bird's-eye view of the lush coastline from a helicopter, snorkeling with sea turtles or simply relaxing on the island's honey- or black-colored beaches, you'll find that Maui is unlike any other tropical destination. Don't miss a chance to visit Haleakala National Park, which is home to the world's largest dormant volcano. You should also attend a luau for a dose of local culture and a taste of Hawaiian specialties like poi, poke and mahimahi.",
+      "country": "Hawaii",
+      "continent": "North America",
+      "type": "tropical",
+      "difficulty": "easy",
+      "prices": "High",
+      "bestMatch": false,
+      "cover": {
+        "url": "https://i.imgur.com/PWSiFTw.jpgg",
+        "description": "Maui is an island in the Central Pacific, part of the Hawaiian archipelago."
+      },
+      "extraImgs": [
+        {
+          "url": "https://i.imgur.com/R6Qsh8v.jpg",
+          "description": "Maui Image 1 - Put some description"
+        },
+        {
+          "url": "https://i.imgur.com/IujoC6j.jpg",
+          "description": "Maui Image 2 - Put some description"
+        },
+        {
+          "url": "https://i.imgur.com/4OOCLos.jpg",
+          "description": "Maui Image 3 - Put some description"
+        }
+      ]
+    }
   ]
 }
