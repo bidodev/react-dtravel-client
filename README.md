@@ -1,8 +1,14 @@
 ## About: 
 This was a group project from **DCI's WEB Development Course**, which We attended between 2019 - 2021.
 
+## V5
+- [ ] Admin Panel
+- [ ] API with Express
+- [ ] Database with MongoDB / Mongoose
+
 ## V4
-- [ ] APP UI refactored.
+- [x] APP UI refactored.
+- [X] Favorites List
 - [ ] Search filters / using Firebase
 
 ## V3
