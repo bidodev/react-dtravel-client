@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ExperienceItem from "./experiences/experience.item.component";
 import { useSelector } from "react-redux";
 
-import handleOfferSearch from "../../offers/handleOfferSearch";
+import handleOfferSearch from "../../../helpers/filter.offers";
 import ShowModal from "../../modal/modal.component";
 
 const Main = () => {
@@ -65,7 +65,8 @@ const Main = () => {
     setIsOpen(false);
   }
 
-  const addWishList =(offerID) => {
+  const addWishList = (offerID) => {
+    console.log("Hello", offerID)
 
   }
 
@@ -76,12 +77,13 @@ const Main = () => {
       <ShowModal
         data={dataModal}
         closeModal={closeModal}
+        addWishList={addWishList}
         modalIsOpen={modalIsOpen}
       />
 
       <div className="aside-main__carrousel">
         {slicedResults.map(({ ...item }) => (
-          <ExperienceItem key={item.id} {...item} openModal={openModal} addWishList={addWishList} />
+          <ExperienceItem key={item.id} {...item} openModal={openModal}/>
         ))}
       </div>
       <div className="pagination">

@@ -17,7 +17,7 @@ const Landing = () => {
     infiniteLoop: false,
     showThumbs: false,
     useKeyboardArrows: true,
-    autoPlay: true,
+    autoPlay: false,
     stopOnHover: true,
     swipeable: true,
     dynamicHeight: true,

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import axios from 'axios';
+//import axios from 'axios';
 
 import Intro from "./components/intro/intro.component";
 import Aside from "./components/aside/aside.component";
@@ -15,15 +15,16 @@ const App = () => {
   //Use dispatch, similar to connect when not using Hooks
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    axios("https://my-json-server.typicode.com/bidodev/dtravel.api/db").then((res) => {
-      dispatch({
-        type: "UPDATE_DATA",
-        payload: res.data,
-      });
-      console.log(res.data)
-    })
-  })
+  //disabled by now
+  //we're going return here
+  // useEffect(() => {
+  //   axios("https://my-json-server.typicode.com/bidodev/dtravel.api/db").then(({data}) => {
+  //     dispatch({
+  //       type: "UPDATE_DATA",
+  //       payload: data,
+  //     });
+  //   })
+  // })
 
   //2. Similar to componentDidMount when using class components.
   useEffect(() => {
@@ -54,7 +55,7 @@ const App = () => {
       //console.log("componetWillUnmount");
       unsubscribe();
     };
-  }, [dispatch]);
+  });
 
   return (
     <div className="App">
