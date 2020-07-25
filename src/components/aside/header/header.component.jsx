@@ -15,10 +15,10 @@ const Header = () => {
     <nav className="aside-header">
       <ul className="aside-header__nav">
         <li>
-          <NavLink to="/">Home</NavLink>
+          <NavLink to="/">Discover</NavLink>
         </li>
         <li>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/Discover">Blog</NavLink>
         </li>
         {currentUser ? (
           <div className="option-logged" onClick={() => auth.signOut()}>

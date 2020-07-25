@@ -70,12 +70,11 @@ const Main = () => {
 
   const addWishList = (offerID) => {
     console.log("Hello", offerID)
-
   }
 
   return (
     <div className="aside-main">
-      <h1>Discover</h1>
+      <h2>Discover</h2>
       <nav>
         <Link to="experiences">Experiences</Link>
         <Link to="places">Places</Link>

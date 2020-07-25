@@ -18,13 +18,30 @@ const AdventurousMood = () => {
   return (
     <div className="aside-adventurous__mood">
       <h3>Adventurous Mood</h3>
-      <div className="aside-adventurous__mood-icons" onClick={submitValues}>
-        <ion-icon id="tropical" name="sunny-outline"></ion-icon>
-        <ion-icon id="winter" name="snow-outline"></ion-icon>
-        <ion-icon id="mountain" name="map-outline"></ion-icon>
-        <ion-icon id="cycling" name="bicycle"></ion-icon>
-        <ion-icon id="city" name="business-outline"></ion-icon>
-      </div>
+      <ul className="aside-adventurous__mood-icons" onClick={submitValues}>
+        <li>
+          <ion-icon id="tropical" name="sunny-outline"></ion-icon>
+          <span>Tropical</span>
+        </li>
+
+        <li>
+          <ion-icon id="winter" name="snow-outline"></ion-icon>
+          <span>Winter</span>
+        </li>
+
+        <li>
+          <ion-icon id="mountain" name="map-outline"></ion-icon>
+          <span>Mountains</span>
+        </li>
+        <li>
+          <ion-icon id="cycling" name="bicycle"></ion-icon>
+          <span>Cycling</span>
+        </li>
+        <li>
+          <ion-icon id="city" name="business-outline"></ion-icon>
+          <span>City</span>
+        </li>
+      </ul>
     </div>
   );
 };
