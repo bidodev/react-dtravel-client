@@ -15,14 +15,16 @@ const App = () => {
   //Use dispatch, similar to connect when not using Hooks
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    axios("https://my-json-server.typicode.com/bidodev/dtravel.api/db").then(({data}) => {
-      dispatch({
-        type: "UPDATE_DATA",
-        payload: data,
-      });
-    })
-  })
+  //disabled by now
+  //we're going return here
+  // useEffect(() => {
+  //   axios("https://my-json-server.typicode.com/bidodev/dtravel.api/db").then(({data}) => {
+  //     dispatch({
+  //       type: "UPDATE_DATA",
+  //       payload: data,
+  //     });
+  //   })
+  // })
 
   //2. Similar to componentDidMount when using class components.
   useEffect(() => {

@@ -2,9 +2,10 @@ import { combineReducers } from 'redux';
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import loginReducer from './login-reducer'
-import dataReducer from './data-reducer'
-import searchReducer from './search-input.reducer'
+//load our reducers
+import loginReducer from './login.reducer'
+import dataReducer from './data.reducer'
+import searchReducer from './filters.reducer'
 
 const persistConfig = {
     key: 'root',
