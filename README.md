@@ -8,7 +8,8 @@ This was a group project from **DCI's WEB Development Course**, which We attende
 
 ## V4
 - [x] APP UI refactored.
-- [X] Favorites List
+- [x] Redux Persist (Local Storage)
+- [ ] Favorites List
 - [ ] Search filters / using Firebase
 
 ## V3
