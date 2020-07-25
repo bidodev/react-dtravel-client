@@ -21,7 +21,6 @@ const App = () => {
         type: "UPDATE_DATA",
         payload: res.data,
       });
-      console.log(res.data)
     })
   })
 
