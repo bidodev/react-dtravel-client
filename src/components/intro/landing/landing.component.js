@@ -1,44 +1,51 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 import "./landing.title.styles.scss";
-//import smoothScroll from "./smoothScroll";
 
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 const Landing = () => {
-  const [img, setImg] = useState(0);
+  const backgrounds = useSelector(({ data }) => data.backgrounds);
 
-  const Urls = useSelector(({data}) => data.backgrounds);
-
-  const handleImg = () => {
-    const arrayItems = Urls.length - 1;
-    let numberImg = 0;
-
-    if (img >= (arrayItems)) {
-      setImg(0);
-    } else {
-      numberImg = img + 1;
-      setImg(numberImg);
-    }
-    
-  };
-
-  let imgStyle = {
-    backgroundImage: `linear-gradient(to left bottom,
-            rgba(0, 0, 0, 0.1),
-            rgba(0, 0, 0, 0.7)
-          ), url("${Urls[img]}")`,
+  const getConfigurableProps = {
+    showArrows: true,
+    showStatus: false,
+    showIndicators: true,
+    infiniteLoop: false,
+    showThumbs: false,
+    useKeyboardArrows: true,
+    autoPlay: true,
+    stopOnHover: true,
+    swipeable: true,
+    dynamicHeight: true,
+    emulateTouch: true,
+    thumbWidth: 100,
+    selectedItem: 0,
+    interval: 60000,
+    transitionTime: 400,
+    swipeScrollTolerance: 5,
   };
 
   return (
-    <div className="main-title" style={imgStyle}>
-      {/* LOGO */}
-      <div className="logo">
-        <p>dtravel<span>.</span></p>
-      </div>
-      {/* Content part */}
+    <div className="landing-wrapper">
+      <Carousel {...getConfigurableProps}>
+        {backgrounds.map((background) => (
+          <div>
+            <img src={`${background}`} alt={`${background}`} />
+            {/* <p className="legend">Legend</p> */}
+          </div>
+        ))}
+      </Carousel>
+
       <div className="content">
+        <div className="logo">
+          <p>
+            dtravel<span>.</span>
+          </p>
+        </div>
         <h1>Get ready for your lifetime journey!</h1>
         <h5>
           Collection of the most beautiful places, experiences and unusual housing in the world
@@ -48,13 +55,6 @@ const Landing = () => {
             Get Started
           </button>
         </Link>
-      </div>
-
-      {/* onClick make the URL inside imgStyle change, you can pass it with props */}
-      <div className="pagination">
-        <ion-icon name="chevron-back-outline" onClick={handleImg}></ion-icon>
-        <p>Get inspired</p>
-        <ion-icon name="chevron-forward-outline" onClick={handleImg}></ion-icon>
       </div>
     </div>
   );

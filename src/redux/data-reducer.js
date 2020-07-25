@@ -33,8 +33,7 @@ const INITIAL_STATE = {
     },
   ],
   backgrounds: [
-    "./img/img-background/photo0.jpg",
-    "./img/img-background/venice.jpg",
+    "./img/img-background/photo0.jpg"
   ],
 };
 
