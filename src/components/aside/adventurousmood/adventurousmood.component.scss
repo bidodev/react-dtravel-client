@@ -8,7 +8,7 @@
   h3 {
     letter-spacing: 0.5px;
     margin-left: 1vw;
-    color: #f75d37;
+    color: #181818;
   }
 
   &-icons {
@@ -19,11 +19,11 @@
   
   ion-icon {
     font-size: 2.3vw;
-    color: #303030;
+    color: #f75d37;
     --ionicon-stroke-width: 26px;
     &:hover {
       opacity: 0.8;
-      color: #f75d37;
+      color: #303030;
     }
   }
 }

@@ -5,6 +5,9 @@ import { useSelector } from "react-redux";
 import handleOfferSearch from "../../../helpers/filter.offers";
 import ShowModal from "../../modal/modal.component";
 
+import { Link } from "react-router-dom";
+import './discover.component.styles.scss'
+
 const Main = () => {
   //obj to return for no match
   //obj to return for no match
@@ -73,6 +76,11 @@ const Main = () => {
   return (
     <div className="aside-main">
       <h1>Discover</h1>
+      <nav>
+        <Link to="experiences">Experiences</Link>
+        <Link to="places">Places</Link>
+        <Link to="housings">Housings</Link>
+      </nav>
       
       <ShowModal
         data={dataModal}

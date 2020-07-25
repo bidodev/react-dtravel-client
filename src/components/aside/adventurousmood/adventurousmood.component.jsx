@@ -19,9 +19,7 @@ const AdventurousMood = () => {
     <div className="aside-adventurous__mood">
       <h3>Adventurous Mood</h3>
       <div className="aside-adventurous__mood-icons" onClick={submitValues}>
-        <ion-icon id="tropical" name="sunny-outline">
-          Icon
-        </ion-icon>
+        <ion-icon id="tropical" name="sunny-outline"></ion-icon>
         <ion-icon id="winter" name="snow-outline"></ion-icon>
         <ion-icon id="mountain" name="map-outline"></ion-icon>
         <ion-icon id="cycling" name="bicycle"></ion-icon>

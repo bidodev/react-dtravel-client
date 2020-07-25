@@ -12,7 +12,7 @@
       "bestMatch": false,
       "cover": {
         "url": "https://i.imgur.com/5E48mGu.jpg",
-        "description": "Bora Bora Cover"
+        "description": "Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia"
       },
       "extraImgs": [
         {
@@ -33,7 +33,7 @@
       "id": 1,
       "productName": "Maui",
       "description": "Whether you're driving along the Road to Hana, enjoying a bird's-eye view of the lush coastline from a helicopter, snorkeling with sea turtles or simply relaxing on the island's honey- or black-colored beaches, you'll find that Maui is unlike any other tropical destination. Don't miss a chance to visit Haleakala National Park, which is home to the world's largest dormant volcano. You should also attend a luau for a dose of local culture and a taste of Hawaiian specialties like poi, poke and mahimahi.",
-      "country": "hawaii",
+      "country": "Hawaii",
       "continent": "North America",
       "type": "tropical",
       "difficulty": "easy",
@@ -41,7 +41,7 @@
       "bestMatch": false,
       "cover": {
         "url": "https://i.imgur.com/PWSiFTw.jpgg",
-        "description": "Maui Cover"
+        "description": "Maui is an island in the Central Pacific, part of the Hawaiian archipelago."
       },
       "extraImgs": [
         {
@@ -322,15 +322,6 @@
   ],
   "backgrounds": [
     "https://i.imgur.com/oHxsM3J.jpg",
-    "./img/img-background/photo0.jpg",
-    "./img/img-background/venice.jpg",
-    "./img/img-background/peles-castle.jpg",
-    "./img/img-background/romania-mount.jpg",
-    "https://i.imgur.com/JvXS56o.jpg",
-    "./img/img-background/photo9.jpg",
-    "./img/img-background/photo10.jpg",
-    "./img/img-background/photo11.jpg",
-    "./img/img-background/laurel-kiev.jpg",
-    "./img/img-background/sunset-floripa.jpg"
+    "https://i.imgur.com/JvXS56o.jpg"
   ]
 }

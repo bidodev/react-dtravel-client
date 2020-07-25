@@ -13,7 +13,7 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
     cover,
     extraImgs,
     description,
-    continent,
+    country,
     prices,
   } = data;
 
@@ -26,7 +26,7 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
     },
   };
 
-    const getConfigurableProps = {
+  const getConfigurableProps = {
     showArrows: true,
     showStatus: false,
     showIndicators: true,
@@ -55,30 +55,33 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
         overlayClassName="overlay"
       >
         <div className="offers-item">
-          <h3>
-            <span>
-              {"⭐"}
-              {productName}
-              <button onClick={closeModal}>X Close</button>
-              <button onClick={() => addWishList(id)}>+ Add Wish List</button>
-            </span>
-          </h3>
-          
+          <div className="offers-item-title">
+            <span>{productName}</span>
+            <div>
+              <ion-icon name="bookmarks-outline" onClick={()=>addWishList(id)}></ion-icon>
+              <ion-icon name="close-circle-outline" onClick={closeModal}></ion-icon>
+            </div>
+          </div>
+
           <Carousel {...getConfigurableProps}>
-              {extraImgs ? [cover, ...extraImgs].map(({url, description}) => (
-                <div>
-                  <img src={url} alt={description} />
-                  <p className="legend">{description}</p>
-                </div>
-              )) : null}
+            {extraImgs
+              ? [cover, ...extraImgs].map(({ url, description }) => (
+                  <div>
+                    <img src={url} alt={description} />
+                    <p className="legend">{description}</p>
+                  </div>
+                ))
+              : null}
           </Carousel>
 
           <div className="exp-infos">
             <li>
-              <ion-icon name="navigate-outline"></ion-icon>{continent}
+              <ion-icon name="navigate-outline"></ion-icon>
+              {country}
             </li>
             <li>
-              <ion-icon name="cash-outline"></ion-icon>{prices}
+              <ion-icon name="cash-outline"></ion-icon>
+              {prices}
             </li>
           </div>
           <p className="description">{description}</p>
