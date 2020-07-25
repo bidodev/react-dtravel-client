@@ -13,7 +13,7 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
     cover,
     extraImgs,
     description,
-    continent,
+    country,
     prices,
   } = data;
 
@@ -56,10 +56,9 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
       >
         <div className="offers-item">
           <div className="offers-item-title">
+            <span>{productName}</span>
             <div>
-              <span>{productName}</span>
-            </div>
-            <div>
+              <ion-icon name="bookmarks-outline" onClick={()=>addWishList(id)}></ion-icon>
               <ion-icon name="close-circle-outline" onClick={closeModal}></ion-icon>
             </div>
           </div>
@@ -78,7 +77,7 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
           <div className="exp-infos">
             <li>
               <ion-icon name="navigate-outline"></ion-icon>
-              {continent}
+              {country}
             </li>
             <li>
               <ion-icon name="cash-outline"></ion-icon>

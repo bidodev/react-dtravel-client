@@ -17,34 +17,25 @@
 
   &-title{
     display: flex;
+    justify-content: space-between;
     width: 100%;
-    align-items: center;
-
-    div:first-child {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-      //border: 1px solid teal;
-      
-      ion-icon {
-        font-size: 1.6rem;
-      }
 
       span {
-        margin: 0;
+        text-align:center;
+        width: 100%;
         font-size: 2rem;
-        margin-left: 0.8rem;
         letter-spacing: 0.5px;
         text-transform: uppercase;
         color: #f75d37;
         font-weight: bold;
+        margin-left: 10rem;
       }
-    }
-    div:last-child{
-      flex-grow: 1;
+    
+    div {
       display: flex;
-      justify-content: flex-end;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 10rem;
 
       ion-icon {
         font-size: 2rem;
