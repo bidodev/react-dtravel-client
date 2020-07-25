@@ -41,8 +41,7 @@ const Landing = () => {
       <div className="content">
         <h1>Get ready for your lifetime journey!</h1>
         <h5>
-          Collection of the most beautiful places, experiences and unusual
-          housing in the world
+          Collection of the most beautiful places, experiences and unusual housing in the world
         </h5>
         <Link to="/quiz">
           <button type="button" className="btn btn-primary btn-lg">
