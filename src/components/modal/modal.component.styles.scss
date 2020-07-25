@@ -4,7 +4,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0, 0.9);
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 9999;
 }
 
@@ -15,29 +15,68 @@
   justify-content: space-evenly;
   height: 100%;
 
-
-.carousel{
-
-.slide {
-
-  .legend {
+  &-title{
     display: flex;
+    width: 100%;
     align-items: center;
-    justify-content: center;
-    font-size:1rem;
+
+    div:first-child {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      //border: 1px solid teal;
+      
+      ion-icon {
+        font-size: 1.6rem;
+      }
+
+      span {
+        margin: 0;
+        font-size: 2rem;
+        margin-left: 0.8rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: #f75d37;
+        font-weight: bold;
+      }
+    }
+    div:last-child{
+      flex-grow: 1;
+      display: flex;
+      justify-content: flex-end;
+
+      ion-icon {
+        font-size: 2rem;
+
+        &:hover {
+          opacity: 0.5;
+          color: red;
+        }
+      }
+    }
   }
 
-  div {
-    height: 45vh;
-  }
 
-  img {
-    height: 100%;
-    object-fit: cover;
-  }
-}
-}
+  .carousel {
+    .slide {
+      .legend {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+      }
 
+      div {
+        height: 45vh;
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
 
   ul {
     text-align: center;
@@ -53,41 +92,31 @@
   }
 }
 
-  h3 {
-    margin: 1.5vh 0;
-    text-align: center;
-    text-transform: uppercase;
-    color: #f75d37;
-  }
+.exp-infos {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 30rem;
 
-
-  .exp-infos {
+  li {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    width: 30rem;
+    width: auto;
+    font-size: 1.3rem;
 
-    li {
-      display: flex;
-      align-items: center;
-      width: auto;
-      font-size: 1.3rem;
-
-      ion-icon {
-        font-size: 2rem;
-        color: #f75d37;
-        margin-right: 0.8rem;
-      }
+    ion-icon {
+      font-size: 2rem;
+      color: #f75d37;
+      margin-right: 0.8rem;
     }
   }
+}
 
-
-  .description {
-    text-align: justify;
-    padding: 1rem;
-    color: #303030
-  }
-
+.description {
+  text-align: justify;
+  padding: 1rem;
+  color: #303030;
+}
 
 // .gallery-container {
 //   height: 15vh;
