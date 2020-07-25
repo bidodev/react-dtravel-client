@@ -5,6 +5,7 @@ import "./modal.component.styles.scss";
 Modal.setAppElement("#root");
 function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
   const {
+    id,
     productName,
     src,
     additionalImages,
@@ -36,7 +37,7 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
               {"⭐"}
               {productName}
               <button onClick={closeModal}>X Close</button>
-              <button onClick={addWishList}>+ Add Wish List</button>
+              <button onClick={()=> addWishList(id)}>+ Add Wish List</button>
             </span>
           </h3>
 

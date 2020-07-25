@@ -33,16 +33,20 @@ const INITIAL_STATE = {
     },
   ],
   backgrounds: [
-    "./img/img-background/photo0.jpg"
+    "https://i.imgur.com/oHxsM3J.jpg"
   ],
 };
 
 const destinationsReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case "UPDATE_DATA":
-      return action.payload;
-    case "UPDATE_BACKGROUNDS":
-      return action.payload;
+
+      return {
+        ...state,
+        destinations: [...action.payload.destinations],
+        backgrounds: [...state.backgrounds, ...action.payload.backgrounds],
+      }
+    
     default:
       return state;
   }

@@ -16,10 +16,10 @@ const App = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    axios("https://my-json-server.typicode.com/bidodev/dtravel.api/db").then((res) => {
+    axios("https://my-json-server.typicode.com/bidodev/dtravel.api/db").then(({data}) => {
       dispatch({
         type: "UPDATE_DATA",
-        payload: res.data,
+        payload: data,
       });
     })
   })
@@ -53,7 +53,7 @@ const App = () => {
       //console.log("componetWillUnmount");
       unsubscribe();
     };
-  }, [dispatch]);
+  });
 
   return (
     <div className="App">
