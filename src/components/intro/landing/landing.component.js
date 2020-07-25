@@ -3,9 +3,9 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 import "./landing.title.styles.scss";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 const Landing = () => {
   const backgrounds = useSelector(({ data }) => data.backgrounds);
@@ -24,7 +24,7 @@ const Landing = () => {
     emulateTouch: true,
     thumbWidth: 100,
     selectedItem: 0,
-    interval: 10000,
+    interval: 60000,
     transitionTime: 400,
     swipeScrollTolerance: 5,
   };
