@@ -1,27 +1,15 @@
-.main-title {
-  //border: 1px solid red;
-  /* position */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  z-index: -1;
+.landing-wrapper {
+  position: relative;
+  color: white;
   height: 95vh;
-  /* decoration */
-  color: #ffffff;
-  font-weight: 800;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  
-  // border-radius: 30px;
-  border-top-left-radius: 30px;
-  border-bottom-left-radius: 30px;
-  background-color: #f5f5f5;
+  background-color: teal;
 
   .logo {
     //border: 1px solid green;
-    padding-left: 5vw;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    
     width: auto;
     height: 25%;
     display: flex;
@@ -35,6 +23,10 @@
     }
   }
   .content {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    transform: translate(5%, 30%);
     //border: 1px solid red;
     width: auto;
     height: 40%;
@@ -42,7 +34,6 @@
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-left: 5vw;
     & :first-child,
     & :nth-child(2) {
       width: 22vw;
@@ -56,48 +47,5 @@
       margin-top: 2vh;
       text-align: center;
     }
-  }
-  .pagination {
-    //border: 1px solid red;
-    height: 25%;
-    width: 25vw;
-    padding-left: 5vw;
-    display: flex;
-    align-items: flex-end;
-
-    p {
-      font-size: 1.4rem;
-      height: 4vh;
-      margin: 0 2vw;
-    }
-    ion-icon {
-      font-size: 2vw;
-      --ionicon-stroke-width: 20px;
-      &:hover{
-        cursor: pointer;
-        opacity: 0.5;
-      }
-    }
-  }
-}
-.to-offers {
-  padding-top: 1rem;
-  color: white;
-  font-weight: 700;
-  font-size: 1.4rem;
-  background: none;
-  border:none;
-  text-align: left;
-  &:focus {
-    outline: none;
-  }
-  &:focus::placeholder {
-    color: transparent;
-  }
-/*   &::first-letter {
-    font-weight: 600;
-  } */
-  a, a:hover, a:focus {
-    text-decoration: none;
   }
 }
