@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import ExperienceItem from "./experiences/experience.item.component";
 import { useSelector } from "react-redux";
 
-import handleOfferSearch from "../../offers/handleOfferSearch";
+import handleOfferSearch from "../../../helpers/filter.offers";
 import ShowModal from "../../modal/modal.component";
 
 const Main = () => {

@@ -2,7 +2,6 @@ import React from "react";
 import questionsFullData from "./questions.json";
 import { Link } from "react-router-dom";
 import QuestionItem from "./question-item.component";
-import smoothScroll from "../landing/smoothScroll";
 
 import "./quiz.styles.scss";
 
@@ -73,7 +72,7 @@ const Quiz = () => {
         </button>
       </div>
       <div className="quiz-to-offers">
-        <button class="offers" onClick={smoothScroll}>
+        <button class="offers">
           <span class="circle" aria-hidden="true">
             <span class="icon arrow"></span>
           </span>
@@ -81,8 +80,7 @@ const Quiz = () => {
         </button>
       </div>
       <div className="quiz-logo">
-        <p onClick={smoothScroll}>
-          {" "}
+        <p>
           do the travel
           <span>.</span>
         </p>

@@ -4,6 +4,36 @@
   align-items: center;
   justify-content: space-evenly;
   height: 100%;
+  
+  .slide {
+    div{
+      height: 45vh;
+    }
+
+    img{
+      height: 100%;
+      object-fit: cover;
+      
+    }
+  }
+
+  ul {
+    text-align: center;
+  }
+
+  .thumb {
+    height: 13vh;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .test {
+    height: 200px;
+    border: 1px solid red;
+  }
 
   h3 {
     margin: 1.5vh 0;
