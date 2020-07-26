@@ -70,6 +70,7 @@ const Discover = () => {
      * 2. some will return true or false.
      */
     const isOnFavorites = favoritesList.some((favorites) => favorites.id === props.id)
+
     setIsOpen(true);
     setDataModal({ ...props, isOnFavorites });
   };
