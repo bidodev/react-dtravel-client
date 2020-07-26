@@ -71,12 +71,13 @@
 
       ion-icon {
         font-size: 2rem;
-        color: #f75d37;
-
         &:hover {
           opacity: 0.5;
-          color: red;
+          color: #ff0000;
         }
+      }
+      ion-icon:first-child {
+        color: #f75d37;
       }
     }
   }

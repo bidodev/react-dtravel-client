@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import ExperienceItem from "./experiences/experience.item.component";
 import { useSelector, useDispatch } from "react-redux";
-
-import handleOfferSearch from "../../../helpers/filter.offers";
-import ShowModal from "../../modal/modal.component";
-
 import { Link } from "react-router-dom";
 import "./discover.component.styles.scss";
 
-const Main = () => {
+import handleOfferSearch from "../../../helpers/filter.offers";
+import ShowModal from "../../modal/modal.component";
+import ExperienceItem from "./experiences/experience.item.component";
+
+const Discover = () => {
   const dispatch = useDispatch();
 
   const [startIndex, setStartIndex] = useState(0);
@@ -16,6 +15,9 @@ const Main = () => {
 
   //1. We have to select our full data from the state
   const offersFullData = useSelector(({ data }) => data.destinations);
+
+  //Load the list of the Favorites
+  const favoritesList = useSelector((state) => state.favoritesList);
 
   const noOfferMatch = [
     offersFullData.find((element) => element.id.toString() === "404"),
@@ -54,7 +56,6 @@ const Main = () => {
     setFinalIndex(finalIndex + 1);
   };
 
-
   const [modalIsOpen, setIsOpen] = useState(false);
   const [dataModal, setDataModal] = useState({});
 
@@ -63,16 +64,27 @@ const Main = () => {
    * 2. It updates the local state with the Data to render the modal.
    * 3. It checks if the item is on the Favorites and pass (false or true)
    */
-  function openModal(props) {
-    const isOnFavorites = true;
-
+  const openModal = (props) => {
+    /**
+     * 1. Check or List of Favorites to see if the ID modal that will render is inside of the array.
+     * 2. some will return true or false.
+     */
+    const isOnFavorites = favoritesList.some((favorites) => favorites.id === props.id)
     setIsOpen(true);
-    setDataModal({ ...props, isOnFavorites});
-  }
+    setDataModal({ ...props, isOnFavorites });
+  };
 
-  function closeModal() {
+  /**
+   * This function update the local state and close the modal.
+   */
+  const closeModal = () => {
     setIsOpen(false);
-  }
+  };
+
+  /**
+   * This functions toogle the favorite on redux store.
+   * If it's already on the the store, then remove else add.
+   */
 
   const addWishList = (offerID, productName) => {
     dispatch({
@@ -110,4 +122,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default Discover;
