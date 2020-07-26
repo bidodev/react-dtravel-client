@@ -1,23 +1,21 @@
 import React, { useState } from "react";
 import ExperienceItem from "./experiences/experience.item.component";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import handleOfferSearch from "../../../helpers/filter.offers";
 import ShowModal from "../../modal/modal.component";
 
 import { Link } from "react-router-dom";
-import './discover.component.styles.scss'
+import "./discover.component.styles.scss";
 
 const Main = () => {
-  //obj to return for no match
-  //obj to return for no match
-  //just a workarround to work..
+  const dispatch = useDispatch();
 
   const [startIndex, setStartIndex] = useState(0);
   const [finalIndex, setFinalIndex] = useState(1);
 
   //1. We have to select our full data from the state
-  const offersFullData = useSelector(({data}) => data.destinations);
+  const offersFullData = useSelector(({ data }) => data.destinations);
 
   const noOfferMatch = [
     offersFullData.find((element) => element.id.toString() === "404"),
@@ -61,16 +59,19 @@ const Main = () => {
 
   function openModal(props) {
     setIsOpen(true);
-    setDataModal(props)
+    setDataModal(props);
   }
 
   function closeModal() {
     setIsOpen(false);
   }
 
-  const addWishList = (offerID) => {
-    console.log("Hello", offerID)
-  }
+  const addWishList = (offerID, productName) => {
+    dispatch({
+      type: "ADD_FAVORITE",
+      payload: { id: offerID, name: productName },
+    });
+  };
 
   return (
     <div className="aside-main">
@@ -80,7 +81,7 @@ const Main = () => {
         <Link to="experiences">Experiences</Link>
         <Link to="housings">Housings</Link>
       </nav>
-      
+
       <ShowModal
         data={dataModal}
         closeModal={closeModal}
@@ -90,7 +91,7 @@ const Main = () => {
 
       <div className="aside-main__carrousel">
         {slicedResults.map(({ ...item }) => (
-          <ExperienceItem key={item.id} {...item} openModal={openModal}/>
+          <ExperienceItem key={item.id} {...item} openModal={openModal} />
         ))}
       </div>
       <div className="pagination">

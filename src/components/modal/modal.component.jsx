@@ -58,7 +58,7 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
           <div className="offers-item-title">
             <span>{productName}</span>
             <div>
-              <ion-icon name="bookmarks-outline" onClick={()=>addWishList(id)}></ion-icon>
+              <ion-icon name="bookmarks-outline" onClick={()=>addWishList(id, productName)}></ion-icon>
               <ion-icon name="close-circle-outline" onClick={closeModal}></ion-icon>
             </div>
           </div>
@@ -66,7 +66,7 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
           <Carousel {...getConfigurableProps}>
             {extraImgs
               ? [cover, ...extraImgs].map(({ url, description }) => (
-                  <div>
+                <div key ={Math.ceil(Math.random())}>
                     <img src={url} alt={description} />
                     <p className="legend">{description}</p>
                   </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.component.styles.scss";
 
-import { NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 import { auth } from "../../../firebase/firebase.utils";
@@ -20,6 +20,9 @@ const Header = () => {
         <li>
           <NavLink to="/Discover">Blog</NavLink>
         </li>
+        {currentUser ? (
+          <NavLink to="/favorites">Favorites</NavLink>
+        ) : null}
         {currentUser ? (
           <div className="option-logged" onClick={() => auth.signOut()}>
             SIGN OUT

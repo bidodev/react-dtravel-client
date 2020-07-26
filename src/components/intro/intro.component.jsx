@@ -8,6 +8,7 @@ import Quiz from "./quiz/Quiz.component";
 
 //Sign In / Sign UP Page...
 import Authentication from "../../pages/authentication";
+import Favorites from '../../pages/favorites'
 
 // About Intro Component
 // Intro is one of the main component along aside.
@@ -30,6 +31,7 @@ import Authentication from "../../pages/authentication";
 //     }
 //   },
 
+
 const Intro = () => {
   //1. Select only login from our state using destructuring
   //2. Select the currentUser, if the user is not logged in, it will be null otherwise it will be an object.
@@ -46,6 +48,11 @@ const Intro = () => {
           exact
           path="/login"
           render={() => (currentUser ? <Redirect to="/" /> : <Authentication />)}
+        />
+        <Route
+          exact
+          path="/favorites"
+          render={() => (currentUser ? <Favorites /> : <Authentication />)}
         />
       </Switch>
     </div>

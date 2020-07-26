@@ -2,15 +2,16 @@
 /* let numOfCalls = 0; */
 const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
   let numOfBestMatches = 0;
-  console.warn("handleOfferSearch was called")
-  console.log(input)
+
+  
   //prevent empty input treating
   if (input === undefined || input === null) {
     const firstNItems = [];
     (() => {
-      for (let i = 0; i < 12; i++) {
-        firstNItems.push(fulldata[i])
-      }
+      fulldata.forEach(element => {
+        firstNItems.push(element)
+      });
+
     })();
     return firstNItems;
   }

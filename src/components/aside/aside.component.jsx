@@ -10,7 +10,7 @@ function Aside() {
     return CurrentUser === null ? (
       ""
     ) : (
-      <div>Welcome: {currentUser.displayName}</div>
+        <div>Welcome: {currentUser.displayName}</div>
     );
   };
 

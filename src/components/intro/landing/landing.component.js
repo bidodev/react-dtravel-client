@@ -14,10 +14,10 @@ const Landing = () => {
     showArrows: true,
     showStatus: false,
     showIndicators: true,
-    infiniteLoop: false,
+    infiniteLoop: true,
     showThumbs: false,
     useKeyboardArrows: true,
-    autoPlay: false,
+    autoPlay: true,
     stopOnHover: true,
     swipeable: true,
     dynamicHeight: true,
@@ -33,7 +33,7 @@ const Landing = () => {
     <div className="landing-wrapper">
       <Carousel {...getConfigurableProps}>
         {backgrounds.map((background) => (
-          <div>
+          <div key ={Math.ceil(Math.random())}>
             <img src={`${background}`} alt={`${background}`} />
             {/* <p className="legend">Legend</p> */}
           </div>
