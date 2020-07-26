@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Modal from "react-modal";
-import "./modal.component.styles.scss";
+import "./offer.component.styles.scss";
+import {useSelector} from "react-redux";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
@@ -15,13 +16,14 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
     extraImgs,
     description,
     country,
-    prices,
-    isOnFavorites,
+    prices
   } = data;
 
-  //disabled by now
-  //we're going return here
+  //Load the list of the Favorites
+  const favoritesList = useSelector((state) => state.favoritesList);
+  const isOnFavorites = favoritesList.some((favorites) => favorites.id === id)
 
+  //configurations for the carousel..
   const getConfigurableProps = {
     showArrows: true,
     showStatus: false,

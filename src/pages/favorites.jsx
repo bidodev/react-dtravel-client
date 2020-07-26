@@ -20,9 +20,7 @@ function Favorites() {
     return (
         <div className="wrapper">
             <h2>Your Favorites</h2>
-            {/* {favoritesList.map(({ ...item }) => (
-            <ExperienceItem key={item.id} {...item} openModal={openModal} />
-        ))} */}
+            {favoritesList.map((item) => <h2>{item.name}</h2>)}
         </div>
     )
 }

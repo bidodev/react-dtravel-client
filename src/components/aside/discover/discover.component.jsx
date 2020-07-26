@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./discover.component.styles.scss";
 
 import handleOfferSearch from "../../../helpers/filter.offers";
-import ShowModal from "../../modal/modal.component";
+import ShowModal from "../../modal/offer.component";
 import ExperienceItem from "./experiences/experience.item.component";
 
 const Discover = () => {
@@ -66,13 +66,10 @@ const Discover = () => {
    */
   const openModal = (props) => {
     /**
-     * 1. Check or List of Favorites to see if the ID modal that will render is inside of the array.
-     * 2. some will return true or false.
+     * update localState with modal state/data
      */
-    const isOnFavorites = favoritesList.some((favorites) => favorites.id === props.id)
-
     setIsOpen(true);
-    setDataModal({ ...props, isOnFavorites });
+    setDataModal(props);
   };
 
   /**
@@ -88,8 +85,9 @@ const Discover = () => {
    */
 
   const addWishList = (offerID, productName) => {
+    //const isOnFavorites = favoritesList.some((favorites) => favorites.id === offerID)
     dispatch({
-      type: "ADD_FAVORITE",
+      type: "TOGGLE FAVORITE",
       payload: { id: offerID, name: productName },
     });
   };
