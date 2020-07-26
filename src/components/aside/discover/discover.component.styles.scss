@@ -20,12 +20,12 @@
     margin-left: 1vw;
 
     nav {
-      font-size: 1.25rem;
+      font-size: 1.18rem;
       display: flex;
       width: 19rem;
       justify-content: space-between;
       letter-spacing: 0.4px;
-      font-weight: 600;
+      font-weight: 400;
 
       a {
         color: #909090;
@@ -48,6 +48,8 @@
       scroll-behavior: smooth;
     }
 
+
+
     .pagination {
       //border: 1px solid red;
       width: 4rem;
@@ -66,3 +68,4 @@
     }
   }
 }
+

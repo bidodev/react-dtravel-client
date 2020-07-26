@@ -8,6 +8,38 @@
   z-index: 9999;
 }
 
+@keyframes modalFade {
+  0% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  80% {
+    transform: translateX(-5%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+.Modal {
+  position: absolute;
+    top: 40px;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
+    overflow: hidden;
+    border-radius: 30px;
+    outline: none;
+    padding: 20px;
+    width: 63vw;
+    margin-left: 2rem;
+    animation-name: modalFade;
+    animation-duration: 2s;
+}
+
 .offers-item {
   display: flex;
   flex-direction: column;
@@ -39,11 +71,13 @@
 
       ion-icon {
         font-size: 2rem;
-
         &:hover {
           opacity: 0.5;
-          color: red;
+          color: #ff0000;
         }
+      }
+      ion-icon:first-child {
+        color: #f75d37;
       }
     }
   }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Modal from "react-modal";
 import "./modal.component.styles.scss";
 
@@ -7,6 +7,7 @@ import { Carousel } from "react-responsive-carousel";
 
 Modal.setAppElement("#root");
 function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
+
   const {
     id,
     productName,
@@ -15,16 +16,11 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
     description,
     country,
     prices,
+    isOnFavorites,
   } = data;
 
-  const customStyles = {
-    content: {
-      overflow: "hidden",
-      width: "63vw",
-      marginLeft: "2rem",
-      borderRadius: "30px",
-    },
-  };
+  //disabled by now
+  //we're going return here
 
   const getConfigurableProps = {
     showArrows: true,
@@ -51,22 +47,27 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
         contentLabel="Offers Modal"
-        style={customStyles}
+        className="Modal"
         overlayClassName="overlay"
       >
         <div className="offers-item">
           <div className="offers-item-title">
             <span>{productName}</span>
             <div>
-              <ion-icon name="bookmarks-outline" onClick={()=>addWishList(id)}></ion-icon>
-              <ion-icon name="close-circle-outline" onClick={closeModal}></ion-icon>
+              <ion-icon name={isOnFavorites ? 'bookmark' : 'bookmark-outline'}
+                onClick={() => addWishList(id, productName)}
+              ></ion-icon>
+              <ion-icon
+                name="close-circle-outline"
+                onClick={closeModal}
+              ></ion-icon>
             </div>
           </div>
 
           <Carousel {...getConfigurableProps}>
             {extraImgs
               ? [cover, ...extraImgs].map(({ url, description }) => (
-                  <div>
+                  <div key={Math.ceil(Math.random())}>
                     <img src={url} alt={description} />
                     <p className="legend">{description}</p>
                   </div>
