@@ -54,12 +54,20 @@ const Main = () => {
     setFinalIndex(finalIndex + 1);
   };
 
+
   const [modalIsOpen, setIsOpen] = useState(false);
   const [dataModal, setDataModal] = useState({});
 
+  /**
+   * 1. This function set the status of the Modal to Open.
+   * 2. It updates the local state with the Data to render the modal.
+   * 3. It checks if the item is on the Favorites and pass (false or true)
+   */
   function openModal(props) {
+    const isOnFavorites = true;
+
     setIsOpen(true);
-    setDataModal(props);
+    setDataModal({ ...props, isOnFavorites});
   }
 
   function closeModal() {
