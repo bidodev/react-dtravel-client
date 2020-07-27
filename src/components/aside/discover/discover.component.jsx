@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import "./discover.component.styles.scss";
 
@@ -8,7 +8,6 @@ import ShowModal from "../../modal/offer.component";
 import ExperienceItem from "./experiences/experience.item.component";
 
 const Discover = () => {
-  const dispatch = useDispatch();
 
   const [startIndex, setStartIndex] = useState(0);
   const [finalIndex, setFinalIndex] = useState(1);
@@ -16,19 +15,12 @@ const Discover = () => {
   //1. We have to select our full data from the state
   const offersFullData = useSelector(({ data }) => data.destinations);
 
-  //Load the list of the Favorites
-  const favoritesList = useSelector((state) => state.favoritesList);
-
-  const noOfferMatch = [
-    offersFullData.find((element) => element.id.toString() === "404"),
-  ];
 
   //2. Check which input the user passed..
   const searchInput = useSelector((state) => state.searchInput);
 
   const filteredSearch = handleOfferSearch(
     searchInput,
-    noOfferMatch,
     offersFullData
   );
 
@@ -79,19 +71,6 @@ const Discover = () => {
     setIsOpen(false);
   };
 
-  /**
-   * This functions toogle the favorite on redux store.
-   * If it's already on the the store, then remove else add.
-   */
-
-  const addWishList = (offerID, productName) => {
-    //const isOnFavorites = favoritesList.some((favorites) => favorites.id === offerID)
-    dispatch({
-      type: "TOGGLE FAVORITE",
-      payload: { id: offerID, name: productName },
-    });
-  };
-
   return (
     <div className="aside-main">
       <h2>Discover</h2>
@@ -104,7 +83,6 @@ const Discover = () => {
       <ShowModal
         data={dataModal}
         closeModal={closeModal}
-        addWishList={addWishList}
         modalIsOpen={modalIsOpen}
       />
 

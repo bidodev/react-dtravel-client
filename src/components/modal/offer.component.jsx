@@ -1,14 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Modal from "react-modal";
 import "./offer.component.styles.scss";
-import {useSelector} from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
 Modal.setAppElement("#root");
-function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
-
+function ShowModal({ modalIsOpen, closeModal, data }) {
   const {
     id,
     productName,
@@ -16,15 +15,29 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
     extraImgs,
     description,
     country,
-    prices
+    prices,
   } = data;
+
+  /**
+   * This functions toogle the favorite on redux store.
+   * If it's already on the the store, then remove else add.
+   */
+
+  const dispatch = useDispatch();
+  const addWishList = (offerID, productName) => {
+    //const isOnFavorites = favoritesList.some((favorites) => favorites.id === offerID)
+    dispatch({
+      type: "TOGGLE FAVORITE",
+      payload: { id: offerID, name: productName },
+    });
+  };
 
   //Load the list of the Favorites
   const favoritesList = useSelector((state) => state.favoritesList);
-  const isOnFavorites = favoritesList.some((favorites) => favorites.id === id)
+  const isOnFavorites = favoritesList.some((favorites) => favorites.id === id);
 
   //configurations for the carousel..
-  const getConfigurableProps = {
+  const modalConfig = {
     showArrows: true,
     showStatus: false,
     showIndicators: true,
@@ -44,7 +57,6 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
   };
 
   return (
-    <div>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={closeModal}
@@ -56,7 +68,8 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
           <div className="offers-item-title">
             <span>{productName}</span>
             <div>
-              <ion-icon name={isOnFavorites ? 'bookmark' : 'bookmark-outline'}
+              <ion-icon
+                name={isOnFavorites ? "bookmark" : "bookmark-outline"}
                 onClick={() => addWishList(id, productName)}
               ></ion-icon>
               <ion-icon
@@ -66,7 +79,7 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
             </div>
           </div>
 
-          <Carousel {...getConfigurableProps}>
+          <Carousel {...modalConfig}>
             {extraImgs
               ? [cover, ...extraImgs].map(({ url, description }) => (
                   <div key={Math.ceil(Math.random())}>
@@ -90,7 +103,6 @@ function ShowModal({ modalIsOpen, closeModal, addWishList, data }) {
           <p className="description">{description}</p>
         </div>
       </Modal>
-    </div>
   );
 }
 
