@@ -1,7 +1,26 @@
 //
 /* let numOfCalls = 0; */
-const handleOfferSearch = ({ input }, defaultItem, fulldata) => {
+
+
+const handleOfferSearch = ({ input }, fulldata) => {
   let numOfBestMatches = 0;
+
+  const defaultItem = {
+    "id": 404,
+    "productName": "Neverland",
+    "continent": "Neverland",
+    "description": "Try one more time",
+    "photo": "../public/img/404.png",
+    "cover": {
+      "url": "https://images.unsplash.com/photo-1531572753322-ad063cecc140?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
+      "description": "The Colosseum or Coliseum, also known as the Flavian Amphitheatre"
+    },
+    "country": "Neverland",
+    "prices": "sure, you want to know",
+    "type": "Neverland",
+    "difficulty": "easy",
+    "bestMatch": false
+  }
 
   
   //prevent empty input treating
