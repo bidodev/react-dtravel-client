@@ -1,29 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./experience.item.component.styles.scss";
 
 const Card = (props) => {
-  const { id, cover, productName, country, openModal, type } = props
+  const { id, cover, extraImgs, productName, country, openModal, type } = props;
 
   //grab the url and description from the cover object.
-  const {url, description} = cover;
+  const { url, description } = cover;
 
   const [isHovering, setIsHovering] = useState(false);
 
+
+
   /**
    * Function to capitalize the first letter of each word.
-   * @param {*} str 
+   * @param {*} str
    */
   const sanitizeNames = (str) => {
-    return str.split(" ").map((el) => el.charAt(0).toUpperCase() + el.slice(1)).join(" ");
+    return str
+      .split(" ")
+      .map((el) => el.charAt(0).toUpperCase() + el.slice(1))
+      .join(" ");
   };
 
   return (
-    
     <div
       className="card"
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
-      onClick={()=>openModal(props)}
+      onClick={() => openModal(props)}
     >
       <img
         //this code is ugly, please fix this shit at some point..

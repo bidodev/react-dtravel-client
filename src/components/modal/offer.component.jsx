@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import Modal from "react-modal";
 import "./offer.component.styles.scss";
 import { useSelector, useDispatch } from "react-redux";
@@ -24,9 +24,9 @@ function ShowModal({ modalIsOpen, closeModal, data }) {
    * If it's already on the the store, then remove else add.
    */
 
+
   const dispatch = useDispatch();
   const addWishList = (offerID, productName) => {
-    //const isOnFavorites = favoritesList.some((favorites) => favorites.id === offerID)
     dispatch({
       type: "TOGGLE FAVORITE",
       payload: { id: offerID, name: productName },
