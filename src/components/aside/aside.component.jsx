@@ -18,8 +18,8 @@ function Aside() {
     return (
       <React.Fragment>
         <Search />
-        <AdventurousMood />
         <Discover />
+        <AdventurousMood />
       </React.Fragment>
     );
   };
