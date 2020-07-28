@@ -4,16 +4,22 @@ import { persistStore } from "redux-persist";
 import rootReducer from "../root.reducer";
 import logger from "redux-logger";
 
-const middlewares = [logger];
-const enhancers = [window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()]
+const middlewares = [];
+const enhancers = [];
+
+const chromeRedux =
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
+
+if (process.env.NODE_ENV === "development") {
+  middlewares.push(logger);
+  enhancers.push(chromeRedux);
+}
 
 export const store = createStore(
   rootReducer,
-  compose(
-    applyMiddleware(...middlewares), ...enhancers
-  )
+  compose(applyMiddleware(...middlewares), ...enhancers)
 );
 
 export const persistor = persistStore(store);
 
-export default {store, persistor};
+export default { store, persistor };

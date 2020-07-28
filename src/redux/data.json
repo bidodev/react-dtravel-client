@@ -11,20 +11,20 @@
       "prices": "High",
       "bestMatch": false,
       "cover": {
-        "url": "https://i.imgur.com/20FWfPd.jpg",
+        "url": "bora/cover.jpg",
         "description": "Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia"
       },
       "extraImgs": [
         {
-          "url": "https://i.imgur.com/Vilz9KV.jpg",
+          "url": "bora/boat.jpg",
           "description": "Bora Bora Image 1 - Put some description"
         },
         {
-          "url": "https://i.imgur.com/j6sBhXS.jpg",
+          "url": "bora/houses.jpg",
           "description": "Bora Bora Image 2 - Put some description"
         },
         {
-          "url": "https://i.imgur.com/KWAt7Pf.jpg",
+          "url": "bora/divers.jpg",
           "description": "Bora Bora Image 3 - Put some description"
         }
       ]
@@ -40,20 +40,20 @@
       "prices": "High",
       "bestMatch": false,
       "cover": {
-        "url": "https://i.imgur.com/PWSiFTw.jpgg",
+        "url": "maui/peter-vanosdall.jpg",
         "description": "Maui is an island in the Central Pacific, part of the Hawaiian archipelago."
       },
       "extraImgs": [
         {
-          "url": "https://i.imgur.com/R6Qsh8v.jpg",
+          "url": "maui/braden-jarvis.jpg",
           "description": "Maui Image 1 - Put some description"
         },
         {
-          "url": "https://i.imgur.com/IujoC6j.jpg",
+          "url": "maui/justin-lam.jpg",
           "description": "Maui Image 2 - Put some description"
         },
         {
-          "url": "https://i.imgur.com/4OOCLos.jpg",
+          "url": "maui/tatonomusic.jpg",
           "description": "Maui Image 3 - Put some description"
         }
       ]

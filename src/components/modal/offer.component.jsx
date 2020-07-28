@@ -16,6 +16,7 @@ function ShowModal({ modalIsOpen, closeModal, data }) {
     description,
     country,
     prices,
+    type
   } = data;
 
   /**
@@ -83,7 +84,7 @@ function ShowModal({ modalIsOpen, closeModal, data }) {
             {extraImgs
               ? [cover, ...extraImgs].map(({ url, description }) => (
                   <div key={Math.ceil(Math.random())}>
-                    <img src={url} alt={description} />
+                    <img src={`./img/${type}/${url}`} alt={description} />
                     <p className="legend">{description}</p>
                   </div>
                 ))

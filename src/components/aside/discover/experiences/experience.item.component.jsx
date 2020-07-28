@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./experience.item.component.styles.scss";
 
 const Card = (props) => {
-  const { id, cover, productName, country, openModal } = props
+  const { id, cover, productName, country, openModal, type } = props
 
   //grab the url and description from the cover object.
   const {url, description} = cover;
@@ -30,7 +30,7 @@ const Card = (props) => {
         //className={id === 404 ? "img-404" : "img-card"}
         className={"img-card"}
         key={id}
-        src={url}
+        src={`./img/${type}/${url}`}
         alt={description}
       />
       {isHovering && (
