@@ -94,7 +94,7 @@ const Discover = () => {
   return (
     <div className="aside-main">
       <h2>Discover</h2>
-      <nav onClick={(event) => updateItem(event.target.value)}>
+      <nav className ="aside-main-nav" onClick={(event) => updateItem(event.target.value)}>
         <button value="experiences">Experiences</button>
         <button value="places">Places</button>
         <button value="housings">Housings</button>

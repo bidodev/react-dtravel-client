@@ -557,8 +557,8 @@
   "experiences": [
     {
       "id": 0,
-      "productName": "bora bora",
-      "description": "What this small island may lack in size it makes up for in sheer tropical beauty. Here, you'll find picturesque beaches, lush jungles and luxurious resorts. The island's dormant volcano, Mount Otemanu, makes for a great photo-op or challenging hike, and the friendly Bora Bora locals can help you catch a glimpse of the island's best sights during an off-road excursion. To relax, head to Matira Beach for crystal-clear water and soft sand. Although a trip to Bora Bora is very high, most travelers say it's worth every penny. ",
+      "productName": "experience1",
+      "description": "experience1 island may lack in size it makes up for in sheer tropical beauty. Here, you'll find picturesque beaches, lush jungles and luxurious resorts. The island's dormant volcano, Mount Otemanu, makes for a great photo-op or challenging hike, and the friendly Bora Bora locals can help you catch a glimpse of the island's best sights during an off-road excursion. To relax, head to Matira Beach for crystal-clear water and soft sand. Although a trip to Bora Bora is very high, most travelers say it's worth every penny. ",
       "country": "French Polynesia, France",
       "continent": "Australia and Oceania",
       "type": "tropical",
@@ -567,7 +567,7 @@
       "bestMatch": false,
       "cover": {
         "url": "https://i.imgur.com/5E48mGu.jpg",
-        "description": "Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia"
+        "description": "experience1 is a small South Pacific island northwest of Tahiti in French Polynesia"
       },
       "extraImgs": [
         {
@@ -596,7 +596,7 @@
       "bestMatch": false,
       "cover": {
         "url": "https://i.imgur.com/PWSiFTw.jpgg",
-        "description": "Maui is an island in the Central Pacific, part of the Hawaiian archipelago."
+        "description": "experience2 is an island in the Central Pacific, part of the Hawaiian archipelago."
       },
       "extraImgs": [
         {
@@ -617,8 +617,8 @@
   "housings": [
     {
       "id": 0,
-      "productName": "bora bora",
-      "description": "What this small island may lack in size it makes up for in sheer tropical beauty. Here, you'll find picturesque beaches, lush jungles and luxurious resorts. The island's dormant volcano, Mount Otemanu, makes for a great photo-op or challenging hike, and the friendly Bora Bora locals can help you catch a glimpse of the island's best sights during an off-road excursion. To relax, head to Matira Beach for crystal-clear water and soft sand. Although a trip to Bora Bora is very high, most travelers say it's worth every penny. ",
+      "productName": "housing1",
+      "description": "housing1 lack in size it makes up for in sheer tropical beauty. Here, you'll find picturesque beaches, lush jungles and luxurious resorts. The island's dormant volcano, Mount Otemanu, makes for a great photo-op or challenging hike, and the friendly Bora Bora locals can help you catch a glimpse of the island's best sights during an off-road excursion. To relax, head to Matira Beach for crystal-clear water and soft sand. Although a trip to Bora Bora is very high, most travelers say it's worth every penny. ",
       "country": "French Polynesia, France",
       "continent": "Australia and Oceania",
       "type": "tropical",
@@ -627,7 +627,7 @@
       "bestMatch": false,
       "cover": {
         "url": "https://i.imgur.com/5E48mGu.jpg",
-        "description": "Bora Bora is a small South Pacific island northwest of Tahiti in French Polynesia"
+        "description": "housing1 is a small South Pacific island northwest of Tahiti in French Polynesia"
       },
       "extraImgs": [
         {
@@ -656,7 +656,7 @@
       "bestMatch": false,
       "cover": {
         "url": "https://i.imgur.com/PWSiFTw.jpgg",
-        "description": "Maui is an island in the Central Pacific, part of the Hawaiian archipelago."
+        "description": "housing2 an island in the Central Pacific, part of the Hawaiian archipelago."
       },
       "extraImgs": [
         {
