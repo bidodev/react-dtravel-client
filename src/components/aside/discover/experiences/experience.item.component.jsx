@@ -2,14 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./experience.item.component.styles.scss";
 
 const Card = (props) => {
-  const { id, cover, extraImgs, productName, country, openModal, type } = props;
+  const { id, cover, productName, country, openModal, type } = props;
 
   //grab the url and description from the cover object.
   const { url, description } = cover;
 
   const [isHovering, setIsHovering] = useState(false);
-
-
 
   /**
    * Function to capitalize the first letter of each word.

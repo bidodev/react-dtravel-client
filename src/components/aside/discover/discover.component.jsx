@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import "./discover.component.styles.scss";
 
 import handleOfferSearch from "../../../helpers/filter.offers";
 import ShowModal from "../../modal/offer.component";
-import Slider from "./slider.jsx"
+import ExperienceItem from "./experiences/experience.item.component";
 
 const Discover = () => {
   const [item, updateItem] = useState("places");
-  const [modalIsOpen, setIsOpen] = useState(false);
-  const [dataModal, setDataModal] = useState({});
-
-  //1. We have to select our full data from the state
-  const fullData = useSelector(({ data }) => data);
+ 
+   //1. We have to select our full data from the state
+   const fullData = useSelector(({ data }) => data);
 
   //2. Check which input the user passed..
   const searchInput = useSelector((state) => state.searchInput);
 
+  const [modalIsOpen, setIsOpen] = useState(false);
+  const [dataModal, setDataModal] = useState({});
 
   /**
    * 1. This function set the status of the Modal to Open.
@@ -38,7 +39,7 @@ const Discover = () => {
     setIsOpen(false);
   };
 
-  const HandleNav = () => {
+  const HandleNav = (current) => {
     const filteredSearch = (switchData) => {
     return handleOfferSearch(
         searchInput,
@@ -47,16 +48,28 @@ const Discover = () => {
     } 
     switch (item) {
       case "experiences":
-        return (<Slider data={filteredSearch(fullData.experiences)} openModal={openModal} />)
+        return (
+          filteredSearch(fullData.experiences).filter((item) => item.id < 2).map(({ ...item }) => (
+            <ExperienceItem key={item.id} {...item} openModal={openModal} />
+          ))
+        )
       case "places":
-        return (<Slider data={filteredSearch(fullData.destinations)} openModal={openModal} />)
+        return (
+          filteredSearch(fullData.destinations).filter((item) => item.id < 2).map(({ ...item }) => (
+            <ExperienceItem key={item.id} {...item} openModal={openModal} />
+          ))
+        )
       case "housings":
-        return (<Slider data={filteredSearch(fullData.housings)} openModal={openModal} />)
+        return (
+          filteredSearch(fullData.housings).map(({ ...item }) => (
+            <ExperienceItem key={item.id} {...item} openModal={openModal} />
+          ))
+        )
       default:
         return false;
     }
- 
   }
+
   return (
     <div className="aside-main">
       <h2>Discover</h2>
@@ -71,12 +84,14 @@ const Discover = () => {
         closeModal={closeModal}
         modalIsOpen={modalIsOpen}
       />
-      <HandleNav />
-      {/* <div className="pagination">
-        <ion-icon name="chevron-back-outline" onClick={previousCard}></ion-icon>
-        <ion-icon name="chevron-forward-outline" onClick={nextCard}></ion-icon>
-      </div> */}
-      
+
+      <div className="aside-main__carrousel">
+        <HandleNav />
+      </div>
+      <div className="pagination">
+        <ion-icon name="chevron-back-outline" onClick={()=> console.log("Next..")}></ion-icon>
+        <ion-icon name="chevron-forward-outline" onClick={()=> console.log("Back..")}></ion-icon>
+      </div>
     </div>
   );
 };
