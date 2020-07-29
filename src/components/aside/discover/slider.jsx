@@ -2,17 +2,19 @@ import React, { useState } from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import './slider.scss'
 
 const Sliders = ({ data, openModal }) => {
   const [isHovering, setIsHovering] = useState(false);
   const settings = {
-      dots: false,
-      arrows: false,
-    infinite: false,
+    className: "gallery",
+    dots: true,
+    lazyLoad: true,
+    infinite: true,
     speed: 500,
-    slidesToShow: 2,
-      slidesToScroll: 1,
-      centerMode: false
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    initialSlide: 2
   };
 
   /**
@@ -46,7 +48,7 @@ const Sliders = ({ data, openModal }) => {
               {isHovering && (
                 <div>
                   <li>
-                    <h4>{item.productName}</h4>
+                    <h4>{sanitizeNames(item.productName)}</h4>
                   </li>
                   <li>
                     <ion-icon name="navigate-outline"></ion-icon>
