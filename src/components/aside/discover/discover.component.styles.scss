@@ -40,12 +40,9 @@
     }
 
     &__carrousel {
-      width: 100%;
+      width: auto;
       height: auto;
-      display: flex;
-      justify-content: space-around;
-      //border: 1px solid red;
-      overflow: hidden;
+      border: 1px solid red;
       scroll-behavior: smooth;
     }
     .pagination {

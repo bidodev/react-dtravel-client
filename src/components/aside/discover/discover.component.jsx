@@ -6,6 +6,7 @@ import "./discover.component.styles.scss";
 import handleOfferSearch from "../../../helpers/filter.offers";
 import ShowModal from "../../modal/offer.component";
 import ExperienceItem from "./experiences/experience.item.component";
+import Slider from "./slider.jsx"
 
 const Discover = () => {
 
@@ -75,9 +76,7 @@ const Discover = () => {
     } 
     switch (item) {
       case "experiences":
-        return (filteredSearch(fullData.experiences).filter((item,index) => index < 2).map(({ ...item }) => (
-          <ExperienceItem key={item.id} {...item} openModal={openModal} />
-        )))
+        return (<Slider data={filteredSearch(fullData.experiences)} openModal={openModal} />)
       case "places":
         return (filteredSearch(fullData.destinations).filter((item,index) => index < 2).map(({ ...item }) => (
           <ExperienceItem key={item.id} {...item} openModal={openModal} />
