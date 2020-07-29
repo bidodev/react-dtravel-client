@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.component.styles.scss";
 
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import { useSelector } from "react-redux";
 import { auth } from "../../../firebase/firebase.utils";
@@ -15,10 +15,10 @@ const Header = () => {
     <nav className="aside-header">
       <ul className="aside-header__nav">
         <li>
-          <NavLink to="/">Discover</NavLink>
+          <Link to="/">Discover</Link>
         </li>
         <li>
-          <NavLink to="/Discover">Blog</NavLink>
+          <NavLink to="/blog">Blog</NavLink>
         </li>
         {currentUser ? (
           <NavLink to="/favorites">Favorites</NavLink>

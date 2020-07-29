@@ -17,7 +17,6 @@ const AdventurousMood = () => {
 
   return (
     <div className="aside-adventurous__mood">
-      <h3>Adventurous Mood</h3>
       <ul className="aside-adventurous__mood-icons" onClick={submitValues}>
         <li>
           <ion-icon id="tropical" name="sunny-outline"></ion-icon>

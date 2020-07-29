@@ -8,48 +8,17 @@ import ShowModal from "../../modal/offer.component";
 import ExperienceItem from "./experiences/experience.item.component";
 
 const Discover = () => {
-
-  const [startIndex, setStartIndex] = useState(0);
-  const [finalIndex, setFinalIndex] = useState(1);
-
-  //1. We have to select our full data from the state
-  const offersFullData = useSelector(({ data }) => data.destinations);
-
+  const [item, updateItem] = useState("places");
+ 
+   //1. We have to select our full data from the state
+   const fullData = useSelector(({ data }) => data);
 
   //2. Check which input the user passed..
   const searchInput = useSelector((state) => state.searchInput);
 
-  const filteredSearch = handleOfferSearch(
-    searchInput,
-    offersFullData
-  );
-
-  let slicedResults = [];
-  slicedResults = [...filteredSearch].filter((elem, index) => {
-    if (filteredSearch.length === 1) {
-      return index === 0;
-    }
-    return index >= startIndex && index <= finalIndex;
-  });
-
-  const previousCard = () => {
-    if (startIndex === 0) {
-      return;
-    }
-    setStartIndex(startIndex - 1);
-    setFinalIndex(finalIndex - 1);
-  };
-
-  const nextCard = () => {
-    if (finalIndex === filteredSearch.length - 2) {
-      return;
-    }
-    setStartIndex(startIndex + 1);
-    setFinalIndex(finalIndex + 1);
-  };
-
   const [modalIsOpen, setIsOpen] = useState(false);
   const [dataModal, setDataModal] = useState({});
+  const [lastIndex, setLastIndex] = useState(2)
 
   /**
    * 1. This function set the status of the Modal to Open.
@@ -71,13 +40,44 @@ const Discover = () => {
     setIsOpen(false);
   };
 
+  const HandleNav = (current) => {
+    const filteredSearch = (switchData) => {
+    return handleOfferSearch(
+        searchInput,
+        switchData
+      );
+    } 
+    switch (item) {
+      case "experiences":
+        return (
+          filteredSearch(fullData.experiences).filter((item, index) => index < lastIndex).map(({ ...item }) => (
+            <ExperienceItem key={item.id} {...item} openModal={openModal} />
+          ))
+        )
+      case "places":
+        return (
+          filteredSearch(fullData.destinations).filter((item, index) => index < lastIndex).map(({ ...item }) => (
+            <ExperienceItem key={item.id} {...item} openModal={openModal} />
+          ))
+        )
+      case "housings":
+        return (
+          filteredSearch(fullData.housings).map(({ ...item }) => (
+            <ExperienceItem key={item.id} {...item} openModal={openModal} />
+          ))
+        )
+      default:
+        return false;
+    }
+  }
+
   return (
     <div className="aside-main">
       <h2>Discover</h2>
-      <nav>
-        <Link to="places">Places</Link>
-        <Link to="experiences">Experiences</Link>
-        <Link to="housings">Housings</Link>
+      <nav className="aside-main-nav" onClick={(event) => updateItem(event.target.value)}>
+        <button value="places">Places</button>
+        <button value="experiences">Experiences</button>
+        <button value="housings">Housings</button>
       </nav>
 
       <ShowModal
@@ -87,13 +87,7 @@ const Discover = () => {
       />
 
       <div className="aside-main__carrousel">
-        {slicedResults.map(({ ...item }) => (
-          <ExperienceItem key={item.id} {...item} openModal={openModal} />
-        ))}
-      </div>
-      <div className="pagination">
-        <ion-icon name="chevron-back-outline" onClick={previousCard}></ion-icon>
-        <ion-icon name="chevron-forward-outline" onClick={nextCard}></ion-icon>
+        <HandleNav />
       </div>
     </div>
   );
