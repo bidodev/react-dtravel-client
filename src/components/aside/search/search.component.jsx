@@ -25,7 +25,7 @@ function Search() {
         <input
           onChange={submitValues}
           type="search"
-          placeholder="Where to?"
+          placeholder="Discover your next adventure"
           ref={textInput}
         />
     </div>

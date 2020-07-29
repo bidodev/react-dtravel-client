@@ -1,7 +1,12 @@
 .aside-search {
   display: flex;
   align-items: center;
+<<<<<<< HEAD
   height: 15%;
+=======
+  height: 10%;
+
+>>>>>>> parent of c134f84... layouts UX fixs
   span {
     transform: translateX(+1.4rem);
   }
@@ -24,7 +29,7 @@
     border-bottom: 1px solid rgba(48, 48, 48, 0.3);
     font-size: 0.8vw;
     letter-spacing: 0.3px;
-    text-indent: 1.7rem;
+    text-indent: 1.6rem;
     //border: 1px solid green;
 
     &:focus {
