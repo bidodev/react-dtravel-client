@@ -1,43 +1,65 @@
-import React, { Component } from "react";
-import "slick-carousel/slick/slick.css"; 
+import React, { useState } from "react";
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
-export default class SimpleSlider extends Component {
-    render() {
-      console.log(this.props)
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 2,
-        slidesToScroll: 1
-    };
-      
-    return (
-      <div>
-        <h2> Single Item</h2>
-        <Slider {...settings}>
-          <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div>
-        </Slider>
-      </div>
-    );
-  }
-}
+const Sliders = ({ data, openModal }) => {
+  const [isHovering, setIsHovering] = useState(false);
+  const settings = {
+      dots: false,
+      arrows: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 2,
+      slidesToScroll: 1,
+      centerMode: false
+  };
+
+  /**
+   * Function to capitalize the first letter of each word.
+   * @param {*} str
+   */
+  const sanitizeNames = (str) => {
+    return str
+      .split(" ")
+      .map((el) => el.charAt(0).toUpperCase() + el.slice(1))
+      .join(" ");
+  };
+
+  return (
+    <div>
+      <Slider {...settings}>
+        {data.map((item) => {
+          return (
+            <div
+              className="card"
+              onMouseEnter={() => setIsHovering(true)}
+              onMouseLeave={() => setIsHovering(false)}
+              onClick={() => openModal(item)}
+            >
+              <img
+                className={"img-card"}
+                key={item.id}
+                src={`./img/${item.type}/${item.cover.url}`}
+                alt={item.cover.description}
+              />
+              {isHovering && (
+                <div>
+                  <li>
+                    <h4>{item.productName}</h4>
+                  </li>
+                  <li>
+                    <ion-icon name="navigate-outline"></ion-icon>
+                    {item.country}
+                  </li>
+                </div>
+              )}
+            </div>
+          );
+        })}
+      </Slider>
+    </div>
+  );
+};
+
+export default Sliders;

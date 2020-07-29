@@ -1,12 +1,12 @@
 .card {
-  position: relative;
+  border: 10px solid pink;
   cursor: pointer;
   backface-visibility: hidden;
   transform: translateZ(0);
   transition: transform 0.5s ease-out;
   font-weight: normal;
   width: 11.5vw;
-  height: 36vh;
+  height: 35vh;
   border: none;
 
   .img-card {
