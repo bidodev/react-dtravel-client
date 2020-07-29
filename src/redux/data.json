@@ -236,6 +236,7 @@
       "id": 8,
       "productName": "amsterdam",
       "description": "Famous museums, tulips, canal-lined streets, 'coffee shops' and high-end boutiques await you in Amsterdam. Here, you can spend your days gazing at Vincent van Gogh paintings, relaxing in Vondelpark and shopping in the Nine Little Streets area. Immerse yourself in Dutch culture by eating raw herring, or satisfy your sweet tooth with stroopwafels. You can also do as the Dutch do and rent a bicycle to tour the city. If you plan on visiting in spring, don't miss the Keukenhof gardens, where you can view millions of colorful flowers. ",
+
       "country": "netherlands",
       "continent": "europe",
       "type": "city",
@@ -556,7 +557,7 @@
   "experiences": [
     {
       "id": 0,
-      "productName": "Kayaking",
+      "productName": "experience1",
       "description": "experience1 island may lack in size it makes up for in sheer tropical beauty. Here, you'll find picturesque beaches, lush jungles and luxurious resorts. The island's dormant volcano, Mount Otemanu, makes for a great photo-op or challenging hike, and the friendly Bora Bora locals can help you catch a glimpse of the island's best sights during an off-road excursion. To relax, head to Matira Beach for crystal-clear water and soft sand. Although a trip to Bora Bora is very high, most travelers say it's worth every penny. ",
       "country": "French Polynesia, France",
       "continent": "Australia and Oceania",
@@ -565,49 +566,49 @@
       "prices": "High",
       "bestMatch": false,
       "cover": {
-        "url": "kayaking/filip-mroz.jpg",
+        "url": "https://i.imgur.com/5E48mGu.jpg",
         "description": "experience1 is a small South Pacific island northwest of Tahiti in French Polynesia"
       },
       "extraImgs": [
         {
-          "url": "kayaking/benjamin-davies.jpg",
+          "url": "https://i.imgur.com/9soxzN3.jpg",
           "description": "Bora Bora Image 1 - Put some description"
         },
         {
-          "url": "kayaking/frank-busch.jpg",
+          "url": "https://i.imgur.com/N5MAokM.jpg",
           "description": "Bora Bora Image 2 - Put some description"
         },
         {
-          "url": "kayaking/toomas-tartes.jpg",
+          "url": "https://i.imgur.com/WK0hVFH.jpg",
           "description": "Bora Bora Image 3 - Put some description"
         }
       ]
     },
     {
       "id": 1,
-      "productName": "Alpinism",
+      "productName": "Maui",
       "description": "Whether you're driving along the Road to Hana, enjoying a bird's-eye view of the lush coastline from a helicopter, snorkeling with sea turtles or simply relaxing on the island's honey- or black-colored beaches, you'll find that Maui is unlike any other tropical destination. Don't miss a chance to visit Haleakala National Park, which is home to the world's largest dormant volcano. You should also attend a luau for a dose of local culture and a taste of Hawaiian specialties like poi, poke and mahimahi.",
       "country": "Hawaii",
       "continent": "North America",
-      "type": "mountain",
+      "type": "tropical",
       "difficulty": "easy",
       "prices": "High",
       "bestMatch": false,
       "cover": {
-        "url": "alpinism/giacomo-berard.jpg",
+        "url": "https://i.imgur.com/PWSiFTw.jpgg",
         "description": "experience2 is an island in the Central Pacific, part of the Hawaiian archipelago."
       },
       "extraImgs": [
         {
-          "url": "alpinism/colin-moldenhauer.jpg",
+          "url": "https://i.imgur.com/R6Qsh8v.jpg",
           "description": "Maui Image 1 - Put some description"
         },
         {
-          "url": "alpinism/jef-willemyns.jpg",
+          "url": "https://i.imgur.com/IujoC6j.jpg",
           "description": "Maui Image 2 - Put some description"
         },
         {
-          "url": "alpinism/matej-drha.jpg",
+          "url": "https://i.imgur.com/4OOCLos.jpg",
           "description": "Maui Image 3 - Put some description"
         }
       ]
@@ -616,58 +617,58 @@
   "housings": [
     {
       "id": 0,
-      "productName": "Boulevard Hotel",
+      "productName": "housing1",
       "description": "housing1 lack in size it makes up for in sheer tropical beauty. Here, you'll find picturesque beaches, lush jungles and luxurious resorts. The island's dormant volcano, Mount Otemanu, makes for a great photo-op or challenging hike, and the friendly Bora Bora locals can help you catch a glimpse of the island's best sights during an off-road excursion. To relax, head to Matira Beach for crystal-clear water and soft sand. Although a trip to Bora Bora is very high, most travelers say it's worth every penny. ",
       "country": "French Polynesia, France",
       "continent": "Australia and Oceania",
-      "type": "city",
+      "type": "tropical",
       "difficulty": "easy",
       "prices": "High",
       "bestMatch": false,
       "cover": {
-        "url": "boulevard/mindaugas-petrutis.jpg",
+        "url": "https://i.imgur.com/5E48mGu.jpg",
         "description": "housing1 is a small South Pacific island northwest of Tahiti in French Polynesia"
       },
       "extraImgs": [
         {
-          "url": "boulevard/ishan-seefromthesky.jpg",
+          "url": "https://i.imgur.com/vemwigz.jpg",
           "description": "Bora Bora Image 1 - Put some description"
         },
         {
-          "url": "boulevard/federico-de-luca.jpg",
+          "url": "https://i.imgur.com/6o9yv9h.jpg",
           "description": "Bora Bora Image 2 - Put some description"
         },
         {
-          "url": "boulevard/gerson-repreza.jpg",
+          "url": "https://i.imgur.com/Jf3gNMA.jpg",
           "description": "Bora Bora Image 3 - Put some description"
         }
       ]
     },
     {
       "id": 1,
-      "productName": "Natours Hotel",
+      "productName": "Maui",
       "description": "Whether you're driving along the Road to Hana, enjoying a bird's-eye view of the lush coastline from a helicopter, snorkeling with sea turtles or simply relaxing on the island's honey- or black-colored beaches, you'll find that Maui is unlike any other tropical destination. Don't miss a chance to visit Haleakala National Park, which is home to the world's largest dormant volcano. You should also attend a luau for a dose of local culture and a taste of Hawaiian specialties like poi, poke and mahimahi.",
       "country": "Hawaii",
       "continent": "North America",
-      "type": "mountain",
+      "type": "tropical",
       "difficulty": "easy",
       "prices": "High",
       "bestMatch": false,
       "cover": {
-        "url": "natuors/johan-sjogren.jpg",
+        "url": "https://i.imgur.com/PWSiFTw.jpgg",
         "description": "housing2 an island in the Central Pacific, part of the Hawaiian archipelago."
       },
       "extraImgs": [
         {
-          "url": "natuors/xavier-coiffic.jpg",
+          "url": "https://i.imgur.com/R6Qsh8v.jpg",
           "description": "Maui Image 1 - Put some description"
         },
         {
-          "url": "natuors/chelsea-gates.jpg",
+          "url": "https://i.imgur.com/IujoC6j.jpg",
           "description": "Maui Image 2 - Put some description"
         },
         {
-          "url": "natuors/claudia-altamim.jpg",
+          "url": "https://i.imgur.com/4OOCLos.jpg",
           "description": "Maui Image 3 - Put some description"
         }
       ]
