@@ -18,6 +18,7 @@ const Discover = () => {
 
   const [modalIsOpen, setIsOpen] = useState(false);
   const [dataModal, setDataModal] = useState({});
+  const [lastIndex, setLastIndex] = useState(2)
 
   /**
    * 1. This function set the status of the Modal to Open.
@@ -49,13 +50,13 @@ const Discover = () => {
     switch (item) {
       case "experiences":
         return (
-          filteredSearch(fullData.experiences).filter((item) => item.id < 2).map(({ ...item }) => (
+          filteredSearch(fullData.experiences).filter((item, index) => index < lastIndex).map(({ ...item }) => (
             <ExperienceItem key={item.id} {...item} openModal={openModal} />
           ))
         )
       case "places":
         return (
-          filteredSearch(fullData.destinations).filter((item) => item.id < 2).map(({ ...item }) => (
+          filteredSearch(fullData.destinations).filter((item, index) => index < lastIndex).map(({ ...item }) => (
             <ExperienceItem key={item.id} {...item} openModal={openModal} />
           ))
         )
@@ -87,10 +88,6 @@ const Discover = () => {
 
       <div className="aside-main__carrousel">
         <HandleNav />
-      </div>
-      <div className="pagination">
-        <ion-icon name="chevron-back-outline" onClick={()=> console.log("Next..")}></ion-icon>
-        <ion-icon name="chevron-forward-outline" onClick={()=> console.log("Back..")}></ion-icon>
       </div>
     </div>
   );
