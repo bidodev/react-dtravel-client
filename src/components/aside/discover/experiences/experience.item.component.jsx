@@ -3,6 +3,7 @@ import "./experience.item.component.styles.scss";
 
 const Card = (props) => {
   const { id, cover, productName, country, openModal, type } = props;
+  console.log(cover)
 
   //grab the url and description from the cover object.
   const { url, description } = cover;
@@ -14,10 +15,10 @@ const Card = (props) => {
    * @param {*} str
    */
   const sanitizeNames = (str) => {
-    return str
+    return str ? str
       .split(" ")
       .map((el) => el.charAt(0).toUpperCase() + el.slice(1))
-      .join(" ");
+      .join(" "): 'null';
   };
 
   return (

@@ -15,9 +15,6 @@ const Header = () => {
     <nav className="aside-header">
       <ul className="aside-header__nav">
         <li>
-          <Link to="/">Discover</Link>
-        </li>
-        <li>
           <NavLink to="/blog">Blog</NavLink>
         </li>
         {currentUser ? (

@@ -118,7 +118,7 @@
     },
     {
       "id": 4,
-      "productName": "grand Canyon",
+      "productName": "grand canyon",
       "description": "Measuring roughly 277 miles long, 18 miles wide and a mile deep, the Grand Canyon offers plenty of outdoor activities for everyone from day-trippers to adventure junkies. Hike along the national park's popular Rim and Bright Angel trails for unparalleled vistas, cool off with a whitewater rafting excursion down the Colorado River or view the dramatic Arizona landscape from above during a helicopter tour. ",
       "country": "united states",
       "continent": "north america",
@@ -127,27 +127,27 @@
       "prices": "normal",
       "bestMatch": false,
       "cover": {
-        "url": "maui/peter-vanosdall.jpg",
+        "url": "grand-canyon/andrew-coelho.jpg",
         "description": "Maui is an island in the Central Pacific, part of the Hawaiian archipelago."
       },
       "extraImgs": [
         {
-          "url": "maui/braden-jarvis.jpg",
+          "url": "grand-canyon/diego-lozano.jpg",
           "description": "Maui Image 1 - Put some description"
         },
         {
-          "url": "maui/justin-lam.jpg",
+          "url": "grand-canyon/gert-boers.jpg",
           "description": "Maui Image 2 - Put some description"
         },
         {
-          "url": "maui/tatonomusic.jpg",
+          "url": "grand-canyon/sam-loydh.jpg",
           "description": "Maui Image 3 - Put some description"
         }
       ]
     },
     {
       "id": 5,
-      "productName": "the Basho Wayfarer",
+      "productName": "the basho wayfarer",
       "description": "Japan boasts numerous ancient trails, connecting temples and cities. This self-guided trip follows a route taken by the poet Matsuo Basho over 300 years ago. The six-day trek starts in Sendai and works its way through the northern Tohoku region, passing through the UNESCO World Heritage Site of Hiraizumi and along the ancient Dewa Kaido path, with its beech and cherry forests, before heading into the mountains of Natagiri-toge and finishing at the temple of Yamadera.",
       "country": "japan",
       "continent": "asia",
@@ -156,49 +156,20 @@
       "prices": "high",
       "bestMatch": false,
       "cover": {
-        "url": "maui/peter-vanosdall.jpg",
-        "description": "Maui is an island in the Central Pacific, part of the Hawaiian archipelago."
+        "url": "basho-wayfarer/dmitry-kotovh.jpg",
+        "description": "Japan boasts numerous ancient trails, connecting temples and cities."
       },
       "extraImgs": [
         {
-          "url": "maui/braden-jarvis.jpg",
+          "url": "basho-wayfarer/daniel-lerman.jpg",
           "description": "Maui Image 1 - Put some description"
         },
         {
-          "url": "maui/justin-lam.jpg",
+          "url": "basho-wayfarer/josiah-gardner.jpg",
           "description": "Maui Image 2 - Put some description"
         },
         {
-          "url": "maui/tatonomusic.jpg",
-          "description": "Maui Image 3 - Put some description"
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "productName": "lechweg Trail",
-      "description": "Starting in the Bavarian town of Fussen, this nine-day route follows the Lechweg river to its source in the Austrian state of Vorarlberg. Passing the royal castles of a King Ludwig II of Bavaria, Germany as well as crystal clear lakes, the trail heads through the Tiroler Lech National Park, a protected area with lush meadows, turquoise water and ibex at every turn.",
-      "country": "germany",
-      "continent": "europe",
-      "type": "mountain",
-      "difficulty": "extreme",
-      "prices": "low",
-      "bestMatch": false,
-      "cover": {
-        "url": "maui/peter-vanosdall.jpg",
-        "description": "Maui is an island in the Central Pacific, part of the Hawaiian archipelago."
-      },
-      "extraImgs": [
-        {
-          "url": "maui/braden-jarvis.jpg",
-          "description": "Maui Image 1 - Put some description"
-        },
-        {
-          "url": "maui/justin-lam.jpg",
-          "description": "Maui Image 2 - Put some description"
-        },
-        {
-          "url": "maui/tatonomusic.jpg",
+          "url": "basho-wayfarer/paul-hanaoka.jpg",
           "description": "Maui Image 3 - Put some description"
         }
       ]
@@ -555,7 +526,7 @@
   ],
   "experiences": [
     {
-      "id": 0,
+      "id": 19,
       "productName": "Kayaking",
       "description": "experience1 island may lack in size it makes up for in sheer tropical beauty. Here, you'll find picturesque beaches, lush jungles and luxurious resorts. The island's dormant volcano, Mount Otemanu, makes for a great photo-op or challenging hike, and the friendly Bora Bora locals can help you catch a glimpse of the island's best sights during an off-road excursion. To relax, head to Matira Beach for crystal-clear water and soft sand. Although a trip to Bora Bora is very high, most travelers say it's worth every penny. ",
       "country": "French Polynesia, France",
@@ -584,7 +555,7 @@
       ]
     },
     {
-      "id": 1,
+      "id": 20,
       "productName": "Alpinism",
       "description": "Whether you're driving along the Road to Hana, enjoying a bird's-eye view of the lush coastline from a helicopter, snorkeling with sea turtles or simply relaxing on the island's honey- or black-colored beaches, you'll find that Maui is unlike any other tropical destination. Don't miss a chance to visit Haleakala National Park, which is home to the world's largest dormant volcano. You should also attend a luau for a dose of local culture and a taste of Hawaiian specialties like poi, poke and mahimahi.",
       "country": "Hawaii",
@@ -611,11 +582,40 @@
           "description": "Maui Image 3 - Put some description"
         }
       ]
+    },
+    {
+      "id": 6,
+      "productName": "trail cycling",
+      "description": "Starting in the Bavarian town of Fussen, this nine-day route follows the Lechweg river to its source in the Austrian state of Vorarlberg. Passing the royal castles of a King Ludwig II of Bavaria, Germany as well as crystal clear lakes, the trail heads through the Tiroler Lech National Park, a protected area with lush meadows, turquoise water and ibex at every turn.",
+      "country": "germany",
+      "continent": "europe",
+      "type": "mountain",
+      "difficulty": "extreme",
+      "prices": "low",
+      "bestMatch": false,
+      "cover": {
+        "url": "lechweg-trail/gus-oppeau.jpg",
+        "description": "Maui is an island in the Central Pacific, part of the Hawaiian archipelago."
+      },
+      "extraImgs": [
+        {
+          "url": "lechweg-trail/joan-villalon.jpg",
+          "description": "Maui Image 1 - Put some description"
+        },
+        {
+          "url": "lechweg-trail/rohit-d-silva.jpg",
+          "description": "Maui Image 2 - Put some description"
+        },
+        {
+          "url": "lechweg-trail/sander-mathlener.jpg",
+          "description": "Maui Image 3 - Put some description"
+        }
+      ]
     }
   ],
   "housings": [
     {
-      "id": 0,
+      "id": 21,
       "productName": "Boulevard Hotel",
       "description": "housing1 lack in size it makes up for in sheer tropical beauty. Here, you'll find picturesque beaches, lush jungles and luxurious resorts. The island's dormant volcano, Mount Otemanu, makes for a great photo-op or challenging hike, and the friendly Bora Bora locals can help you catch a glimpse of the island's best sights during an off-road excursion. To relax, head to Matira Beach for crystal-clear water and soft sand. Although a trip to Bora Bora is very high, most travelers say it's worth every penny. ",
       "country": "French Polynesia, France",
@@ -644,7 +644,7 @@
       ]
     },
     {
-      "id": 1,
+      "id": 22,
       "productName": "Natours Hotel",
       "description": "Whether you're driving along the Road to Hana, enjoying a bird's-eye view of the lush coastline from a helicopter, snorkeling with sea turtles or simply relaxing on the island's honey- or black-colored beaches, you'll find that Maui is unlike any other tropical destination. Don't miss a chance to visit Haleakala National Park, which is home to the world's largest dormant volcano. You should also attend a luau for a dose of local culture and a taste of Hawaiian specialties like poi, poke and mahimahi.",
       "country": "Hawaii",

@@ -11,11 +11,10 @@ const openModal = () => {
 
 function Favorites() {
     const favoritesList = useSelector((state) => state.favoritesList)
-    const data = useSelector((state) => state.data.destinations)
+    const data = useSelector((state) => state.data)
 
-    
-    console.log(favoritesList, data)
-
+    console.log("data", data)
+    console.log("favoritesList", favoritesList)
 
     return (
         <div className="wrapper">

@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Modal from "react-modal";
 import "./offer.component.styles.scss";
 import { useSelector, useDispatch } from "react-redux";
@@ -7,7 +7,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from "react-responsive-carousel";
 
 Modal.setAppElement("#root");
-function ShowModal({ modalIsOpen, closeModal, data }) {
+const ShowOffer = ({ modalIsOpen, closeModal, data }) => {
   const {
     id,
     productName,
@@ -16,20 +16,26 @@ function ShowModal({ modalIsOpen, closeModal, data }) {
     description,
     country,
     prices,
-    type
+    type,
+    typeref,
   } = data;
 
+  const sanitizeNames = (str) => {
+    return str ? str
+      .split(" ")
+      .map((el) => el.charAt(0).toUpperCase() + el.slice(1))
+      .join(" "): 'null';
+  };
   /**
    * This functions toogle the favorite on redux store.
    * If it's already on the the store, then remove else add.
    */
 
-
   const dispatch = useDispatch();
-  const addWishList = (offerID, productName) => {
+  const addWishList = (offerID, productName, typeref) => {
     dispatch({
       type: "TOGGLE FAVORITE",
-      payload: { id: offerID, name: productName },
+      payload: { id: offerID, name: productName, typeref },
     });
   };
 
@@ -58,55 +64,55 @@ function ShowModal({ modalIsOpen, closeModal, data }) {
   };
 
   return (
-      <Modal
-        isOpen={modalIsOpen}
-        onRequestClose={closeModal}
-        contentLabel="Offers Modal"
-        className="Modal"
-        overlayClassName="overlay"
-      >
-        <div className="offers-item">
-          <div className="offers-item-title">
-            <span>{productName}</span>
-            <div>
-              <ion-icon
-                name={isOnFavorites ? "bookmark" : "bookmark-outline"}
-                onClick={() => addWishList(id, productName)}
-              ></ion-icon>
-              <ion-icon
-                name="close-circle-outline"
-                onClick={closeModal}
-              ></ion-icon>
-            </div>
+    <Modal
+      isOpen={modalIsOpen}
+      onRequestClose={closeModal}
+      contentLabel="Offers Modal"
+      className="Modal"
+      overlayClassName="overlay"
+    >
+      <div className="offers-item">
+        <div className="offers-item-title">
+          <span>{productName}</span>
+          <div>
+            <ion-icon
+              name={isOnFavorites ? "bookmark" : "bookmark-outline"}
+              onClick={() => addWishList(id, productName, typeref)}
+            ></ion-icon>
+            <ion-icon
+              name="close-circle-outline"
+              onClick={closeModal}
+            ></ion-icon>
           </div>
-
-          <Carousel {...modalConfig}>
-            {extraImgs
-              ? [cover, ...extraImgs].map(({ url, description }) => (
-                  <div key={Math.ceil(Math.random())}>
-                    <img src={`./img/${type}/${url}`} alt={description} />
-                    <p className="legend">{description}</p>
-                  </div>
-                ))
-              : null}
-          </Carousel>
-
-          <div className="exp-infos">
-            <li>
-              <ion-icon name="navigate-outline"></ion-icon>
-              {country}
-            </li>
-            <li>
-              <ion-icon name="cash-outline"></ion-icon>
-              {prices}
-            </li>
-          </div>
-          <p className="description">{description}</p>
         </div>
-      </Modal>
+
+        <Carousel {...modalConfig}>
+          {extraImgs
+            ? [cover, ...extraImgs].map(({ url, description }) => (
+                <div key={Math.ceil(Math.random())}>
+                  <img src={`./img/${type}/${url}`} alt={description} />
+                  <p className="legend">{description}</p>
+                </div>
+              ))
+            : null}
+        </Carousel>
+
+        <div className="exp-infos">
+          <li>
+            <ion-icon name="navigate-outline"></ion-icon>
+            {sanitizeNames(country)}
+          </li>
+          <li>
+            <ion-icon name="cash-outline"></ion-icon>
+            {sanitizeNames(prices)}
+          </li>
+        </div>
+        <p className="description">{description}</p>
+      </div>
+    </Modal>
   );
-}
+};
 
 //to be fixed
 
-export default ShowModal;
+export default ShowOffer;

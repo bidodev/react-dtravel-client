@@ -55,8 +55,16 @@
       scroll-behavior: smooth;
     }
 
-
-
+    .show-all {
+      text-align: right;
+      width: 98%;
+      color: #909090;
+      
+      &:hover {
+        opacity: 0.5;
+        cursor: pointer;
+      }
+    }
     .pagination {
       //border: 1px solid red;
       width: 4rem;
