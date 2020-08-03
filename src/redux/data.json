@@ -185,20 +185,20 @@
       "prices": "normal",
       "bestMatch": false,
       "cover": {
-        "url": "maui/peter-vanosdall.jpg",
+        "url": "phuket/mike-swigunski.jpg",
         "description": "Maui is an island in the Central Pacific, part of the Hawaiian archipelago."
       },
       "extraImgs": [
         {
-          "url": "maui/braden-jarvis.jpg",
-          "description": "Maui Image 1 - Put some description"
+          "url": "phuket/william-rouseh.jpg",
+          "description": "phuket Image 1 - Put some description"
         },
         {
-          "url": "maui/justin-lam.jpg",
-          "description": "Maui Image 2 - Put some description"
+          "url": "phuket/frankie-spontell.jpg",
+          "description": "phuket Image 2 - Put some description"
         },
         {
-          "url": "maui/tatonomusic.jpg",
+          "url": "phuket/vitaly-sacred.jpg",
           "description": "Maui Image 3 - Put some description"
         }
       ]
@@ -290,9 +290,10 @@
     },
     {
       "id": 11,
-      "productName": "la Ruta de los Conquistadores",
+      "productName": "la ruta de los conquistadores",
       "description": "From the Pacific to Caribbean coasts, this one takes in mud paths, rainforest, coffee plantations, even an extinct volcano. It can be completed in three days each November as part of the annual mountain bike race from which the ride takes its name. Beginning in the surf resort of Jaco Beach, the route soon turns onto energy-sapping red mud dirt roads, climbing up. And up and up -- the official La Ruta course includes about 3,000 meters (9,842 feet) of climbing on the first day alone. Skirting the capital, San Jose, it passes near the extinct peak volcanic peak of Irazu and down again to mangrove forests and white sand beaches. The traditional end to the trip is a dip in the Caribbean. Riding in is optional.",
-      "continent": "central America",
+      "country": "costa rica",
+      "continent": "central america",
       "type": "cycling",
       "difficulty": "medium",
       "prices": "normal",
@@ -407,27 +408,27 @@
       "id": 15,
       "productName": "maldives",
       "description": "Strung across the Indian Ocean southwest of India and Sri Lanka, the 26 natural atolls of the Maldives exude an almost surreal beauty due, in large part, to the luminous blue waters that surround them. If slipping into the crystal-clear, soul-warming sea is a top criteria for your perfect tropical vacation, this is the place to do it, as water comprises 99 percent of the Maldives. Paradoxically, it also threatens to inundate the shores of this low-lying island nation. Other popular activities here include swimming with manta rays and whale sharks as well as big-game fishing. With water being a focal point and so many islands to choose from, the Maldives is also the perfect candidate for a cruise vacation. ",
-      "country": " Republic of Maldives",
+      "country": " pepublic of maldives",
       "continent": "south asia",
       "type": "tropical",
       "difficulty": "easy",
       "prices": "high",
       "bestMatch": false,
       "cover": {
-        "url": "maui/peter-vanosdall.jpg",
-        "description": "Maui is an island in the Central Pacific, part of the Hawaiian archipelago."
+        "url": "maldives/colin-watts.jpg",
+        "description": "Maldives is put some description here.."
       },
       "extraImgs": [
         {
-          "url": "maui/braden-jarvis.jpg",
+          "url": "maldives/ishan-seefromthesky.jpg",
           "description": "Maui Image 1 - Put some description"
         },
         {
-          "url": "maui/justin-lam.jpg",
+          "url": "maldives/mohamed-nashah.jpg",
           "description": "Maui Image 2 - Put some description"
         },
         {
-          "url": "maui/tatonomusic.jpg",
+          "url": "maldives/shifaaz-shamoon.jpg",
           "description": "Maui Image 3 - Put some description"
         }
       ]
@@ -647,8 +648,8 @@
       "id": 22,
       "productName": "Natours Hotel",
       "description": "Whether you're driving along the Road to Hana, enjoying a bird's-eye view of the lush coastline from a helicopter, snorkeling with sea turtles or simply relaxing on the island's honey- or black-colored beaches, you'll find that Maui is unlike any other tropical destination. Don't miss a chance to visit Haleakala National Park, which is home to the world's largest dormant volcano. You should also attend a luau for a dose of local culture and a taste of Hawaiian specialties like poi, poke and mahimahi.",
-      "country": "Hawaii",
-      "continent": "North America",
+      "country": "Brazil",
+      "continent": "South America",
       "type": "mountain",
       "difficulty": "easy",
       "prices": "High",
