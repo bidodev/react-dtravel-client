@@ -7,7 +7,6 @@ import { useSelector } from "react-redux";
 import { auth } from "../../../firebase/firebase.utils";
 
 const Header = () => {
-
   //load the currentUser propertie from the redux store.
   const currentUser = useSelector(({ login }) => login.currentUser);
 
@@ -15,11 +14,12 @@ const Header = () => {
     <nav className="aside-header">
       <ul className="aside-header__nav">
         <li>
+          <NavLink to="/">Home</NavLink>
+        </li>
+        <li>
           <NavLink to="/blog">Blog</NavLink>
         </li>
-        {currentUser ? (
-          <NavLink to="/favorites">Favorites</NavLink>
-        ) : null}
+        {currentUser ? <NavLink to="/favorites">Favorites</NavLink> : null}
         {currentUser ? (
           <div className="option-logged" onClick={() => auth.signOut()}>
             SIGN OUT
