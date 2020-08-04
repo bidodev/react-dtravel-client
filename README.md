@@ -1,6 +1,12 @@
 ## About: 
 This was a group project from **DCI's WEB Development Course**, which We attended between 2019 - 2021.
 
+# Find the vacation of your dreams with Dtravel!
+
+ A platform that helps you find a special vacation in line with your taste.
+ Check the filters to sort our destinations according to your wish, whether it is a tropical, snowy, hiking, cycling trip, or just a city tour.
+### Take our quiz for more personalized offers!
+
 ## Contact
 Currently being developed by [Claudinei Bido](https://www.linkedin.com/in/bidoc/) - feel free to contact me!
 
@@ -14,7 +20,7 @@ Currently being developed by [Claudinei Bido](https://www.linkedin.com/in/bidoc/
 ## RoadMap
 ## V5
 - [ ] Admin Panel
-- [ ] API with Express
+- [ ] REST API with Express
 - [ ] Database with MongoDB / Mongoose
 
 ## V4
@@ -36,15 +42,7 @@ Currently being developed by [Claudinei Bido](https://www.linkedin.com/in/bidoc/
 - [x] UI / UX APP Structure
 - [x] Redux / Search Engine
 
-# Find the vacation of your dreams with Dtravel!
-
- A platform that helps you find a special vacation in line with your taste.
- Check the filters to sort our destinations according to your wish, whether it is a tropical, snowy, hiking, cycling trip, or just a city tour.
-### Take our quiz for more personalized offers!
-
-<br>
-
-## Structure
+## Files Structure
 
 ```
 Project
