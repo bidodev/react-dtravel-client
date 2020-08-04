@@ -2,7 +2,7 @@
 This was a group project from **DCI's WEB Development Course**, which We attended between 2019 - 2021.
 
 ## Contact
-Created by [Claudinei Bido](https://www.linkedin.com/in/bidoc/) - feel free to contact me!
+Currently being developed by [Claudinei Bido](https://www.linkedin.com/in/bidoc/) - feel free to contact me!
 
 ## Original Team
 - [Bido](https://www.linkedin.com/in/bidoc/)
