@@ -17,9 +17,7 @@ Currently being developed by [Claudinei Bido](https://www.linkedin.com/in/bidoc/
 - [Yaman](https://github.com/YamanKatmawi)
 
 ## 🚀 Technologies used
-<img title="React 16" src="https://ih1.redbubble.net/image.32576156.9850/sticker,375x360.png" width="100" /> 
-<img title="Sass" src="https://vanseodesign.com/blog/wp-content/uploads/2015/09/sass-logo-2.png" width="100" />
-<img title="Redux 4" src="https://cdn-images-1.medium.com/max/800/1*tOI6UC5EaS2fPItCesI-AQ.png" width="100" />
+<img title="React 16" src="https://ih1.redbubble.net/image.32576156.9850/sticker,375x360.png" width="100" /><img title="Sass" src="https://vanseodesign.com/blog/wp-content/uploads/2015/09/sass-logo-2.png" width="100" /><img title="Redux 4" src="https://cdn-images-1.medium.com/max/800/1*tOI6UC5EaS2fPItCesI-AQ.png" width="100" />
 
 ## RoadMap
 ## V5
@@ -110,6 +108,11 @@ Project
 ``` 
 
 ## Preview:
+### Landing Page
 ![homepage](./doc/img/homepage.png)
+
+### Modal Item View
 ![modalview](./doc/img/modalview.png)
+
+### Login Page
 ![login](./doc/img/loginpage.png)
