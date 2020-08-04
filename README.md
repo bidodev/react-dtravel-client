@@ -1,6 +1,17 @@
 ## About: 
 This was a group project from **DCI's WEB Development Course**, which We attended between 2019 - 2021.
 
+## Contact
+Created by [Claudinei Bido](https://www.linkedin.com/in/bidoc/) - feel free to contact me!
+
+## Original Team
+- [Bido](https://www.linkedin.com/in/bidoc/)
+- [Alex](https://github.com/hadabr)
+- [Simona](https://github.com/SimonaHriscu)
+- [Yaman](https://github.com/YamanKatmawi)
+
+
+## RoadMap
 ## V5
 - [ ] Admin Panel
 - [ ] API with Express
@@ -9,27 +20,21 @@ This was a group project from **DCI's WEB Development Course**, which We attende
 ## V4
 - [x] APP UI refactored.
 - [x] Redux Persist (Local Storage)
-- [ ] Favorites List
-- [ ] Search filters / using Firebase
+- [x] Favorites List
 
 ## V3
-#### RoadMap
 - [x] Authtentication using Firebase / Firestore
 - [x] Redux Hooks (useSelector, useDispatch)
 - [x] React Hooks (useState, useEffect)
 - [X] APP UX refactored.
 
-### Credits goes to:
-- Bido: https://github.com/
+## V2
+- [x] Filters / Adventurous Mood
+- [x] All Offers / Quiz
 
-
-### Credits v2.0 goes to:
-- Bido: https://github.com/
-- Alex: https://github.com/
-- Simona: https://github.com/
-- Yaman: https://github.com/
-
-Download the V2.0: [Here](https://github.com/bidodev/dtravel/releases/tag/v2.0)
+## V1
+- [x] UI / UX APP Structure
+- [x] Redux / Search Engine
 
 # Find the vacation of your dreams with Dtravel!
 
@@ -103,12 +108,3 @@ Project
 ``` 
 
 ## Preview:
-
-![Imgur](https://imgur.com/1GMIqEl.jpg)
-<br>
-![Imgur](https://imgur.com/kidquWh.jpg)
-<br>
-![Imgur](https://imgur.com/ZGJS0mN.jpg)
-<br>
-![Imgur](https://imgur.com/S5mCULX.jpg)
-<br>
