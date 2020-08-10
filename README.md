@@ -19,6 +19,29 @@ Currently being developed by [Claudinei Bido](https://www.linkedin.com/in/bidoc/
 ## 🚀 Technologies used
 <img title="React 16" src="https://ih1.redbubble.net/image.32576156.9850/sticker,375x360.png" width="100" /><img title="Sass" src="https://vanseodesign.com/blog/wp-content/uploads/2015/09/sass-logo-2.png" width="100" /><img title="Redux 4" src="https://cdn-images-1.medium.com/max/800/1*tOI6UC5EaS2fPItCesI-AQ.png" width="100" />
 
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.<br />
+
+## Preview:
+### Landing Page
+![homepage](./doc/img/homepage.png)
+
+### Modal Item View
+![modalview](./doc/img/modalview.png)
+
+### Login Page
+![login](./doc/img/loginpage.png)
+
 ## RoadMap
 ## V5
 - [ ] Admin Panel
@@ -106,13 +129,3 @@ Project
                └─── search-input.reducer.js
                
 ``` 
-
-## Preview:
-### Landing Page
-![homepage](./doc/img/homepage.png)
-
-### Modal Item View
-![modalview](./doc/img/modalview.png)
-
-### Login Page
-![login](./doc/img/loginpage.png)
