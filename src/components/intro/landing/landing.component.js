@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import "./landing.title.styles.scss";
 
 import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
 const Landing = () => {
   const backgrounds = useSelector(({ data }) => data.backgrounds);
@@ -32,9 +31,9 @@ const Landing = () => {
   return (
     <div className="landing-wrapper">
       <Carousel {...getConfigurableProps}>
-        {backgrounds.map((background) => (
+        {backgrounds.map(({description, url}) => (
           <div key ={Math.ceil(Math.random())}>
-            <img src={`${background}`} alt={`${background}`} />
+            <img src={`./background/${url}`} alt={description} />
             {/* <p className="legend">Legend</p> */}
           </div>
         ))}
