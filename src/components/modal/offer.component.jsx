@@ -3,7 +3,6 @@ import Modal from "react-modal";
 import "./offer.component.styles.scss";
 import { useSelector, useDispatch } from "react-redux";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
 
 Modal.setAppElement("#root");
