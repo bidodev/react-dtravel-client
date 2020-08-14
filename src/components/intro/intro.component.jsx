@@ -43,7 +43,8 @@ const Intro = () => {
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route exact path="/quiz" component={Quiz} />
-        <Route exact path="/about" component={About} />
+        <Route exact path="/blog" component={About} />
+        <Route exact path="/offers" component={About} />
         <Route
           exact
           path="/login"

@@ -18,7 +18,7 @@ const App = () => {
   //disabled by now
   //we're going return here
   // useEffect(() => {
-  //   axios("https://my-json-server.typicode.com/bidodev/dtravel.api/db").then(({data}) => {
+  //   axios("https://server/dtravel.api/db").then(({data}) => {
   //     dispatch({
   //       type: "UPDATE_DATA",
   //       payload: data,

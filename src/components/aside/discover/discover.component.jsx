@@ -108,7 +108,7 @@ const Discover = () => {
       <div className="aside-main__carrousel">
         <HandleNav />
       </div>
-      <div className="show-all"><Link to="alloffers">Show All Offers</Link></div>
+      <div className="show-all"><Link to="offers">Show All Offers</Link></div>
     </div>
   );
 };
